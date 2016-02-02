@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?define Property_ProductVersion = "$(var.ProductVersion)" ?>
+<?define Property_UpgradeCode = "{FC5ECDDC-BABF-4A04-B5B0-F3BCA3BED0F4}" ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*"
+			 Codepage="1252"
+			 Name="!(loc.Property_ProductName)"
+			 Version="$(var.Property_ProductVersion)"
+			 Language="!(loc.Property_ProductLanguage)"
+			 Manufacturer="!(loc.Property_CompanyName)"
+			 UpgradeCode="$(var.Property_UpgradeCode)">
+		<Package Description="!(loc.Package_Description)" InstallerVersion="405" Compressed="yes" InstallScope="perMachine" />
+		<Media Id="1" Cabinet="setup.cab" EmbedCab="yes" CompressionLevel="high" />
+
+		<Icon Id="AppIcon" SourceFile="$(var.PoE-Helper.TargetDir)PoE-Helper.exe"/>
+
+		<PropertyRef Id="NETFRAMEWORK45" />
+
+		<!-- ARP Information -->
+		<Property Id="ARPPRODUCTICON" Value="AppIcon" />
+		<Property Id="ARPCONTACT" Value="mibbio" />
+		<Property Id="ARPURLINFOABOUT" Value="https://github.com/mibbio/PoE-Helper/issues" />
+		<Property Id="ARPSIZE" Value="542" />
+		<Property Id="ARPNOMODIFY" Value="1" />
+		<Property Id="ARPNOREPAIR" Value="1" />
+
+
+		<MajorUpgrade DowngradeErrorMessage="!(loc.LaunchCondition_LaterVersion)" />
+		<Condition Message="!(loc.LaunchCondition_WrongOSVersion)">
+			<![CDATA[Installed OR (VersionNT >= 501) OR (ServicePackLevel < 2)]]>
+		</Condition>
+		<Condition Message="!(loc.LaunchCondition_NetFX)">
+			<![CDATA[Installed OR NETFRAMEWORK45]]>
+		</Condition>
+
+		<!-- UI Definitions -->
+		<UI Id="WixUI_FeatureTree">
+			<TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+			<TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+			<TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+			<Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+			<Property Id="WixUI_Mode" Value="FeatureTree" />
+
+			<DialogRef Id="ErrorDlg" />
+			<DialogRef Id="FatalError" />
+			<DialogRef Id="FilesInUse" />
+			<DialogRef Id="MsiRMFilesInUse" />
+			<DialogRef Id="PrepareDlg" />
+			<DialogRef Id="ProgressDlg" />
+			<DialogRef Id="ResumeDlg" />
+			<DialogRef Id="UserExit" />
+
+			<Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+
+			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="CustomizeDlg">NOT Installed</Publish>
+			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">Installed AND PATCH</Publish>
+
+			<Publish Dialog="CustomizeDlg" Control="Back" Event="NewDialog" Value="MaintenanceTypeDlg" Order="1">Installed</Publish>
+			<Publish Dialog="CustomizeDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">NOT Installed</Publish>
+			<Publish Dialog="CustomizeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+
+			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="CustomizeDlg" Order="1">NOT Installed OR WixUI_InstallMode = "Change"</Publish>
+			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="MaintenanceTypeDlg" Order="2">Installed AND NOT PATCH</Publish>
+			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="3">Installed AND PATCH</Publish>
+
+			<Publish Dialog="MaintenanceWelcomeDlg" Control="Next" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+
+			<Publish Dialog="MaintenanceTypeDlg" Control="ChangeButton" Event="NewDialog" Value="CustomizeDlg">1</Publish>
+			<Publish Dialog="MaintenanceTypeDlg" Control="RepairButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+			<Publish Dialog="MaintenanceTypeDlg" Control="RemoveButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+			<Publish Dialog="MaintenanceTypeDlg" Control="Back" Event="NewDialog" Value="MaintenanceWelcomeDlg">1</Publish>
+		</UI>
+
+		<UIRef Id="WixUI_Common" />
+
+		<!-- Directory Structure -->
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="!(loc.Property_ProductName)">
+					<Component Id="PoE_Helper.exe" Guid="{F8CC74F8-9C76-4C2C-9620-C090A9A37A7D}">
+						<File Id="PoE_Helper.exe" Name="PoE-Helper.exe" Source="$(var.PoE-Helper.TargetDir)PoE-Helper.exe" Vital="yes" KeyPath="yes" />
+					</Component>
+					<Component Id="PoE_Helper.exe.config" Guid="{BF818BCC-F22E-4258-A4DC-A695438A5AAF}">
+						<File Id="PoE_Helper.exe.config" Name="PoE-Helper.exe.config" Source="$(var.PoE-Helper.TargetDir)PoE-Helper.exe.config" Vital="yes" />
+					</Component>
+					<Component Id="SharpConfig.dll" Guid="{1FD19B89-3DEA-4F59-986B-303D312270E5}">
+						<File Id="SharpConfig.dll" Name="SharpConfig.dll" Source="$(var.PoE-Helper.TargetDir)SharpConfig.dll" Vital="yes" />
+					</Component>
+				</Directory>
+			</Directory>
+			<Directory Id="ProgramMenuFolder">
+				<Directory Id="PoE_Helper" Name="!(loc.Property_ProductName)">
+					<Component Id="MainShortcut" Guid="{BBF7F690-BB92-450F-BE1E-0AB57373DB70}">
+						<Shortcut Id="MainShortcut" Name="!(loc.Property_ProductName)" Target="[#PoE_Helper.exe]" WorkingDirectory="APPROOTDIR" />
+						<RemoveFolder Id="PoE_Helper" On="uninstall" />
+					</Component>
+				</Directory>
+			</Directory>
+		</Directory>
+
+		<Feature Id="Complete" Title="!(loc.Property_ProductName)" Absent="disallow" Display="expand" AllowAdvertise="no">
+			<Feature Id="Main" Level="1" Title="!(loc.Property_MainFeature)" Absent="disallow" AllowAdvertise="no">
+				<ComponentRef Id="PoE_Helper.exe" />
+				<ComponentRef Id="PoE_Helper.exe.config" />
+				<ComponentRef Id="SharpConfig.dll" />
+			</Feature>
+			<Feature Id="Shortcuts" Title="!(loc.Property_ShortcutFeature)" Absent="disallow" AllowAdvertise="no">
+				<ComponentRef Id="MainShortcut" />
+			</Feature>
+		</Feature>
+
+	</Product>
+
+
+</Wix>

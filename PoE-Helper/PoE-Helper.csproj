@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40BD69F5-070E-4B97-80EC-D7C15D619E50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PoE_Helper</RootNamespace>
+    <AssemblyName>PoE-Helper</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>PoE-Tools</ProductName>
+    <PublisherName>mibbio</PublisherName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PoE_Helper.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>Resources\path_of_exile_dock_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D6CE448382A59F763F22429E2EB7A60AE9076100</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PoE-Helper_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpConfig, Version=1.4.9.0, Culture=neutral, PublicKeyToken=c1deedac91bd7724, processorArchitecture=MSIL">
+      <HintPath>..\packages\sharpconfig.1.4.9\lib\net20\SharpConfig.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Icons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Currency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Debug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Talisman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LevelComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TagData.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="CurrencyIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CurrencyIcons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DecimalTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Internal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Internal.settings</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CurrencyIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CurrencyIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Properties\Internal.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Internal.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01_Portal_Scroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02_Scroll_of_Wisdom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_Orb_of_Alteration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\04_Orb_of_Transmutation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05_Orb_of_Augmentation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\06_Orb_of_Chance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\07_Armourer__s_Scrap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\08_Blacksmith__s_Whetstone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\09_Orb_of_Alchemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_Chromatic_Orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11_Jeweller__s_Orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12_Orb_of_Fusing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13_Glassblower__s_Bauble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14_Orb_of_Scouring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15_Orb_of_Regret.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16_Cartographer__s_Chisel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17_Gemcutter__s_Prism.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18_Chaos_Orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19_Regal_Orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20_Blessed_Orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21_Divine_Orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22_Exalted_Orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23_Eternal_Orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_Mirror_of_Kalandra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\path_of_exile_dock_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\path_of_exile_dock_icon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

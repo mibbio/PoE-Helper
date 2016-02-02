@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PoE_Helper.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ColorSelected" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">LightGreen</Value>
+    </Setting>
+    <Setting Name="ColorUnselected" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">Transparent</Value>
+    </Setting>
+    <Setting Name="TagInput" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">input</Value>
+    </Setting>
+    <Setting Name="TagOutput" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">output</Value>
+    </Setting>
+    <Setting Name="TagElementGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">group</Value>
+    </Setting>
+    <Setting Name="TagElementCurrency" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">currency</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
