@@ -88,6 +88,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlExtensions.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Icons.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -132,6 +133,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Internal.settings</DependentUpon>
     </Compile>
+    <Compile Include="UpdateCheck.cs" />
     <EmbeddedResource Include="CurrencyIcons.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CurrencyIcons.Designer.cs</LastGenOutput>

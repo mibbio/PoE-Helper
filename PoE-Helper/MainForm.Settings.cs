@@ -12,11 +12,11 @@ using SharpConfig;
 
 namespace PoE_Helper {
 	public partial class MainForm : Form {
-		private void InitializeConfig() {
+		private void InitializeConfig(string configFile) {
 			Configuration.ValidCommentChars = new char[] { '#' };
 			configState = ConfigState.Loading;
 			try {
-				config = Configuration.LoadFromFile(CONFIG_FILE, Encoding.UTF8);
+				config = Configuration.LoadFromFile(configFile, Encoding.UTF8);
 				foreach (Section sec in config) {
 					Currency c = sec.CreateObject<Currency>();
 					if (sec["Name"].StringValue.Contains("Chaos")) { c.Value = 1; }
@@ -32,7 +32,7 @@ namespace PoE_Helper {
 					config.Add(Section.FromObject(SECTION_CURRENCY + id, currencyData.Current));
 					id++;
 				}
-				config.SaveToFile(CONFIG_FILE, Encoding.UTF8);
+				config.SaveToFile(configFile, Encoding.UTF8);
 			}
 			configState = ConfigState.Clean;
 			saveTimer.Interval = 2000;
@@ -48,7 +48,7 @@ namespace PoE_Helper {
 							}
 							catch (Exception) { continue; }
 						}
-						config.SaveToFile(CONFIG_FILE, Encoding.UTF8);
+						config.SaveToFile(configFile, Encoding.UTF8);
 						configState = ConfigState.Clean;
 					}));
 				}

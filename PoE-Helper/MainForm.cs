@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -13,13 +14,14 @@ namespace PoE_Helper {
 		private readonly Properties.Internal permCfg = Properties.Internal.Default;
 		private readonly Dictionary<ButtonType, Button> selectedCurrencyButton;
 		private readonly List<Currency> currencies;
+		private readonly Version applicationVersion;
+		private readonly string downloadLink = "https://github.com/mibbio/PoE-Helper/releases/latest";
 
 		// talisman
 		private static readonly int MIN_LEVEL = 1;
 		private static readonly int MAX_LEVEL = 84;
 
 		// settings
-		private readonly string CONFIG_FILE = "currency.conf";
 		private const string SECTION_CURRENCY = "Currency";
 		private Configuration config;
 		private ConfigState configState = ConfigState.Loading;
@@ -29,12 +31,15 @@ namespace PoE_Helper {
 			InitializeComponent();
 			EnableDebugMenu();
 
-			string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PoE-Helper");
-			Directory.CreateDirectory(path);
-			CONFIG_FILE = Path.Combine(path, "currency.conf");
+			// getting assembly version number
+			applicationVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+			this.Text = String.Format("{0} v{1}", this.Text, VersionString(applicationVersion));
+
 			this.currencies = new List<Currency>(24);
 
-			InitializeConfig();
+			string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PoE-Helper");
+			Directory.CreateDirectory(path);
+			InitializeConfig(Path.Combine(path, "currency.conf"));
 			InitializeCurrencyTab();
 			InitializeTalismanTab();
 
@@ -45,7 +50,11 @@ namespace PoE_Helper {
 				{ ButtonType.Input, defaultInput },
 				{ ButtonType.Output, defaultOutput },
 			};
+			UpdateCheck.VersionCheckDone += UpdateCheck_VersionCheckDone;
+			this.Shown += UpdateCheck.CheckRemoteVersion;
 		}
+
+
 
 		#region General event handling
 		private void MainForm_Load( object sender, EventArgs e ) {
@@ -62,6 +71,18 @@ namespace PoE_Helper {
 				PopulateCurrencyValues();
 				if (!saveTimer.Enabled) { saveTimer.Start(); }
 			} else { saveTimer.Stop(); }
+		}
+
+		private void UpdateCheck_VersionCheckDone( Version remoteVersion ) {
+			int newerAvail = remoteVersion.CompareTo(applicationVersion);
+			if (newerAvail > 0) {
+				statusNewerVersion.Visible = true;
+				statusNewerVersion.Text = String.Format("[Click to get version {0}]", VersionString(remoteVersion));
+			}
+		}
+
+		private void statusNewerVersion_Click( object sender, EventArgs e ) {
+			Process.Start(downloadLink);
 		}
 		#endregion
 
@@ -146,6 +167,10 @@ namespace PoE_Helper {
 				catch (DivideByZeroException) { }
 				txtTab1Output.Value = result;
 			}
+		}
+
+		public string VersionString( Version version ) {
+			return String.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
 		}
 		#endregion
 	}

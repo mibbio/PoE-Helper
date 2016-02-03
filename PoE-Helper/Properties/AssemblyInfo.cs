@@ -8,7 +8,11 @@ using System.Runtime.InteropServices;
 // die einer Assembly zugeordnet sind.
 [assembly: AssemblyTitle("PoE-Helper")]
 [assembly: AssemblyDescription("Helper Tools for Path of Exile")]
-[assembly: AssemblyConfiguration("")]
+#if DEBUG
+[assembly: AssemblyConfiguration("Debug")]
+#else
+[assembly: AssemblyConfiguration("Release")] 
+#endif
 [assembly: AssemblyCompany("mibbiodev")]
 [assembly: AssemblyProduct("PoE-Helper")]
 [assembly: AssemblyCopyright("Copyright © Marcus Schütze (mibbio)  2016")]
@@ -33,6 +37,6 @@ using System.Runtime.InteropServices;
 // Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.1.0")]
 [assembly: NeutralResourcesLanguage("en")]
 

@@ -28,6 +28,9 @@
 			this.statusBar = new System.Windows.Forms.StatusStrip();
 			this.debugMenu = new System.Windows.Forms.ToolStripDropDownButton();
 			this.debugMenuEntry01 = new System.Windows.Forms.ToolStripMenuItem();
+			this.statusPlaceholderLeft = new System.Windows.Forms.ToolStripStatusLabel();
+			this.statusNewerVersion = new System.Windows.Forms.ToolStripStatusLabel();
+			this.statusPlaceholderRight = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tabControlFeatures = new System.Windows.Forms.TabControl();
 			this.tabPageCurrency = new System.Windows.Forms.TabPage();
 			this.tableTabPageCurrency = new System.Windows.Forms.TableLayoutPanel();
@@ -179,10 +182,14 @@
 			// statusBar
 			// 
 			this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.debugMenu});
+            this.debugMenu,
+            this.statusPlaceholderLeft,
+            this.statusNewerVersion,
+            this.statusPlaceholderRight});
 			this.statusBar.Location = new System.Drawing.Point(10, 379);
 			this.statusBar.Name = "statusBar";
 			this.statusBar.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+			this.statusBar.ShowItemToolTips = true;
 			this.statusBar.Size = new System.Drawing.Size(574, 22);
 			this.statusBar.SizingGrip = false;
 			this.statusBar.TabIndex = 1;
@@ -206,6 +213,37 @@
 			this.debugMenuEntry01.Size = new System.Drawing.Size(218, 22);
 			this.debugMenuEntry01.Text = "Randomize currency values";
 			this.debugMenuEntry01.Click += new System.EventHandler(this.debugMenuEntry01_Click);
+			// 
+			// statusPlaceholderLeft
+			// 
+			this.statusPlaceholderLeft.AutoToolTip = true;
+			this.statusPlaceholderLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None;
+			this.statusPlaceholderLeft.Name = "statusPlaceholderLeft";
+			this.statusPlaceholderLeft.Size = new System.Drawing.Size(175, 17);
+			this.statusPlaceholderLeft.Spring = true;
+			// 
+			// statusNewerVersion
+			// 
+			this.statusNewerVersion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.statusNewerVersion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline);
+			this.statusNewerVersion.ForeColor = System.Drawing.Color.Red;
+			this.statusNewerVersion.IsLink = true;
+			this.statusNewerVersion.LinkColor = System.Drawing.Color.Red;
+			this.statusNewerVersion.Name = "statusNewerVersion";
+			this.statusNewerVersion.Size = new System.Drawing.Size(118, 17);
+			this.statusNewerVersion.Text = "Version x.x.x available";
+			this.statusNewerVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.statusNewerVersion.ToolTipText = "Click to get newest version.";
+			this.statusNewerVersion.Visible = false;
+			this.statusNewerVersion.Click += new System.EventHandler(this.statusNewerVersion_Click);
+			// 
+			// statusPlaceholderRight
+			// 
+			this.statusPlaceholderRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None;
+			this.statusPlaceholderRight.Name = "statusPlaceholderRight";
+			this.statusPlaceholderRight.Size = new System.Drawing.Size(175, 17);
+			this.statusPlaceholderRight.Spring = true;
+			this.statusPlaceholderRight.Text = "toolStripStatusLabel1";
 			// 
 			// tabControlFeatures
 			// 
@@ -1986,6 +2024,9 @@
 		private System.Windows.Forms.NumericUpDown inputUppderBound;
 		private System.Windows.Forms.NumericUpDown inputLowerBound;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.ToolStripStatusLabel statusPlaceholderLeft;
+		private System.Windows.Forms.ToolStripStatusLabel statusNewerVersion;
+		private System.Windows.Forms.ToolStripStatusLabel statusPlaceholderRight;
 	}
 }
 
