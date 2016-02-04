@@ -11,20 +11,15 @@ namespace PoE_Helper {
 	public partial class MainForm : Form {
 		#region Variables
 		// main
-		private readonly Properties.Internal permCfg = Properties.Internal.Default;
+		private readonly Properties.Internal defaultCfg = Properties.Internal.Default;
 		private readonly Dictionary<ButtonType, Button> selectedCurrencyButton;
-		private readonly List<Currency> currencies;
 		private readonly Version applicationVersion;
-		private readonly string downloadLink = "https://github.com/mibbio/PoE-Helper/releases/latest";
+		private readonly Updater updater;
+		private readonly AppConfig config;
 
 		// talisman
 		private static readonly int MIN_LEVEL = 1;
 		private static readonly int MAX_LEVEL = 84;
-
-		// settings
-		private const string SECTION_CURRENCY = "Currency";
-		private Configuration config;
-		private ConfigState configState = ConfigState.Loading;
 		#endregion
 
 		public MainForm() {
@@ -33,15 +28,17 @@ namespace PoE_Helper {
 
 			// getting assembly version number
 			applicationVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-			this.Text = String.Format("{0} v{1}", this.Text, VersionString(applicationVersion));
-
-			this.currencies = new List<Currency>(24);
+			this.Text = string.Format("{0} v{1}", this.Text, VersionString(applicationVersion));
 
 			string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PoE-Helper");
 			Directory.CreateDirectory(path);
-			InitializeConfig(Path.Combine(path, "currency.conf"));
+			config = new AppConfig(Path.Combine(path, "currency.conf"));
 			InitializeCurrencyTab();
-			InitializeTalismanTab();
+			InitializeTalismanTab();this.debugMenuEntry01.Click += new System.EventHandler(this.debugMenuEntry01_Click);
+
+			saveTimer.Tick += new EventHandler(( sender, e ) => {
+				config.Save(tabPageSettings.Controls.OfType<DecimalTextBox>().ToList());
+			});
 
 			// preselect Buttons
 			Button defaultInput = tableButtonsInput.Controls.OfType<Button>().First();
@@ -50,11 +47,13 @@ namespace PoE_Helper {
 				{ ButtonType.Input, defaultInput },
 				{ ButtonType.Output, defaultOutput },
 			};
-			UpdateCheck.VersionCheckDone += UpdateCheck_VersionCheckDone;
-			this.Shown += UpdateCheck.CheckRemoteVersion;
+
+			this.updater = new Updater();
+			updater.VersionCheckDone += UpdateCheck_VersionCheckDone;
+			this.Shown += updater.CheckRemoteVersion;
+			Downloader downloader = new Downloader(new Version("1.0.1.0"));
+			//downloader.Download();
 		}
-
-
 
 		#region General event handling
 		private void MainForm_Load( object sender, EventArgs e ) {
@@ -68,21 +67,18 @@ namespace PoE_Helper {
 				e.Cancel = true;
 			}
 			if (page == tabPageSettings) {
-				PopulateCurrencyValues();
+				InitializeSettingsTab();
 				if (!saveTimer.Enabled) { saveTimer.Start(); }
 			} else { saveTimer.Stop(); }
 		}
 
-		private void UpdateCheck_VersionCheckDone( Version remoteVersion ) {
-			int newerAvail = remoteVersion.CompareTo(applicationVersion);
+		private void UpdateCheck_VersionCheckDone() {
+			int newerAvail = updater.LatestVersion.CompareTo(applicationVersion);
 			if (newerAvail > 0) {
+				// TODO start download process
 				statusNewerVersion.Visible = true;
-				statusNewerVersion.Text = String.Format("[Click to get version {0}]", VersionString(remoteVersion));
+				statusNewerVersion.Text = string.Format("[Click to get version {0}]", updater.LatestVersion);
 			}
-		}
-
-		private void statusNewerVersion_Click( object sender, EventArgs e ) {
-			Process.Start(downloadLink);
 		}
 		#endregion
 
@@ -101,10 +97,10 @@ namespace PoE_Helper {
 
 			var tagData = (TagData) btn.Tag;
 			if (selectedCurrencyButton[tagData.ButtonType] != null) {
-				selectedCurrencyButton[tagData.ButtonType].BackColor = permCfg.ColorUnselected;
+				selectedCurrencyButton[tagData.ButtonType].BackColor = defaultCfg.ColorUnselected;
 			}
 			selectedCurrencyButton[tagData.ButtonType] = btn;
-			selectedCurrencyButton[tagData.ButtonType].BackColor = permCfg.ColorSelected;
+			selectedCurrencyButton[tagData.ButtonType].BackColor = defaultCfg.ColorSelected;
 			if (selectedCurrencyButton[ButtonType.Input] != null && selectedCurrencyButton[ButtonType.Output] != null) {
 				ConvertCurrency(selectedCurrencyButton[ButtonType.Input], selectedCurrencyButton[ButtonType.Output]);
 			}
@@ -133,7 +129,9 @@ namespace PoE_Helper {
 		}
 
 		private void currencyTextBox_Validated( object sender, EventArgs e ) {
-			if (configState == ConfigState.Clean) { configState = ConfigState.Tainted; }
+			if (config.State == ConfigState.Clean) { config.State = ConfigState.Tainted; }
+			ConvertCurrency(selectedCurrencyButton[ButtonType.Input], selectedCurrencyButton[ButtonType.Output]);
+			txtTab1Output.Refresh();
 		}
 		#endregion
 
@@ -170,7 +168,7 @@ namespace PoE_Helper {
 		}
 
 		public string VersionString( Version version ) {
-			return String.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
+			return string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
 		}
 		#endregion
 	}

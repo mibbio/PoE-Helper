@@ -26,11 +26,12 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.statusBar = new System.Windows.Forms.StatusStrip();
+			this.statusProgressbar = new System.Windows.Forms.ToolStripProgressBar();
+			this.placeholderLeft = new System.Windows.Forms.ToolStripStatusLabel();
+			this.statusNewerVersion = new System.Windows.Forms.ToolStripStatusLabel();
 			this.debugMenu = new System.Windows.Forms.ToolStripDropDownButton();
 			this.debugMenuEntry01 = new System.Windows.Forms.ToolStripMenuItem();
-			this.statusPlaceholderLeft = new System.Windows.Forms.ToolStripStatusLabel();
-			this.statusNewerVersion = new System.Windows.Forms.ToolStripStatusLabel();
-			this.statusPlaceholderRight = new System.Windows.Forms.ToolStripStatusLabel();
+			this.placeholderRight = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tabControlFeatures = new System.Windows.Forms.TabControl();
 			this.tabPageCurrency = new System.Windows.Forms.TabPage();
 			this.tableTabPageCurrency = new System.Windows.Forms.TableLayoutPanel();
@@ -85,12 +86,38 @@
 			this.btnOutput07 = new System.Windows.Forms.Button();
 			this.btnOutput01 = new System.Windows.Forms.Button();
 			this.btnSwapCurrency = new System.Windows.Forms.Button();
+			this.txtTab1Input = new PoE_Helper.DecimalTextBox();
+			this.txtTab1Output = new PoE_Helper.DecimalTextBox();
 			this.tabPageTalisman = new System.Windows.Forms.TabPage();
 			this.label2 = new System.Windows.Forms.Label();
 			this.inputUppderBound = new System.Windows.Forms.NumericUpDown();
 			this.inputLowerBound = new System.Windows.Forms.NumericUpDown();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tabPageSettings = new System.Windows.Forms.TabPage();
+			this.currencyTextBox24 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox23 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox22 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox21 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox20 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox19 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox18 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox17 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox16 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox15 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox14 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox13 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox12 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox11 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox10 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox09 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox08 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox07 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox06 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox05 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox04 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox03 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox02 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox01 = new PoE_Helper.DecimalTextBox();
 			this.pictureBox17 = new System.Windows.Forms.PictureBox();
 			this.pictureBox18 = new System.Windows.Forms.PictureBox();
 			this.pictureBox19 = new System.Windows.Forms.PictureBox();
@@ -117,32 +144,6 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.tooltipButtons = new System.Windows.Forms.ToolTip(this.components);
 			this.saveTimer = new System.Windows.Forms.Timer(this.components);
-			this.txtTab1Input = new PoE_Helper.DecimalTextBox();
-			this.txtTab1Output = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox24 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox23 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox22 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox21 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox20 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox19 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox18 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox17 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox16 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox15 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox14 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox13 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox12 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox11 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox10 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox09 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox08 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox07 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox06 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox05 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox04 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox03 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox02 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox01 = new PoE_Helper.DecimalTextBox();
 			this.statusBar.SuspendLayout();
 			this.tabControlFeatures.SuspendLayout();
 			this.tabPageCurrency.SuspendLayout();
@@ -182,10 +183,11 @@
 			// statusBar
 			// 
 			this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.debugMenu,
-            this.statusPlaceholderLeft,
+            this.statusProgressbar,
+            this.placeholderLeft,
             this.statusNewerVersion,
-            this.statusPlaceholderRight});
+            this.debugMenu,
+            this.placeholderRight});
 			this.statusBar.Location = new System.Drawing.Point(10, 379);
 			this.statusBar.Name = "statusBar";
 			this.statusBar.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
@@ -193,6 +195,34 @@
 			this.statusBar.Size = new System.Drawing.Size(574, 22);
 			this.statusBar.SizingGrip = false;
 			this.statusBar.TabIndex = 1;
+			// 
+			// statusProgressbar
+			// 
+			this.statusProgressbar.Name = "statusProgressbar";
+			this.statusProgressbar.Size = new System.Drawing.Size(200, 16);
+			this.statusProgressbar.Step = 1;
+			this.statusProgressbar.Value = 50;
+			this.statusProgressbar.Visible = false;
+			// 
+			// placeholderLeft
+			// 
+			this.placeholderLeft.Name = "placeholderLeft";
+			this.placeholderLeft.Size = new System.Drawing.Size(278, 17);
+			this.placeholderLeft.Spring = true;
+			// 
+			// statusNewerVersion
+			// 
+			this.statusNewerVersion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.statusNewerVersion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline);
+			this.statusNewerVersion.ForeColor = System.Drawing.Color.Red;
+			this.statusNewerVersion.IsLink = true;
+			this.statusNewerVersion.LinkColor = System.Drawing.Color.Red;
+			this.statusNewerVersion.Name = "statusNewerVersion";
+			this.statusNewerVersion.Size = new System.Drawing.Size(118, 17);
+			this.statusNewerVersion.Text = "Version x.x.x available";
+			this.statusNewerVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.statusNewerVersion.ToolTipText = "Click to get newest version.";
+			this.statusNewerVersion.Visible = false;
 			// 
 			// debugMenu
 			// 
@@ -212,38 +242,12 @@
 			this.debugMenuEntry01.Name = "debugMenuEntry01";
 			this.debugMenuEntry01.Size = new System.Drawing.Size(218, 22);
 			this.debugMenuEntry01.Text = "Randomize currency values";
-			this.debugMenuEntry01.Click += new System.EventHandler(this.debugMenuEntry01_Click);
 			// 
-			// statusPlaceholderLeft
+			// placeholderRight
 			// 
-			this.statusPlaceholderLeft.AutoToolTip = true;
-			this.statusPlaceholderLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None;
-			this.statusPlaceholderLeft.Name = "statusPlaceholderLeft";
-			this.statusPlaceholderLeft.Size = new System.Drawing.Size(175, 17);
-			this.statusPlaceholderLeft.Spring = true;
-			// 
-			// statusNewerVersion
-			// 
-			this.statusNewerVersion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.statusNewerVersion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline);
-			this.statusNewerVersion.ForeColor = System.Drawing.Color.Red;
-			this.statusNewerVersion.IsLink = true;
-			this.statusNewerVersion.LinkColor = System.Drawing.Color.Red;
-			this.statusNewerVersion.Name = "statusNewerVersion";
-			this.statusNewerVersion.Size = new System.Drawing.Size(118, 17);
-			this.statusNewerVersion.Text = "Version x.x.x available";
-			this.statusNewerVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.statusNewerVersion.ToolTipText = "Click to get newest version.";
-			this.statusNewerVersion.Visible = false;
-			this.statusNewerVersion.Click += new System.EventHandler(this.statusNewerVersion_Click);
-			// 
-			// statusPlaceholderRight
-			// 
-			this.statusPlaceholderRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None;
-			this.statusPlaceholderRight.Name = "statusPlaceholderRight";
-			this.statusPlaceholderRight.Size = new System.Drawing.Size(175, 17);
-			this.statusPlaceholderRight.Spring = true;
-			this.statusPlaceholderRight.Text = "toolStripStatusLabel1";
+			this.placeholderRight.Name = "placeholderRight";
+			this.placeholderRight.Size = new System.Drawing.Size(278, 17);
+			this.placeholderRight.Spring = true;
 			// 
 			// tabControlFeatures
 			// 
@@ -1115,6 +1119,38 @@
 			this.btnSwapCurrency.UseVisualStyleBackColor = true;
 			this.btnSwapCurrency.Click += new System.EventHandler(this.btnSwapCurrency_Click);
 			// 
+			// txtTab1Input
+			// 
+			this.txtTab1Input.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.txtTab1Input.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTab1Input.Location = new System.Drawing.Point(2, 288);
+			this.txtTab1Input.Margin = new System.Windows.Forms.Padding(2);
+			this.txtTab1Input.MaxLength = 10;
+			this.txtTab1Input.Name = "txtTab1Input";
+			this.txtTab1Input.Size = new System.Drawing.Size(188, 43);
+			this.txtTab1Input.TabIndex = 5;
+			this.txtTab1Input.Text = "0,00";
+			this.txtTab1Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtTab1Input.WordWrap = false;
+			this.txtTab1Input.TextChanged += new System.EventHandler(this.txtTab1Input_TextChanged);
+			// 
+			// txtTab1Output
+			// 
+			this.txtTab1Output.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.txtTab1Output.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTab1Output.Location = new System.Drawing.Point(370, 288);
+			this.txtTab1Output.Margin = new System.Windows.Forms.Padding(2);
+			this.txtTab1Output.MaxLength = 10;
+			this.txtTab1Output.Name = "txtTab1Output";
+			this.txtTab1Output.ReadOnly = true;
+			this.txtTab1Output.Size = new System.Drawing.Size(188, 43);
+			this.txtTab1Output.TabIndex = 6;
+			this.txtTab1Output.TabStop = false;
+			this.txtTab1Output.Text = "0,00";
+			this.txtTab1Output.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtTab1Output.WordWrap = false;
+			this.txtTab1Output.Click += new System.EventHandler(this.txtTab1Output_Click);
+			// 
 			// tabPageTalisman
 			// 
 			this.tabPageTalisman.Controls.Add(this.label2);
@@ -1253,287 +1289,6 @@
 			this.tabPageSettings.Size = new System.Drawing.Size(566, 339);
 			this.tabPageSettings.TabIndex = 2;
 			this.tabPageSettings.Text = "Settings";
-			// 
-			// pictureBox17
-			// 
-			this.pictureBox17.BackgroundImage = global::PoE_Helper.CurrencyIcons._16_Cartographer__s_Chisel;
-			this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox17.Location = new System.Drawing.Point(213, 297);
-			this.pictureBox17.Name = "pictureBox17";
-			this.pictureBox17.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox17.TabIndex = 46;
-			this.pictureBox17.TabStop = false;
-			// 
-			// pictureBox18
-			// 
-			this.pictureBox18.BackgroundImage = global::PoE_Helper.CurrencyIcons._15_Orb_of_Regret;
-			this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox18.Location = new System.Drawing.Point(213, 255);
-			this.pictureBox18.Name = "pictureBox18";
-			this.pictureBox18.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox18.TabIndex = 44;
-			this.pictureBox18.TabStop = false;
-			// 
-			// pictureBox19
-			// 
-			this.pictureBox19.BackgroundImage = global::PoE_Helper.CurrencyIcons._14_Orb_of_Scouring;
-			this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox19.Location = new System.Drawing.Point(213, 213);
-			this.pictureBox19.Name = "pictureBox19";
-			this.pictureBox19.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox19.TabIndex = 42;
-			this.pictureBox19.TabStop = false;
-			// 
-			// pictureBox20
-			// 
-			this.pictureBox20.BackgroundImage = global::PoE_Helper.CurrencyIcons._13_Glassblower__s_Bauble;
-			this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox20.Location = new System.Drawing.Point(213, 171);
-			this.pictureBox20.Name = "pictureBox20";
-			this.pictureBox20.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox20.TabIndex = 40;
-			this.pictureBox20.TabStop = false;
-			// 
-			// pictureBox21
-			// 
-			this.pictureBox21.BackgroundImage = global::PoE_Helper.CurrencyIcons._12_Orb_of_Fusing;
-			this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox21.Location = new System.Drawing.Point(213, 129);
-			this.pictureBox21.Name = "pictureBox21";
-			this.pictureBox21.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox21.TabIndex = 38;
-			this.pictureBox21.TabStop = false;
-			// 
-			// pictureBox22
-			// 
-			this.pictureBox22.BackgroundImage = global::PoE_Helper.CurrencyIcons._11_Jeweller__s_Orb;
-			this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox22.Location = new System.Drawing.Point(213, 87);
-			this.pictureBox22.Name = "pictureBox22";
-			this.pictureBox22.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox22.TabIndex = 36;
-			this.pictureBox22.TabStop = false;
-			// 
-			// pictureBox23
-			// 
-			this.pictureBox23.BackgroundImage = global::PoE_Helper.CurrencyIcons._10_Chromatic_Orb;
-			this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox23.Location = new System.Drawing.Point(213, 45);
-			this.pictureBox23.Name = "pictureBox23";
-			this.pictureBox23.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox23.TabIndex = 34;
-			this.pictureBox23.TabStop = false;
-			// 
-			// pictureBox24
-			// 
-			this.pictureBox24.BackgroundImage = global::PoE_Helper.CurrencyIcons._09_Orb_of_Alchemy;
-			this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox24.Location = new System.Drawing.Point(213, 3);
-			this.pictureBox24.Name = "pictureBox24";
-			this.pictureBox24.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox24.TabIndex = 32;
-			this.pictureBox24.TabStop = false;
-			// 
-			// pictureBox9
-			// 
-			this.pictureBox9.BackgroundImage = global::PoE_Helper.CurrencyIcons._24_Mirror_of_Kalandra;
-			this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox9.Location = new System.Drawing.Point(421, 297);
-			this.pictureBox9.Name = "pictureBox9";
-			this.pictureBox9.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox9.TabIndex = 30;
-			this.pictureBox9.TabStop = false;
-			// 
-			// pictureBox10
-			// 
-			this.pictureBox10.BackgroundImage = global::PoE_Helper.CurrencyIcons._23_Eternal_Orb;
-			this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox10.Location = new System.Drawing.Point(421, 255);
-			this.pictureBox10.Name = "pictureBox10";
-			this.pictureBox10.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox10.TabIndex = 28;
-			this.pictureBox10.TabStop = false;
-			// 
-			// pictureBox11
-			// 
-			this.pictureBox11.BackgroundImage = global::PoE_Helper.CurrencyIcons._22_Exalted_Orb;
-			this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox11.Location = new System.Drawing.Point(421, 213);
-			this.pictureBox11.Name = "pictureBox11";
-			this.pictureBox11.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox11.TabIndex = 26;
-			this.pictureBox11.TabStop = false;
-			// 
-			// pictureBox12
-			// 
-			this.pictureBox12.BackgroundImage = global::PoE_Helper.CurrencyIcons._21_Divine_Orb;
-			this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox12.Location = new System.Drawing.Point(421, 171);
-			this.pictureBox12.Name = "pictureBox12";
-			this.pictureBox12.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox12.TabIndex = 24;
-			this.pictureBox12.TabStop = false;
-			// 
-			// pictureBox13
-			// 
-			this.pictureBox13.BackgroundImage = global::PoE_Helper.CurrencyIcons._20_Blessed_Orb;
-			this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox13.Location = new System.Drawing.Point(421, 129);
-			this.pictureBox13.Name = "pictureBox13";
-			this.pictureBox13.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox13.TabIndex = 22;
-			this.pictureBox13.TabStop = false;
-			// 
-			// pictureBox14
-			// 
-			this.pictureBox14.BackgroundImage = global::PoE_Helper.CurrencyIcons._19_Regal_Orb;
-			this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox14.Location = new System.Drawing.Point(421, 87);
-			this.pictureBox14.Name = "pictureBox14";
-			this.pictureBox14.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox14.TabIndex = 20;
-			this.pictureBox14.TabStop = false;
-			// 
-			// pictureBox15
-			// 
-			this.pictureBox15.BackgroundImage = global::PoE_Helper.CurrencyIcons._18_Chaos_Orb;
-			this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox15.Location = new System.Drawing.Point(421, 45);
-			this.pictureBox15.Name = "pictureBox15";
-			this.pictureBox15.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox15.TabIndex = 18;
-			this.pictureBox15.TabStop = false;
-			// 
-			// pictureBox16
-			// 
-			this.pictureBox16.BackgroundImage = global::PoE_Helper.CurrencyIcons._17_Gemcutter__s_Prism;
-			this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox16.Location = new System.Drawing.Point(421, 3);
-			this.pictureBox16.Name = "pictureBox16";
-			this.pictureBox16.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox16.TabIndex = 16;
-			this.pictureBox16.TabStop = false;
-			// 
-			// pictureBox5
-			// 
-			this.pictureBox5.BackgroundImage = global::PoE_Helper.CurrencyIcons._08_Blacksmith__s_Whetstone;
-			this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox5.Location = new System.Drawing.Point(3, 297);
-			this.pictureBox5.Name = "pictureBox5";
-			this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox5.TabIndex = 14;
-			this.pictureBox5.TabStop = false;
-			// 
-			// pictureBox6
-			// 
-			this.pictureBox6.BackgroundImage = global::PoE_Helper.CurrencyIcons._07_Armourer__s_Scrap;
-			this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox6.Location = new System.Drawing.Point(3, 255);
-			this.pictureBox6.Name = "pictureBox6";
-			this.pictureBox6.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox6.TabIndex = 12;
-			this.pictureBox6.TabStop = false;
-			// 
-			// pictureBox7
-			// 
-			this.pictureBox7.BackgroundImage = global::PoE_Helper.CurrencyIcons._06_Orb_of_Chance;
-			this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox7.Location = new System.Drawing.Point(3, 213);
-			this.pictureBox7.Name = "pictureBox7";
-			this.pictureBox7.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox7.TabIndex = 10;
-			this.pictureBox7.TabStop = false;
-			// 
-			// pictureBox8
-			// 
-			this.pictureBox8.BackgroundImage = global::PoE_Helper.CurrencyIcons._05_Orb_of_Augmentation;
-			this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox8.Location = new System.Drawing.Point(3, 171);
-			this.pictureBox8.Name = "pictureBox8";
-			this.pictureBox8.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox8.TabIndex = 8;
-			this.pictureBox8.TabStop = false;
-			// 
-			// pictureBox4
-			// 
-			this.pictureBox4.BackgroundImage = global::PoE_Helper.CurrencyIcons._04_Orb_of_Transmutation;
-			this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox4.Location = new System.Drawing.Point(3, 129);
-			this.pictureBox4.Name = "pictureBox4";
-			this.pictureBox4.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox4.TabIndex = 6;
-			this.pictureBox4.TabStop = false;
-			// 
-			// pictureBox3
-			// 
-			this.pictureBox3.BackgroundImage = global::PoE_Helper.CurrencyIcons._03_Orb_of_Alteration;
-			this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox3.Location = new System.Drawing.Point(3, 87);
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox3.TabIndex = 4;
-			this.pictureBox3.TabStop = false;
-			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.BackgroundImage = global::PoE_Helper.CurrencyIcons._02_Scroll_of_Wisdom;
-			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox2.Location = new System.Drawing.Point(3, 45);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox2.TabIndex = 2;
-			this.pictureBox2.TabStop = false;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.BackgroundImage = global::PoE_Helper.CurrencyIcons._01_Portal_Scroll;
-			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			// 
-			// tooltipButtons
-			// 
-			this.tooltipButtons.UseAnimation = false;
-			this.tooltipButtons.UseFading = false;
-			// 
-			// saveTimer
-			// 
-			this.saveTimer.Interval = 30000;
-			// 
-			// txtTab1Input
-			// 
-			this.txtTab1Input.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txtTab1Input.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTab1Input.Location = new System.Drawing.Point(2, 288);
-			this.txtTab1Input.Margin = new System.Windows.Forms.Padding(2);
-			this.txtTab1Input.MaxLength = 10;
-			this.txtTab1Input.Name = "txtTab1Input";
-			this.txtTab1Input.Size = new System.Drawing.Size(188, 43);
-			this.txtTab1Input.TabIndex = 5;
-			this.txtTab1Input.Text = "0,00";
-			this.txtTab1Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.txtTab1Input.WordWrap = false;
-			this.txtTab1Input.TextChanged += new System.EventHandler(this.txtTab1Input_TextChanged);
-			// 
-			// txtTab1Output
-			// 
-			this.txtTab1Output.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txtTab1Output.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTab1Output.Location = new System.Drawing.Point(370, 288);
-			this.txtTab1Output.Margin = new System.Windows.Forms.Padding(2);
-			this.txtTab1Output.MaxLength = 10;
-			this.txtTab1Output.Name = "txtTab1Output";
-			this.txtTab1Output.ReadOnly = true;
-			this.txtTab1Output.Size = new System.Drawing.Size(188, 43);
-			this.txtTab1Output.TabIndex = 6;
-			this.txtTab1Output.TabStop = false;
-			this.txtTab1Output.Text = "0,00";
-			this.txtTab1Output.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.txtTab1Output.WordWrap = false;
-			this.txtTab1Output.Click += new System.EventHandler(this.txtTab1Output_Click);
 			// 
 			// currencyTextBox24
 			// 
@@ -1848,6 +1603,255 @@
 			this.currencyTextBox01.WordWrap = false;
 			this.currencyTextBox01.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
+			// pictureBox17
+			// 
+			this.pictureBox17.BackgroundImage = global::PoE_Helper.CurrencyIcons._16_Cartographer__s_Chisel;
+			this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox17.Location = new System.Drawing.Point(213, 297);
+			this.pictureBox17.Name = "pictureBox17";
+			this.pictureBox17.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox17.TabIndex = 46;
+			this.pictureBox17.TabStop = false;
+			// 
+			// pictureBox18
+			// 
+			this.pictureBox18.BackgroundImage = global::PoE_Helper.CurrencyIcons._15_Orb_of_Regret;
+			this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox18.Location = new System.Drawing.Point(213, 255);
+			this.pictureBox18.Name = "pictureBox18";
+			this.pictureBox18.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox18.TabIndex = 44;
+			this.pictureBox18.TabStop = false;
+			// 
+			// pictureBox19
+			// 
+			this.pictureBox19.BackgroundImage = global::PoE_Helper.CurrencyIcons._14_Orb_of_Scouring;
+			this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox19.Location = new System.Drawing.Point(213, 213);
+			this.pictureBox19.Name = "pictureBox19";
+			this.pictureBox19.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox19.TabIndex = 42;
+			this.pictureBox19.TabStop = false;
+			// 
+			// pictureBox20
+			// 
+			this.pictureBox20.BackgroundImage = global::PoE_Helper.CurrencyIcons._13_Glassblower__s_Bauble;
+			this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox20.Location = new System.Drawing.Point(213, 171);
+			this.pictureBox20.Name = "pictureBox20";
+			this.pictureBox20.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox20.TabIndex = 40;
+			this.pictureBox20.TabStop = false;
+			// 
+			// pictureBox21
+			// 
+			this.pictureBox21.BackgroundImage = global::PoE_Helper.CurrencyIcons._12_Orb_of_Fusing;
+			this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox21.Location = new System.Drawing.Point(213, 129);
+			this.pictureBox21.Name = "pictureBox21";
+			this.pictureBox21.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox21.TabIndex = 38;
+			this.pictureBox21.TabStop = false;
+			// 
+			// pictureBox22
+			// 
+			this.pictureBox22.BackgroundImage = global::PoE_Helper.CurrencyIcons._11_Jeweller__s_Orb;
+			this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox22.Location = new System.Drawing.Point(213, 87);
+			this.pictureBox22.Name = "pictureBox22";
+			this.pictureBox22.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox22.TabIndex = 36;
+			this.pictureBox22.TabStop = false;
+			// 
+			// pictureBox23
+			// 
+			this.pictureBox23.BackgroundImage = global::PoE_Helper.CurrencyIcons._10_Chromatic_Orb;
+			this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox23.Location = new System.Drawing.Point(213, 45);
+			this.pictureBox23.Name = "pictureBox23";
+			this.pictureBox23.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox23.TabIndex = 34;
+			this.pictureBox23.TabStop = false;
+			// 
+			// pictureBox24
+			// 
+			this.pictureBox24.BackgroundImage = global::PoE_Helper.CurrencyIcons._09_Orb_of_Alchemy;
+			this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox24.Location = new System.Drawing.Point(213, 3);
+			this.pictureBox24.Name = "pictureBox24";
+			this.pictureBox24.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox24.TabIndex = 32;
+			this.pictureBox24.TabStop = false;
+			// 
+			// pictureBox9
+			// 
+			this.pictureBox9.BackgroundImage = global::PoE_Helper.CurrencyIcons._24_Mirror_of_Kalandra;
+			this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox9.Location = new System.Drawing.Point(421, 297);
+			this.pictureBox9.Name = "pictureBox9";
+			this.pictureBox9.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox9.TabIndex = 30;
+			this.pictureBox9.TabStop = false;
+			// 
+			// pictureBox10
+			// 
+			this.pictureBox10.BackgroundImage = global::PoE_Helper.CurrencyIcons._23_Eternal_Orb;
+			this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox10.Location = new System.Drawing.Point(421, 255);
+			this.pictureBox10.Name = "pictureBox10";
+			this.pictureBox10.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox10.TabIndex = 28;
+			this.pictureBox10.TabStop = false;
+			// 
+			// pictureBox11
+			// 
+			this.pictureBox11.BackgroundImage = global::PoE_Helper.CurrencyIcons._22_Exalted_Orb;
+			this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox11.Location = new System.Drawing.Point(421, 213);
+			this.pictureBox11.Name = "pictureBox11";
+			this.pictureBox11.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox11.TabIndex = 26;
+			this.pictureBox11.TabStop = false;
+			// 
+			// pictureBox12
+			// 
+			this.pictureBox12.BackgroundImage = global::PoE_Helper.CurrencyIcons._21_Divine_Orb;
+			this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox12.Location = new System.Drawing.Point(421, 171);
+			this.pictureBox12.Name = "pictureBox12";
+			this.pictureBox12.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox12.TabIndex = 24;
+			this.pictureBox12.TabStop = false;
+			// 
+			// pictureBox13
+			// 
+			this.pictureBox13.BackgroundImage = global::PoE_Helper.CurrencyIcons._20_Blessed_Orb;
+			this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox13.Location = new System.Drawing.Point(421, 129);
+			this.pictureBox13.Name = "pictureBox13";
+			this.pictureBox13.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox13.TabIndex = 22;
+			this.pictureBox13.TabStop = false;
+			// 
+			// pictureBox14
+			// 
+			this.pictureBox14.BackgroundImage = global::PoE_Helper.CurrencyIcons._19_Regal_Orb;
+			this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox14.Location = new System.Drawing.Point(421, 87);
+			this.pictureBox14.Name = "pictureBox14";
+			this.pictureBox14.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox14.TabIndex = 20;
+			this.pictureBox14.TabStop = false;
+			// 
+			// pictureBox15
+			// 
+			this.pictureBox15.BackgroundImage = global::PoE_Helper.CurrencyIcons._18_Chaos_Orb;
+			this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox15.Location = new System.Drawing.Point(421, 45);
+			this.pictureBox15.Name = "pictureBox15";
+			this.pictureBox15.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox15.TabIndex = 18;
+			this.pictureBox15.TabStop = false;
+			// 
+			// pictureBox16
+			// 
+			this.pictureBox16.BackgroundImage = global::PoE_Helper.CurrencyIcons._17_Gemcutter__s_Prism;
+			this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox16.Location = new System.Drawing.Point(421, 3);
+			this.pictureBox16.Name = "pictureBox16";
+			this.pictureBox16.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox16.TabIndex = 16;
+			this.pictureBox16.TabStop = false;
+			// 
+			// pictureBox5
+			// 
+			this.pictureBox5.BackgroundImage = global::PoE_Helper.CurrencyIcons._08_Blacksmith__s_Whetstone;
+			this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox5.Location = new System.Drawing.Point(3, 297);
+			this.pictureBox5.Name = "pictureBox5";
+			this.pictureBox5.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox5.TabIndex = 14;
+			this.pictureBox5.TabStop = false;
+			// 
+			// pictureBox6
+			// 
+			this.pictureBox6.BackgroundImage = global::PoE_Helper.CurrencyIcons._07_Armourer__s_Scrap;
+			this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox6.Location = new System.Drawing.Point(3, 255);
+			this.pictureBox6.Name = "pictureBox6";
+			this.pictureBox6.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox6.TabIndex = 12;
+			this.pictureBox6.TabStop = false;
+			// 
+			// pictureBox7
+			// 
+			this.pictureBox7.BackgroundImage = global::PoE_Helper.CurrencyIcons._06_Orb_of_Chance;
+			this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox7.Location = new System.Drawing.Point(3, 213);
+			this.pictureBox7.Name = "pictureBox7";
+			this.pictureBox7.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox7.TabIndex = 10;
+			this.pictureBox7.TabStop = false;
+			// 
+			// pictureBox8
+			// 
+			this.pictureBox8.BackgroundImage = global::PoE_Helper.CurrencyIcons._05_Orb_of_Augmentation;
+			this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox8.Location = new System.Drawing.Point(3, 171);
+			this.pictureBox8.Name = "pictureBox8";
+			this.pictureBox8.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox8.TabIndex = 8;
+			this.pictureBox8.TabStop = false;
+			// 
+			// pictureBox4
+			// 
+			this.pictureBox4.BackgroundImage = global::PoE_Helper.CurrencyIcons._04_Orb_of_Transmutation;
+			this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox4.Location = new System.Drawing.Point(3, 129);
+			this.pictureBox4.Name = "pictureBox4";
+			this.pictureBox4.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox4.TabIndex = 6;
+			this.pictureBox4.TabStop = false;
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.BackgroundImage = global::PoE_Helper.CurrencyIcons._03_Orb_of_Alteration;
+			this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox3.Location = new System.Drawing.Point(3, 87);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox3.TabIndex = 4;
+			this.pictureBox3.TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.BackgroundImage = global::PoE_Helper.CurrencyIcons._02_Scroll_of_Wisdom;
+			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox2.Location = new System.Drawing.Point(3, 45);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox2.TabIndex = 2;
+			this.pictureBox2.TabStop = false;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackgroundImage = global::PoE_Helper.CurrencyIcons._01_Portal_Scroll;
+			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
+			// 
+			// tooltipButtons
+			// 
+			this.tooltipButtons.UseAnimation = false;
+			this.tooltipButtons.UseFading = false;
+			// 
+			// saveTimer
+			// 
+			this.saveTimer.Interval = 2000;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -2019,14 +2023,15 @@
 		private DecimalTextBox currencyTextBox02;
 		private System.Windows.Forms.ToolStripDropDownButton debugMenu;
 		private System.Windows.Forms.ToolStripMenuItem debugMenuEntry01;
-		private System.Windows.Forms.Timer saveTimer;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.NumericUpDown inputUppderBound;
 		private System.Windows.Forms.NumericUpDown inputLowerBound;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ToolStripStatusLabel statusPlaceholderLeft;
 		private System.Windows.Forms.ToolStripStatusLabel statusNewerVersion;
-		private System.Windows.Forms.ToolStripStatusLabel statusPlaceholderRight;
+		private System.Windows.Forms.ToolStripProgressBar statusProgressbar;
+		private System.Windows.Forms.ToolStripStatusLabel placeholderLeft;
+		private System.Windows.Forms.ToolStripStatusLabel placeholderRight;
+		private System.Windows.Forms.Timer saveTimer;
 	}
 }
 

@@ -88,15 +88,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppConfig.cs" />
     <Compile Include="ControlExtensions.cs" />
+    <Compile Include="Downloader.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Icons.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Icons.resx</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm.Settings.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Currency.cs">
       <SubType>Form</SubType>
@@ -133,7 +132,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Internal.settings</DependentUpon>
     </Compile>
-    <Compile Include="UpdateCheck.cs" />
+    <Compile Include="Updater.cs" />
     <EmbeddedResource Include="CurrencyIcons.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CurrencyIcons.Designer.cs</LastGenOutput>
@@ -267,7 +266,9 @@
   <ItemGroup>
     <None Include="Resources\path_of_exile_dock_icon.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Ideas.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
