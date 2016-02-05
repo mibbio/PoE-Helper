@@ -26,6 +26,11 @@
 		<Property Id="ARPNOMODIFY" Value="1" />
 		<Property Id="ARPNOREPAIR" Value="1" />
 
+		<Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch !(loc.Property_ProductName)" />
+		<Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX" Value="1" />
+
+		<Property Id="WixShellExecTarget" Value="[#PoE_Helper.exe]" />
+		<CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
 
 		<MajorUpgrade DowngradeErrorMessage="!(loc.LaunchCondition_LaterVersion)" />
 		<Condition Message="!(loc.LaunchCondition_WrongOSVersion)">
@@ -54,6 +59,10 @@
 			<DialogRef Id="UserExit" />
 
 			<Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+			<Publish Dialog="ExitDialog"
+					 Control="Finish"
+					 Event="DoAction"
+					 Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT installed</Publish>
 
 			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="CustomizeDlg">NOT Installed</Publish>
 			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">Installed AND PATCH</Publish>

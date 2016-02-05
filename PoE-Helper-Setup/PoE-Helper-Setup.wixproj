@@ -30,6 +30,10 @@
     <Compile Include="Product.wxs" />
   </ItemGroup>
   <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
     <WixExtension Include="WixUIExtension">
       <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
       <Name>WixUIExtension</Name>
@@ -53,9 +57,8 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
-  
   <!-- Determine Version of executable -->
-	<Target Name="BeforeBuild">
+  <Target Name="BeforeBuild">
     <!-- Get the programs assembly version from the .exe file -->
     <GetAssemblyIdentity AssemblyFiles="..\PoE-Helper\bin\$(Configuration)\PoE-Helper.exe">
       <Output TaskParameter="Assemblies" ItemName="AsmInfo" />
@@ -72,5 +75,5 @@
     <CreateProperty Value="$(TargetName)$(TargetPdbExt)">
       <Output TaskParameter="Value" PropertyName="TargetPdbName" />
     </CreateProperty>
-	</Target>
+  </Target>
 </Project>
