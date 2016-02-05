@@ -132,6 +132,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Internal.settings</DependentUpon>
     </Compile>
+    <Compile Include="TalismanCalculator.cs" />
     <Compile Include="Updater.cs" />
     <EmbeddedResource Include="CurrencyIcons.resx">
       <Generator>ResXFileCodeGenerator</Generator>

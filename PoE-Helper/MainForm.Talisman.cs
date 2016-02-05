@@ -15,14 +15,6 @@ namespace PoE_Helper {
 			foreach (LevelComboBox lcb in tabPageTalisman.Controls.OfType<LevelComboBox>()) {
 				lcb.DataSource = Enumerable.Range((int) inputLowerBound.Value, count).ToList();
 			}
-			/*
-			levelTalisman1.DataSource
-				= levelTalisman2.DataSource
-				= levelTalisman3.DataSource
-				= levelTalisman4.DataSource
-				= levelTalisman5.DataSource
-				= Enumerable.Range((int) inputLowerBound.Value, count).ToList();
-				*/
 		}
 	}
 }

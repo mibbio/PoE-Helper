@@ -83,13 +83,66 @@
 			this.btnOutput07 = new System.Windows.Forms.Button();
 			this.btnOutput01 = new System.Windows.Forms.Button();
 			this.btnSwapCurrency = new System.Windows.Forms.Button();
+			this.txtTab1Input = new PoE_Helper.DecimalTextBox();
+			this.txtTab1Output = new PoE_Helper.DecimalTextBox();
 			this.tabPageTalisman = new System.Windows.Forms.TabPage();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.labelLevelResult = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.labelT5 = new System.Windows.Forms.Label();
+			this.labelT4 = new System.Windows.Forms.Label();
+			this.labelT3 = new System.Windows.Forms.Label();
+			this.labelT2 = new System.Windows.Forms.Label();
+			this.labelT1 = new System.Windows.Forms.Label();
+			this.label13 = new System.Windows.Forms.Label();
+			this.label14 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label17 = new System.Windows.Forms.Label();
+			this.labelLevelT5 = new System.Windows.Forms.Label();
+			this.labelLevelT4 = new System.Windows.Forms.Label();
+			this.labelLevelT3 = new System.Windows.Forms.Label();
+			this.labelLevelT2 = new System.Windows.Forms.Label();
+			this.labelLevelT1 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.levelTalisman3 = new PoE_Helper.LevelComboBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.levelTalisman5 = new PoE_Helper.LevelComboBox();
+			this.label5 = new System.Windows.Forms.Label();
+			this.levelTalisman2 = new PoE_Helper.LevelComboBox();
+			this.label4 = new System.Windows.Forms.Label();
+			this.levelTalisman4 = new PoE_Helper.LevelComboBox();
 			this.label3 = new System.Windows.Forms.Label();
+			this.levelTalisman1 = new PoE_Helper.LevelComboBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.inputUpperBound = new System.Windows.Forms.NumericUpDown();
 			this.inputLowerBound = new System.Windows.Forms.NumericUpDown();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tabPageSettings = new System.Windows.Forms.TabPage();
+			this.currencyTextBox24 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox23 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox22 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox21 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox20 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox19 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox18 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox17 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox16 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox15 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox14 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox13 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox12 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox11 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox10 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox09 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox08 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox07 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox06 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox05 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox04 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox03 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox02 = new PoE_Helper.DecimalTextBox();
+			this.currencyTextBox01 = new PoE_Helper.DecimalTextBox();
 			this.pictureBox17 = new System.Windows.Forms.PictureBox();
 			this.pictureBox18 = new System.Windows.Forms.PictureBox();
 			this.pictureBox19 = new System.Windows.Forms.PictureBox();
@@ -116,52 +169,6 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.tooltipButtons = new System.Windows.Forms.ToolTip(this.components);
 			this.saveTimer = new System.Windows.Forms.Timer(this.components);
-			this.label4 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
-			this.txtTab1Input = new PoE_Helper.DecimalTextBox();
-			this.txtTab1Output = new PoE_Helper.DecimalTextBox();
-			this.levelTalisman3 = new PoE_Helper.LevelComboBox();
-			this.levelTalisman5 = new PoE_Helper.LevelComboBox();
-			this.levelTalisman2 = new PoE_Helper.LevelComboBox();
-			this.levelTalisman4 = new PoE_Helper.LevelComboBox();
-			this.levelTalisman1 = new PoE_Helper.LevelComboBox();
-			this.currencyTextBox24 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox23 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox22 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox21 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox20 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox19 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox18 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox17 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox16 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox15 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox14 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox13 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox12 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox11 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox10 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox09 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox08 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox07 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox06 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox05 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox04 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox03 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox02 = new PoE_Helper.DecimalTextBox();
-			this.currencyTextBox01 = new PoE_Helper.DecimalTextBox();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.label10 = new System.Windows.Forms.Label();
-			this.label11 = new System.Windows.Forms.Label();
-			this.label12 = new System.Windows.Forms.Label();
-			this.label13 = new System.Windows.Forms.Label();
-			this.label14 = new System.Windows.Forms.Label();
-			this.label15 = new System.Windows.Forms.Label();
-			this.label16 = new System.Windows.Forms.Label();
-			this.label17 = new System.Windows.Forms.Label();
 			this.statusBar.SuspendLayout();
 			this.tabControlFeatures.SuspendLayout();
 			this.tabPageCurrency.SuspendLayout();
@@ -169,6 +176,7 @@
 			this.tableButtonsInput.SuspendLayout();
 			this.tableButtonsOutput.SuspendLayout();
 			this.tabPageTalisman.SuspendLayout();
+			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.inputUpperBound)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.inputLowerBound)).BeginInit();
 			this.tabPageSettings.SuspendLayout();
@@ -196,7 +204,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// statusBar
@@ -1113,6 +1120,38 @@
 			this.btnSwapCurrency.UseVisualStyleBackColor = true;
 			this.btnSwapCurrency.Click += new System.EventHandler(this.btnSwapCurrency_Click);
 			// 
+			// txtTab1Input
+			// 
+			this.txtTab1Input.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.txtTab1Input.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTab1Input.Location = new System.Drawing.Point(2, 288);
+			this.txtTab1Input.Margin = new System.Windows.Forms.Padding(2);
+			this.txtTab1Input.MaxLength = 10;
+			this.txtTab1Input.Name = "txtTab1Input";
+			this.txtTab1Input.Size = new System.Drawing.Size(188, 43);
+			this.txtTab1Input.TabIndex = 5;
+			this.txtTab1Input.Text = "0,00";
+			this.txtTab1Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtTab1Input.WordWrap = false;
+			this.txtTab1Input.TextChanged += new System.EventHandler(this.txtTab1Input_TextChanged);
+			// 
+			// txtTab1Output
+			// 
+			this.txtTab1Output.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.txtTab1Output.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTab1Output.Location = new System.Drawing.Point(370, 288);
+			this.txtTab1Output.Margin = new System.Windows.Forms.Padding(2);
+			this.txtTab1Output.MaxLength = 10;
+			this.txtTab1Output.Name = "txtTab1Output";
+			this.txtTab1Output.ReadOnly = true;
+			this.txtTab1Output.Size = new System.Drawing.Size(188, 43);
+			this.txtTab1Output.TabIndex = 6;
+			this.txtTab1Output.TabStop = false;
+			this.txtTab1Output.Text = "0,00";
+			this.txtTab1Output.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtTab1Output.WordWrap = false;
+			this.txtTab1Output.Click += new System.EventHandler(this.txtTab1Output_Click);
+			// 
 			// tabPageTalisman
 			// 
 			this.tabPageTalisman.Controls.Add(this.groupBox1);
@@ -1138,6 +1177,371 @@
 			this.tabPageTalisman.Text = "Talisman";
 			this.tabPageTalisman.UseVisualStyleBackColor = true;
 			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.labelLevelResult);
+			this.groupBox1.Controls.Add(this.label8);
+			this.groupBox1.Controls.Add(this.labelT5);
+			this.groupBox1.Controls.Add(this.labelT4);
+			this.groupBox1.Controls.Add(this.labelT3);
+			this.groupBox1.Controls.Add(this.labelT2);
+			this.groupBox1.Controls.Add(this.labelT1);
+			this.groupBox1.Controls.Add(this.label13);
+			this.groupBox1.Controls.Add(this.label14);
+			this.groupBox1.Controls.Add(this.label15);
+			this.groupBox1.Controls.Add(this.label16);
+			this.groupBox1.Controls.Add(this.label17);
+			this.groupBox1.Controls.Add(this.labelLevelT5);
+			this.groupBox1.Controls.Add(this.labelLevelT4);
+			this.groupBox1.Controls.Add(this.labelLevelT3);
+			this.groupBox1.Controls.Add(this.labelLevelT2);
+			this.groupBox1.Controls.Add(this.labelLevelT1);
+			this.groupBox1.Location = new System.Drawing.Point(373, 67);
+			this.groupBox1.Margin = new System.Windows.Forms.Padding(10);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(183, 259);
+			this.groupBox1.TabIndex = 100;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Calculation";
+			// 
+			// labelLevelResult
+			// 
+			this.labelLevelResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelLevelResult.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelLevelResult.ForeColor = System.Drawing.Color.SteelBlue;
+			this.labelLevelResult.Location = new System.Drawing.Point(121, 209);
+			this.labelLevelResult.Margin = new System.Windows.Forms.Padding(3);
+			this.labelLevelResult.Name = "labelLevelResult";
+			this.labelLevelResult.Size = new System.Drawing.Size(56, 32);
+			this.labelLevelResult.TabIndex = 16;
+			this.labelLevelResult.Text = "77";
+			this.labelLevelResult.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label8
+			// 
+			this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.Location = new System.Drawing.Point(5, 214);
+			this.label8.Margin = new System.Windows.Forms.Padding(3);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(62, 25);
+			this.label8.TabIndex = 15;
+			this.label8.Text = "Result";
+			this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelT5
+			// 
+			this.labelT5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelT5.AutoSize = true;
+			this.labelT5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelT5.Location = new System.Drawing.Point(6, 128);
+			this.labelT5.Margin = new System.Windows.Forms.Padding(3);
+			this.labelT5.Name = "labelT5";
+			this.labelT5.Size = new System.Drawing.Size(55, 20);
+			this.labelT5.TabIndex = 14;
+			this.labelT5.Text = "Lowest";
+			this.labelT5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelT4
+			// 
+			this.labelT4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelT4.AutoSize = true;
+			this.labelT4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelT4.Location = new System.Drawing.Point(6, 102);
+			this.labelT4.Margin = new System.Windows.Forms.Padding(3);
+			this.labelT4.Name = "labelT4";
+			this.labelT4.Size = new System.Drawing.Size(85, 20);
+			this.labelT4.TabIndex = 13;
+			this.labelT4.Text = "Medium #3";
+			this.labelT4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelT3
+			// 
+			this.labelT3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelT3.AutoSize = true;
+			this.labelT3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelT3.Location = new System.Drawing.Point(6, 76);
+			this.labelT3.Margin = new System.Windows.Forms.Padding(3);
+			this.labelT3.Name = "labelT3";
+			this.labelT3.Size = new System.Drawing.Size(85, 20);
+			this.labelT3.TabIndex = 12;
+			this.labelT3.Text = "Medium #2";
+			this.labelT3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelT2
+			// 
+			this.labelT2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelT2.AutoSize = true;
+			this.labelT2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelT2.Location = new System.Drawing.Point(6, 50);
+			this.labelT2.Margin = new System.Windows.Forms.Padding(3);
+			this.labelT2.Name = "labelT2";
+			this.labelT2.Size = new System.Drawing.Size(85, 20);
+			this.labelT2.TabIndex = 11;
+			this.labelT2.Text = "Medium #1";
+			this.labelT2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelT1
+			// 
+			this.labelT1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelT1.AutoSize = true;
+			this.labelT1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelT1.Location = new System.Drawing.Point(6, 24);
+			this.labelT1.Margin = new System.Windows.Forms.Padding(3);
+			this.labelT1.Name = "labelT1";
+			this.labelT1.Size = new System.Drawing.Size(60, 20);
+			this.labelT1.TabIndex = 10;
+			this.labelT1.Text = "Highest";
+			this.labelT1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label13
+			// 
+			this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label13.AutoSize = true;
+			this.label13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.label13.Location = new System.Drawing.Point(117, 128);
+			this.label13.Margin = new System.Windows.Forms.Padding(3);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(24, 20);
+			this.label13.TabIndex = 9;
+			this.label13.Text = "1x";
+			this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label14
+			// 
+			this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label14.AutoSize = true;
+			this.label14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label14.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.label14.Location = new System.Drawing.Point(117, 102);
+			this.label14.Margin = new System.Windows.Forms.Padding(3);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(24, 20);
+			this.label14.TabIndex = 8;
+			this.label14.Text = "2x";
+			this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label15
+			// 
+			this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label15.AutoSize = true;
+			this.label15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label15.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.label15.Location = new System.Drawing.Point(117, 76);
+			this.label15.Margin = new System.Windows.Forms.Padding(3);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(24, 20);
+			this.label15.TabIndex = 7;
+			this.label15.Text = "2x";
+			this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label16
+			// 
+			this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label16.AutoSize = true;
+			this.label16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label16.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.label16.Location = new System.Drawing.Point(117, 50);
+			this.label16.Margin = new System.Windows.Forms.Padding(3);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(24, 20);
+			this.label16.TabIndex = 6;
+			this.label16.Text = "2x";
+			this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label17
+			// 
+			this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label17.AutoSize = true;
+			this.label17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label17.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.label17.Location = new System.Drawing.Point(117, 24);
+			this.label17.Margin = new System.Windows.Forms.Padding(3);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(24, 20);
+			this.label17.TabIndex = 5;
+			this.label17.Text = "3x";
+			this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelLevelT5
+			// 
+			this.labelLevelT5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelLevelT5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelLevelT5.ForeColor = System.Drawing.Color.Tomato;
+			this.labelLevelT5.Location = new System.Drawing.Point(147, 128);
+			this.labelLevelT5.Margin = new System.Windows.Forms.Padding(3);
+			this.labelLevelT5.Name = "labelLevelT5";
+			this.labelLevelT5.Size = new System.Drawing.Size(30, 20);
+			this.labelLevelT5.TabIndex = 4;
+			this.labelLevelT5.Text = "77";
+			this.labelLevelT5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelLevelT4
+			// 
+			this.labelLevelT4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelLevelT4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelLevelT4.ForeColor = System.Drawing.Color.Orange;
+			this.labelLevelT4.Location = new System.Drawing.Point(147, 102);
+			this.labelLevelT4.Margin = new System.Windows.Forms.Padding(3);
+			this.labelLevelT4.Name = "labelLevelT4";
+			this.labelLevelT4.Size = new System.Drawing.Size(30, 20);
+			this.labelLevelT4.TabIndex = 3;
+			this.labelLevelT4.Text = "77";
+			this.labelLevelT4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelLevelT3
+			// 
+			this.labelLevelT3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelLevelT3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelLevelT3.ForeColor = System.Drawing.Color.Orange;
+			this.labelLevelT3.Location = new System.Drawing.Point(147, 76);
+			this.labelLevelT3.Margin = new System.Windows.Forms.Padding(3);
+			this.labelLevelT3.Name = "labelLevelT3";
+			this.labelLevelT3.Size = new System.Drawing.Size(30, 20);
+			this.labelLevelT3.TabIndex = 2;
+			this.labelLevelT3.Text = "77";
+			this.labelLevelT3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelLevelT2
+			// 
+			this.labelLevelT2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelLevelT2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelLevelT2.ForeColor = System.Drawing.Color.Orange;
+			this.labelLevelT2.Location = new System.Drawing.Point(147, 50);
+			this.labelLevelT2.Margin = new System.Windows.Forms.Padding(3);
+			this.labelLevelT2.Name = "labelLevelT2";
+			this.labelLevelT2.Size = new System.Drawing.Size(30, 20);
+			this.labelLevelT2.TabIndex = 1;
+			this.labelLevelT2.Text = "77";
+			this.labelLevelT2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelLevelT1
+			// 
+			this.labelLevelT1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelLevelT1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelLevelT1.ForeColor = System.Drawing.Color.Green;
+			this.labelLevelT1.Location = new System.Drawing.Point(147, 24);
+			this.labelLevelT1.Margin = new System.Windows.Forms.Padding(3);
+			this.labelLevelT1.Name = "labelLevelT1";
+			this.labelLevelT1.Size = new System.Drawing.Size(30, 20);
+			this.labelLevelT1.TabIndex = 0;
+			this.labelLevelT1.Text = "77";
+			this.labelLevelT1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.Location = new System.Drawing.Point(6, 258);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(83, 21);
+			this.label7.TabIndex = 13;
+			this.label7.Text = "Talisman 3";
+			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// levelTalisman3
+			// 
+			this.levelTalisman3.DropDownHeight = 150;
+			this.levelTalisman3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman3.FormattingEnabled = true;
+			this.levelTalisman3.IntegralHeight = false;
+			this.levelTalisman3.Location = new System.Drawing.Point(95, 254);
+			this.levelTalisman3.MaxValue = 0;
+			this.levelTalisman3.MinValue = 0;
+			this.levelTalisman3.Name = "levelTalisman3";
+			this.levelTalisman3.SelectedItem = 0;
+			this.levelTalisman3.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman3.TabIndex = 3;
+			this.levelTalisman3.Tag = "3";
+			this.levelTalisman3.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.Location = new System.Drawing.Point(184, 168);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(83, 21);
+			this.label6.TabIndex = 11;
+			this.label6.Text = "Talisman 5";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// levelTalisman5
+			// 
+			this.levelTalisman5.DropDownHeight = 150;
+			this.levelTalisman5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman5.FormattingEnabled = true;
+			this.levelTalisman5.IntegralHeight = false;
+			this.levelTalisman5.Location = new System.Drawing.Point(273, 165);
+			this.levelTalisman5.MaxValue = 0;
+			this.levelTalisman5.MinValue = 0;
+			this.levelTalisman5.Name = "levelTalisman5";
+			this.levelTalisman5.SelectedItem = 0;
+			this.levelTalisman5.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman5.TabIndex = 5;
+			this.levelTalisman5.Tag = "5";
+			this.levelTalisman5.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.Location = new System.Drawing.Point(6, 168);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(83, 21);
+			this.label5.TabIndex = 9;
+			this.label5.Text = "Talisman 2";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// levelTalisman2
+			// 
+			this.levelTalisman2.DropDownHeight = 150;
+			this.levelTalisman2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman2.FormattingEnabled = true;
+			this.levelTalisman2.IntegralHeight = false;
+			this.levelTalisman2.Location = new System.Drawing.Point(95, 165);
+			this.levelTalisman2.MaxValue = 0;
+			this.levelTalisman2.MinValue = 0;
+			this.levelTalisman2.Name = "levelTalisman2";
+			this.levelTalisman2.SelectedItem = 0;
+			this.levelTalisman2.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman2.TabIndex = 2;
+			this.levelTalisman2.Tag = "2";
+			this.levelTalisman2.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(184, 79);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(83, 21);
+			this.label4.TabIndex = 7;
+			this.label4.Text = "Talisman 4";
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// levelTalisman4
+			// 
+			this.levelTalisman4.DropDownHeight = 150;
+			this.levelTalisman4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman4.FormattingEnabled = true;
+			this.levelTalisman4.IntegralHeight = false;
+			this.levelTalisman4.Location = new System.Drawing.Point(273, 76);
+			this.levelTalisman4.MaxValue = 0;
+			this.levelTalisman4.MinValue = 0;
+			this.levelTalisman4.Name = "levelTalisman4";
+			this.levelTalisman4.SelectedItem = 0;
+			this.levelTalisman4.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman4.TabIndex = 4;
+			this.levelTalisman4.Tag = "4";
+			this.levelTalisman4.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
+			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
@@ -1148,6 +1552,23 @@
 			this.label3.TabIndex = 5;
 			this.label3.Text = "Talisman 1";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// levelTalisman1
+			// 
+			this.levelTalisman1.DropDownHeight = 150;
+			this.levelTalisman1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman1.FormattingEnabled = true;
+			this.levelTalisman1.IntegralHeight = false;
+			this.levelTalisman1.Location = new System.Drawing.Point(95, 76);
+			this.levelTalisman1.MaxValue = 0;
+			this.levelTalisman1.MinValue = 0;
+			this.levelTalisman1.Name = "levelTalisman1";
+			this.levelTalisman1.SelectedItem = 0;
+			this.levelTalisman1.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman1.TabIndex = 1;
+			this.levelTalisman1.Tag = "1";
+			this.levelTalisman1.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
 			// 
 			// label2
 			// 
@@ -1277,406 +1698,6 @@
 			this.tabPageSettings.Size = new System.Drawing.Size(566, 339);
 			this.tabPageSettings.TabIndex = 2;
 			this.tabPageSettings.Text = "Settings";
-			// 
-			// pictureBox17
-			// 
-			this.pictureBox17.BackgroundImage = global::PoE_Helper.CurrencyIcons._16_Cartographer__s_Chisel;
-			this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox17.Location = new System.Drawing.Point(213, 297);
-			this.pictureBox17.Name = "pictureBox17";
-			this.pictureBox17.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox17.TabIndex = 46;
-			this.pictureBox17.TabStop = false;
-			// 
-			// pictureBox18
-			// 
-			this.pictureBox18.BackgroundImage = global::PoE_Helper.CurrencyIcons._15_Orb_of_Regret;
-			this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox18.Location = new System.Drawing.Point(213, 255);
-			this.pictureBox18.Name = "pictureBox18";
-			this.pictureBox18.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox18.TabIndex = 44;
-			this.pictureBox18.TabStop = false;
-			// 
-			// pictureBox19
-			// 
-			this.pictureBox19.BackgroundImage = global::PoE_Helper.CurrencyIcons._14_Orb_of_Scouring;
-			this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox19.Location = new System.Drawing.Point(213, 213);
-			this.pictureBox19.Name = "pictureBox19";
-			this.pictureBox19.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox19.TabIndex = 42;
-			this.pictureBox19.TabStop = false;
-			// 
-			// pictureBox20
-			// 
-			this.pictureBox20.BackgroundImage = global::PoE_Helper.CurrencyIcons._13_Glassblower__s_Bauble;
-			this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox20.Location = new System.Drawing.Point(213, 171);
-			this.pictureBox20.Name = "pictureBox20";
-			this.pictureBox20.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox20.TabIndex = 40;
-			this.pictureBox20.TabStop = false;
-			// 
-			// pictureBox21
-			// 
-			this.pictureBox21.BackgroundImage = global::PoE_Helper.CurrencyIcons._12_Orb_of_Fusing;
-			this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox21.Location = new System.Drawing.Point(213, 129);
-			this.pictureBox21.Name = "pictureBox21";
-			this.pictureBox21.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox21.TabIndex = 38;
-			this.pictureBox21.TabStop = false;
-			// 
-			// pictureBox22
-			// 
-			this.pictureBox22.BackgroundImage = global::PoE_Helper.CurrencyIcons._11_Jeweller__s_Orb;
-			this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox22.Location = new System.Drawing.Point(213, 87);
-			this.pictureBox22.Name = "pictureBox22";
-			this.pictureBox22.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox22.TabIndex = 36;
-			this.pictureBox22.TabStop = false;
-			// 
-			// pictureBox23
-			// 
-			this.pictureBox23.BackgroundImage = global::PoE_Helper.CurrencyIcons._10_Chromatic_Orb;
-			this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox23.Location = new System.Drawing.Point(213, 45);
-			this.pictureBox23.Name = "pictureBox23";
-			this.pictureBox23.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox23.TabIndex = 34;
-			this.pictureBox23.TabStop = false;
-			// 
-			// pictureBox24
-			// 
-			this.pictureBox24.BackgroundImage = global::PoE_Helper.CurrencyIcons._09_Orb_of_Alchemy;
-			this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox24.Location = new System.Drawing.Point(213, 3);
-			this.pictureBox24.Name = "pictureBox24";
-			this.pictureBox24.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox24.TabIndex = 32;
-			this.pictureBox24.TabStop = false;
-			// 
-			// pictureBox9
-			// 
-			this.pictureBox9.BackgroundImage = global::PoE_Helper.CurrencyIcons._24_Mirror_of_Kalandra;
-			this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox9.Location = new System.Drawing.Point(421, 297);
-			this.pictureBox9.Name = "pictureBox9";
-			this.pictureBox9.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox9.TabIndex = 30;
-			this.pictureBox9.TabStop = false;
-			// 
-			// pictureBox10
-			// 
-			this.pictureBox10.BackgroundImage = global::PoE_Helper.CurrencyIcons._23_Eternal_Orb;
-			this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox10.Location = new System.Drawing.Point(421, 255);
-			this.pictureBox10.Name = "pictureBox10";
-			this.pictureBox10.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox10.TabIndex = 28;
-			this.pictureBox10.TabStop = false;
-			// 
-			// pictureBox11
-			// 
-			this.pictureBox11.BackgroundImage = global::PoE_Helper.CurrencyIcons._22_Exalted_Orb;
-			this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox11.Location = new System.Drawing.Point(421, 213);
-			this.pictureBox11.Name = "pictureBox11";
-			this.pictureBox11.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox11.TabIndex = 26;
-			this.pictureBox11.TabStop = false;
-			// 
-			// pictureBox12
-			// 
-			this.pictureBox12.BackgroundImage = global::PoE_Helper.CurrencyIcons._21_Divine_Orb;
-			this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox12.Location = new System.Drawing.Point(421, 171);
-			this.pictureBox12.Name = "pictureBox12";
-			this.pictureBox12.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox12.TabIndex = 24;
-			this.pictureBox12.TabStop = false;
-			// 
-			// pictureBox13
-			// 
-			this.pictureBox13.BackgroundImage = global::PoE_Helper.CurrencyIcons._20_Blessed_Orb;
-			this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox13.Location = new System.Drawing.Point(421, 129);
-			this.pictureBox13.Name = "pictureBox13";
-			this.pictureBox13.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox13.TabIndex = 22;
-			this.pictureBox13.TabStop = false;
-			// 
-			// pictureBox14
-			// 
-			this.pictureBox14.BackgroundImage = global::PoE_Helper.CurrencyIcons._19_Regal_Orb;
-			this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox14.Location = new System.Drawing.Point(421, 87);
-			this.pictureBox14.Name = "pictureBox14";
-			this.pictureBox14.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox14.TabIndex = 20;
-			this.pictureBox14.TabStop = false;
-			// 
-			// pictureBox15
-			// 
-			this.pictureBox15.BackgroundImage = global::PoE_Helper.CurrencyIcons._18_Chaos_Orb;
-			this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox15.Location = new System.Drawing.Point(421, 45);
-			this.pictureBox15.Name = "pictureBox15";
-			this.pictureBox15.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox15.TabIndex = 18;
-			this.pictureBox15.TabStop = false;
-			// 
-			// pictureBox16
-			// 
-			this.pictureBox16.BackgroundImage = global::PoE_Helper.CurrencyIcons._17_Gemcutter__s_Prism;
-			this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox16.Location = new System.Drawing.Point(421, 3);
-			this.pictureBox16.Name = "pictureBox16";
-			this.pictureBox16.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox16.TabIndex = 16;
-			this.pictureBox16.TabStop = false;
-			// 
-			// pictureBox5
-			// 
-			this.pictureBox5.BackgroundImage = global::PoE_Helper.CurrencyIcons._08_Blacksmith__s_Whetstone;
-			this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox5.Location = new System.Drawing.Point(3, 297);
-			this.pictureBox5.Name = "pictureBox5";
-			this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox5.TabIndex = 14;
-			this.pictureBox5.TabStop = false;
-			// 
-			// pictureBox6
-			// 
-			this.pictureBox6.BackgroundImage = global::PoE_Helper.CurrencyIcons._07_Armourer__s_Scrap;
-			this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox6.Location = new System.Drawing.Point(3, 255);
-			this.pictureBox6.Name = "pictureBox6";
-			this.pictureBox6.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox6.TabIndex = 12;
-			this.pictureBox6.TabStop = false;
-			// 
-			// pictureBox7
-			// 
-			this.pictureBox7.BackgroundImage = global::PoE_Helper.CurrencyIcons._06_Orb_of_Chance;
-			this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox7.Location = new System.Drawing.Point(3, 213);
-			this.pictureBox7.Name = "pictureBox7";
-			this.pictureBox7.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox7.TabIndex = 10;
-			this.pictureBox7.TabStop = false;
-			// 
-			// pictureBox8
-			// 
-			this.pictureBox8.BackgroundImage = global::PoE_Helper.CurrencyIcons._05_Orb_of_Augmentation;
-			this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox8.Location = new System.Drawing.Point(3, 171);
-			this.pictureBox8.Name = "pictureBox8";
-			this.pictureBox8.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox8.TabIndex = 8;
-			this.pictureBox8.TabStop = false;
-			// 
-			// pictureBox4
-			// 
-			this.pictureBox4.BackgroundImage = global::PoE_Helper.CurrencyIcons._04_Orb_of_Transmutation;
-			this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox4.Location = new System.Drawing.Point(3, 129);
-			this.pictureBox4.Name = "pictureBox4";
-			this.pictureBox4.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox4.TabIndex = 6;
-			this.pictureBox4.TabStop = false;
-			// 
-			// pictureBox3
-			// 
-			this.pictureBox3.BackgroundImage = global::PoE_Helper.CurrencyIcons._03_Orb_of_Alteration;
-			this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox3.Location = new System.Drawing.Point(3, 87);
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox3.TabIndex = 4;
-			this.pictureBox3.TabStop = false;
-			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.BackgroundImage = global::PoE_Helper.CurrencyIcons._02_Scroll_of_Wisdom;
-			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox2.Location = new System.Drawing.Point(3, 45);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox2.TabIndex = 2;
-			this.pictureBox2.TabStop = false;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.BackgroundImage = global::PoE_Helper.CurrencyIcons._01_Portal_Scroll;
-			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(36, 36);
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			// 
-			// tooltipButtons
-			// 
-			this.tooltipButtons.UseAnimation = false;
-			this.tooltipButtons.UseFading = false;
-			// 
-			// saveTimer
-			// 
-			this.saveTimer.Interval = 2000;
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(184, 79);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(83, 21);
-			this.label4.TabIndex = 7;
-			this.label4.Text = "Talisman 4";
-			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(6, 168);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(83, 21);
-			this.label5.TabIndex = 9;
-			this.label5.Text = "Talisman 2";
-			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(184, 168);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(83, 21);
-			this.label6.TabIndex = 11;
-			this.label6.Text = "Talisman 5";
-			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(6, 258);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(83, 21);
-			this.label7.TabIndex = 13;
-			this.label7.Text = "Talisman 3";
-			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// txtTab1Input
-			// 
-			this.txtTab1Input.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txtTab1Input.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTab1Input.Location = new System.Drawing.Point(2, 288);
-			this.txtTab1Input.Margin = new System.Windows.Forms.Padding(2);
-			this.txtTab1Input.MaxLength = 10;
-			this.txtTab1Input.Name = "txtTab1Input";
-			this.txtTab1Input.Size = new System.Drawing.Size(188, 43);
-			this.txtTab1Input.TabIndex = 5;
-			this.txtTab1Input.Text = "0,00";
-			this.txtTab1Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.txtTab1Input.WordWrap = false;
-			this.txtTab1Input.TextChanged += new System.EventHandler(this.txtTab1Input_TextChanged);
-			// 
-			// txtTab1Output
-			// 
-			this.txtTab1Output.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txtTab1Output.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTab1Output.Location = new System.Drawing.Point(370, 288);
-			this.txtTab1Output.Margin = new System.Windows.Forms.Padding(2);
-			this.txtTab1Output.MaxLength = 10;
-			this.txtTab1Output.Name = "txtTab1Output";
-			this.txtTab1Output.ReadOnly = true;
-			this.txtTab1Output.Size = new System.Drawing.Size(188, 43);
-			this.txtTab1Output.TabIndex = 6;
-			this.txtTab1Output.TabStop = false;
-			this.txtTab1Output.Text = "0,00";
-			this.txtTab1Output.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.txtTab1Output.WordWrap = false;
-			this.txtTab1Output.Click += new System.EventHandler(this.txtTab1Output_Click);
-			// 
-			// levelTalisman3
-			// 
-			this.levelTalisman3.DropDownHeight = 150;
-			this.levelTalisman3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.levelTalisman3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.levelTalisman3.FormattingEnabled = true;
-			this.levelTalisman3.IntegralHeight = false;
-			this.levelTalisman3.Location = new System.Drawing.Point(95, 254);
-			this.levelTalisman3.MaxValue = 0;
-			this.levelTalisman3.MinValue = 0;
-			this.levelTalisman3.Name = "levelTalisman3";
-			this.levelTalisman3.SelectedItem = 0;
-			this.levelTalisman3.Size = new System.Drawing.Size(50, 29);
-			this.levelTalisman3.TabIndex = 3;
-			// 
-			// levelTalisman5
-			// 
-			this.levelTalisman5.DropDownHeight = 150;
-			this.levelTalisman5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.levelTalisman5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.levelTalisman5.FormattingEnabled = true;
-			this.levelTalisman5.IntegralHeight = false;
-			this.levelTalisman5.Location = new System.Drawing.Point(273, 165);
-			this.levelTalisman5.MaxValue = 0;
-			this.levelTalisman5.MinValue = 0;
-			this.levelTalisman5.Name = "levelTalisman5";
-			this.levelTalisman5.SelectedItem = 0;
-			this.levelTalisman5.Size = new System.Drawing.Size(50, 29);
-			this.levelTalisman5.TabIndex = 5;
-			// 
-			// levelTalisman2
-			// 
-			this.levelTalisman2.DropDownHeight = 150;
-			this.levelTalisman2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.levelTalisman2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.levelTalisman2.FormattingEnabled = true;
-			this.levelTalisman2.IntegralHeight = false;
-			this.levelTalisman2.Location = new System.Drawing.Point(95, 165);
-			this.levelTalisman2.MaxValue = 0;
-			this.levelTalisman2.MinValue = 0;
-			this.levelTalisman2.Name = "levelTalisman2";
-			this.levelTalisman2.SelectedItem = 0;
-			this.levelTalisman2.Size = new System.Drawing.Size(50, 29);
-			this.levelTalisman2.TabIndex = 2;
-			// 
-			// levelTalisman4
-			// 
-			this.levelTalisman4.DropDownHeight = 150;
-			this.levelTalisman4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.levelTalisman4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.levelTalisman4.FormattingEnabled = true;
-			this.levelTalisman4.IntegralHeight = false;
-			this.levelTalisman4.Location = new System.Drawing.Point(273, 76);
-			this.levelTalisman4.MaxValue = 0;
-			this.levelTalisman4.MinValue = 0;
-			this.levelTalisman4.Name = "levelTalisman4";
-			this.levelTalisman4.SelectedItem = 0;
-			this.levelTalisman4.Size = new System.Drawing.Size(50, 29);
-			this.levelTalisman4.TabIndex = 4;
-			// 
-			// levelTalisman1
-			// 
-			this.levelTalisman1.DropDownHeight = 150;
-			this.levelTalisman1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.levelTalisman1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.levelTalisman1.FormattingEnabled = true;
-			this.levelTalisman1.IntegralHeight = false;
-			this.levelTalisman1.Location = new System.Drawing.Point(95, 76);
-			this.levelTalisman1.MaxValue = 0;
-			this.levelTalisman1.MinValue = 0;
-			this.levelTalisman1.Name = "levelTalisman1";
-			this.levelTalisman1.SelectedItem = 0;
-			this.levelTalisman1.Size = new System.Drawing.Size(50, 29);
-			this.levelTalisman1.TabIndex = 1;
 			// 
 			// currencyTextBox24
 			// 
@@ -1991,150 +2012,254 @@
 			this.currencyTextBox01.WordWrap = false;
 			this.currencyTextBox01.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
-			// groupBox1
+			// pictureBox17
 			// 
-			this.groupBox1.Controls.Add(this.label13);
-			this.groupBox1.Controls.Add(this.label14);
-			this.groupBox1.Controls.Add(this.label15);
-			this.groupBox1.Controls.Add(this.label16);
-			this.groupBox1.Controls.Add(this.label17);
-			this.groupBox1.Controls.Add(this.label12);
-			this.groupBox1.Controls.Add(this.label11);
-			this.groupBox1.Controls.Add(this.label10);
-			this.groupBox1.Controls.Add(this.label9);
-			this.groupBox1.Controls.Add(this.label8);
-			this.groupBox1.Location = new System.Drawing.Point(342, 67);
-			this.groupBox1.Margin = new System.Windows.Forms.Padding(10);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(214, 259);
-			this.groupBox1.TabIndex = 100;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Calculation";
+			this.pictureBox17.BackgroundImage = global::PoE_Helper.CurrencyIcons._16_Cartographer__s_Chisel;
+			this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox17.Location = new System.Drawing.Point(213, 297);
+			this.pictureBox17.Name = "pictureBox17";
+			this.pictureBox17.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox17.TabIndex = 46;
+			this.pictureBox17.TabStop = false;
 			// 
-			// label8
+			// pictureBox18
 			// 
-			this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(178, 24);
-			this.label8.Margin = new System.Windows.Forms.Padding(3);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(30, 20);
-			this.label8.TabIndex = 0;
-			this.label8.Text = "77";
-			this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.pictureBox18.BackgroundImage = global::PoE_Helper.CurrencyIcons._15_Orb_of_Regret;
+			this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox18.Location = new System.Drawing.Point(213, 255);
+			this.pictureBox18.Name = "pictureBox18";
+			this.pictureBox18.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox18.TabIndex = 44;
+			this.pictureBox18.TabStop = false;
 			// 
-			// label9
+			// pictureBox19
 			// 
-			this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(178, 50);
-			this.label9.Margin = new System.Windows.Forms.Padding(3);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(30, 20);
-			this.label9.TabIndex = 1;
-			this.label9.Text = "77";
-			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.pictureBox19.BackgroundImage = global::PoE_Helper.CurrencyIcons._14_Orb_of_Scouring;
+			this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox19.Location = new System.Drawing.Point(213, 213);
+			this.pictureBox19.Name = "pictureBox19";
+			this.pictureBox19.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox19.TabIndex = 42;
+			this.pictureBox19.TabStop = false;
 			// 
-			// label10
+			// pictureBox20
 			// 
-			this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.Location = new System.Drawing.Point(178, 76);
-			this.label10.Margin = new System.Windows.Forms.Padding(3);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(30, 20);
-			this.label10.TabIndex = 2;
-			this.label10.Text = "77";
-			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.pictureBox20.BackgroundImage = global::PoE_Helper.CurrencyIcons._13_Glassblower__s_Bauble;
+			this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox20.Location = new System.Drawing.Point(213, 171);
+			this.pictureBox20.Name = "pictureBox20";
+			this.pictureBox20.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox20.TabIndex = 40;
+			this.pictureBox20.TabStop = false;
 			// 
-			// label11
+			// pictureBox21
 			// 
-			this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label11.Location = new System.Drawing.Point(178, 102);
-			this.label11.Margin = new System.Windows.Forms.Padding(3);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(30, 20);
-			this.label11.TabIndex = 3;
-			this.label11.Text = "77";
-			this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.pictureBox21.BackgroundImage = global::PoE_Helper.CurrencyIcons._12_Orb_of_Fusing;
+			this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox21.Location = new System.Drawing.Point(213, 129);
+			this.pictureBox21.Name = "pictureBox21";
+			this.pictureBox21.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox21.TabIndex = 38;
+			this.pictureBox21.TabStop = false;
 			// 
-			// label12
+			// pictureBox22
 			// 
-			this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label12.Location = new System.Drawing.Point(178, 128);
-			this.label12.Margin = new System.Windows.Forms.Padding(3);
-			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(30, 20);
-			this.label12.TabIndex = 4;
-			this.label12.Text = "77";
-			this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.pictureBox22.BackgroundImage = global::PoE_Helper.CurrencyIcons._11_Jeweller__s_Orb;
+			this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox22.Location = new System.Drawing.Point(213, 87);
+			this.pictureBox22.Name = "pictureBox22";
+			this.pictureBox22.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox22.TabIndex = 36;
+			this.pictureBox22.TabStop = false;
 			// 
-			// label13
+			// pictureBox23
 			// 
-			this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label13.AutoSize = true;
-			this.label13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label13.Location = new System.Drawing.Point(148, 128);
-			this.label13.Margin = new System.Windows.Forms.Padding(3);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(24, 20);
-			this.label13.TabIndex = 9;
-			this.label13.Text = "3x";
-			this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.pictureBox23.BackgroundImage = global::PoE_Helper.CurrencyIcons._10_Chromatic_Orb;
+			this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox23.Location = new System.Drawing.Point(213, 45);
+			this.pictureBox23.Name = "pictureBox23";
+			this.pictureBox23.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox23.TabIndex = 34;
+			this.pictureBox23.TabStop = false;
 			// 
-			// label14
+			// pictureBox24
 			// 
-			this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label14.AutoSize = true;
-			this.label14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label14.Location = new System.Drawing.Point(148, 102);
-			this.label14.Margin = new System.Windows.Forms.Padding(3);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(24, 20);
-			this.label14.TabIndex = 8;
-			this.label14.Text = "3x";
-			this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.pictureBox24.BackgroundImage = global::PoE_Helper.CurrencyIcons._09_Orb_of_Alchemy;
+			this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox24.Location = new System.Drawing.Point(213, 3);
+			this.pictureBox24.Name = "pictureBox24";
+			this.pictureBox24.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox24.TabIndex = 32;
+			this.pictureBox24.TabStop = false;
 			// 
-			// label15
+			// pictureBox9
 			// 
-			this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label15.AutoSize = true;
-			this.label15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label15.Location = new System.Drawing.Point(148, 76);
-			this.label15.Margin = new System.Windows.Forms.Padding(3);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(24, 20);
-			this.label15.TabIndex = 7;
-			this.label15.Text = "3x";
-			this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.pictureBox9.BackgroundImage = global::PoE_Helper.CurrencyIcons._24_Mirror_of_Kalandra;
+			this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox9.Location = new System.Drawing.Point(421, 297);
+			this.pictureBox9.Name = "pictureBox9";
+			this.pictureBox9.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox9.TabIndex = 30;
+			this.pictureBox9.TabStop = false;
 			// 
-			// label16
+			// pictureBox10
 			// 
-			this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label16.AutoSize = true;
-			this.label16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label16.Location = new System.Drawing.Point(148, 50);
-			this.label16.Margin = new System.Windows.Forms.Padding(3);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(24, 20);
-			this.label16.TabIndex = 6;
-			this.label16.Text = "3x";
-			this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.pictureBox10.BackgroundImage = global::PoE_Helper.CurrencyIcons._23_Eternal_Orb;
+			this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox10.Location = new System.Drawing.Point(421, 255);
+			this.pictureBox10.Name = "pictureBox10";
+			this.pictureBox10.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox10.TabIndex = 28;
+			this.pictureBox10.TabStop = false;
 			// 
-			// label17
+			// pictureBox11
 			// 
-			this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label17.AutoSize = true;
-			this.label17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label17.Location = new System.Drawing.Point(148, 24);
-			this.label17.Margin = new System.Windows.Forms.Padding(3);
-			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(24, 20);
-			this.label17.TabIndex = 5;
-			this.label17.Text = "3x";
-			this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.pictureBox11.BackgroundImage = global::PoE_Helper.CurrencyIcons._22_Exalted_Orb;
+			this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox11.Location = new System.Drawing.Point(421, 213);
+			this.pictureBox11.Name = "pictureBox11";
+			this.pictureBox11.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox11.TabIndex = 26;
+			this.pictureBox11.TabStop = false;
+			// 
+			// pictureBox12
+			// 
+			this.pictureBox12.BackgroundImage = global::PoE_Helper.CurrencyIcons._21_Divine_Orb;
+			this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox12.Location = new System.Drawing.Point(421, 171);
+			this.pictureBox12.Name = "pictureBox12";
+			this.pictureBox12.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox12.TabIndex = 24;
+			this.pictureBox12.TabStop = false;
+			// 
+			// pictureBox13
+			// 
+			this.pictureBox13.BackgroundImage = global::PoE_Helper.CurrencyIcons._20_Blessed_Orb;
+			this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox13.Location = new System.Drawing.Point(421, 129);
+			this.pictureBox13.Name = "pictureBox13";
+			this.pictureBox13.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox13.TabIndex = 22;
+			this.pictureBox13.TabStop = false;
+			// 
+			// pictureBox14
+			// 
+			this.pictureBox14.BackgroundImage = global::PoE_Helper.CurrencyIcons._19_Regal_Orb;
+			this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox14.Location = new System.Drawing.Point(421, 87);
+			this.pictureBox14.Name = "pictureBox14";
+			this.pictureBox14.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox14.TabIndex = 20;
+			this.pictureBox14.TabStop = false;
+			// 
+			// pictureBox15
+			// 
+			this.pictureBox15.BackgroundImage = global::PoE_Helper.CurrencyIcons._18_Chaos_Orb;
+			this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox15.Location = new System.Drawing.Point(421, 45);
+			this.pictureBox15.Name = "pictureBox15";
+			this.pictureBox15.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox15.TabIndex = 18;
+			this.pictureBox15.TabStop = false;
+			// 
+			// pictureBox16
+			// 
+			this.pictureBox16.BackgroundImage = global::PoE_Helper.CurrencyIcons._17_Gemcutter__s_Prism;
+			this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox16.Location = new System.Drawing.Point(421, 3);
+			this.pictureBox16.Name = "pictureBox16";
+			this.pictureBox16.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox16.TabIndex = 16;
+			this.pictureBox16.TabStop = false;
+			// 
+			// pictureBox5
+			// 
+			this.pictureBox5.BackgroundImage = global::PoE_Helper.CurrencyIcons._08_Blacksmith__s_Whetstone;
+			this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox5.Location = new System.Drawing.Point(3, 297);
+			this.pictureBox5.Name = "pictureBox5";
+			this.pictureBox5.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox5.TabIndex = 14;
+			this.pictureBox5.TabStop = false;
+			// 
+			// pictureBox6
+			// 
+			this.pictureBox6.BackgroundImage = global::PoE_Helper.CurrencyIcons._07_Armourer__s_Scrap;
+			this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox6.Location = new System.Drawing.Point(3, 255);
+			this.pictureBox6.Name = "pictureBox6";
+			this.pictureBox6.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox6.TabIndex = 12;
+			this.pictureBox6.TabStop = false;
+			// 
+			// pictureBox7
+			// 
+			this.pictureBox7.BackgroundImage = global::PoE_Helper.CurrencyIcons._06_Orb_of_Chance;
+			this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox7.Location = new System.Drawing.Point(3, 213);
+			this.pictureBox7.Name = "pictureBox7";
+			this.pictureBox7.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox7.TabIndex = 10;
+			this.pictureBox7.TabStop = false;
+			// 
+			// pictureBox8
+			// 
+			this.pictureBox8.BackgroundImage = global::PoE_Helper.CurrencyIcons._05_Orb_of_Augmentation;
+			this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox8.Location = new System.Drawing.Point(3, 171);
+			this.pictureBox8.Name = "pictureBox8";
+			this.pictureBox8.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox8.TabIndex = 8;
+			this.pictureBox8.TabStop = false;
+			// 
+			// pictureBox4
+			// 
+			this.pictureBox4.BackgroundImage = global::PoE_Helper.CurrencyIcons._04_Orb_of_Transmutation;
+			this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox4.Location = new System.Drawing.Point(3, 129);
+			this.pictureBox4.Name = "pictureBox4";
+			this.pictureBox4.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox4.TabIndex = 6;
+			this.pictureBox4.TabStop = false;
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.BackgroundImage = global::PoE_Helper.CurrencyIcons._03_Orb_of_Alteration;
+			this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox3.Location = new System.Drawing.Point(3, 87);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox3.TabIndex = 4;
+			this.pictureBox3.TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.BackgroundImage = global::PoE_Helper.CurrencyIcons._02_Scroll_of_Wisdom;
+			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox2.Location = new System.Drawing.Point(3, 45);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox2.TabIndex = 2;
+			this.pictureBox2.TabStop = false;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackgroundImage = global::PoE_Helper.CurrencyIcons._01_Portal_Scroll;
+			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(36, 36);
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
+			// 
+			// tooltipButtons
+			// 
+			this.tooltipButtons.UseAnimation = false;
+			this.tooltipButtons.UseFading = false;
+			// 
+			// saveTimer
+			// 
+			this.saveTimer.Interval = 2000;
 			// 
 			// MainForm
 			// 
@@ -2164,6 +2289,8 @@
 			this.tableButtonsOutput.ResumeLayout(false);
 			this.tabPageTalisman.ResumeLayout(false);
 			this.tabPageTalisman.PerformLayout();
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.inputUpperBound)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.inputLowerBound)).EndInit();
 			this.tabPageSettings.ResumeLayout(false);
@@ -2192,8 +2319,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -2332,11 +2457,18 @@
 		private System.Windows.Forms.Label label15;
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Label label17;
-		private System.Windows.Forms.Label label12;
-		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label labelLevelT5;
+		private System.Windows.Forms.Label labelLevelT4;
+		private System.Windows.Forms.Label labelLevelT3;
+		private System.Windows.Forms.Label labelLevelT2;
+		private System.Windows.Forms.Label labelLevelT1;
+		private System.Windows.Forms.Label labelLevelResult;
 		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label labelT5;
+		private System.Windows.Forms.Label labelT4;
+		private System.Windows.Forms.Label labelT3;
+		private System.Windows.Forms.Label labelT2;
+		private System.Windows.Forms.Label labelT1;
 	}
 }
 

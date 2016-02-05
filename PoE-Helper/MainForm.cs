@@ -27,6 +27,7 @@ namespace PoE_Helper {
 		// talisman
 		private static readonly int MIN_LEVEL = 1;
 		private static readonly int MAX_LEVEL = 84;
+		private TalismanCalculator calculator;
 		#endregion
 
 		public MainForm() {
@@ -245,5 +246,23 @@ namespace PoE_Helper {
 			return string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
 		}
 		#endregion
+
+		private void levelTalisman_SelectedIndexChanged( object sender, EventArgs e ) {
+			if (this.calculator == null) {
+				this.calculator = new TalismanCalculator(levelTalisman1.SelectedItem,
+					levelTalisman2.SelectedItem, levelTalisman3.SelectedItem,
+					levelTalisman4.SelectedItem, levelTalisman5.SelectedItem);
+			}
+			LevelComboBox lcb = sender as LevelComboBox;
+			Console.WriteLine(string.Format("{0} \t{1}", lcb.SelectedItem, lcb.Tag));
+			this.calculator.SetTalismanLevel(lcb.SelectedItem, Convert.ToInt32(lcb.Tag));
+			int[] medium = this.calculator.MediumTalismans;
+			labelLevelT1.Text = this.calculator.HighestTalisman.ToString();
+			labelLevelT2.Text = medium[0].ToString();
+			labelLevelT3.Text = medium[1].ToString();
+			labelLevelT4.Text = medium[2].ToString();
+			labelLevelT5.Text = this.calculator.LowestTalisman.ToString();
+			labelLevelResult.Text = this.calculator.CombinedTalisman.ToString();
+		}
 	}
 }
