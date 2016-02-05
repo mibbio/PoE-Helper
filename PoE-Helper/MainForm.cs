@@ -123,7 +123,7 @@ namespace PoE_Helper {
 			});
 			Downloader downloader = new Downloader();
 			downloader.UpdateDownloadEvent += Downloader_ProgressChangedEvent;
-			downloader.Download(new Version("1.0.1.0"));
+			downloader.Download(updater.LatestVersion);
 		}
 
 		private void StatusLabelLeft_ExecuteUpdate( object sender, EventArgs e ) {
@@ -208,6 +208,24 @@ namespace PoE_Helper {
 				lcb.DataSource = Enumerable.Range((int) inputLowerBound.Value, count).ToList();
 			}
 		}
+
+		private void levelTalisman_SelectedIndexChanged( object sender, EventArgs e ) {
+			if (this.calculator == null) {
+				this.calculator = new TalismanCalculator(levelTalisman1.SelectedItem,
+					levelTalisman2.SelectedItem, levelTalisman3.SelectedItem,
+					levelTalisman4.SelectedItem, levelTalisman5.SelectedItem);
+			}
+			LevelComboBox lcb = sender as LevelComboBox;
+			Console.WriteLine(string.Format("{0} \t{1}", lcb.SelectedItem, lcb.Tag));
+			this.calculator.SetTalismanLevel(lcb.SelectedItem, Convert.ToInt32(lcb.Tag));
+			int[] medium = this.calculator.MediumTalismans;
+			labelLevelT1.Text = this.calculator.HighestTalisman.ToString();
+			labelLevelT2.Text = medium[0].ToString();
+			labelLevelT3.Text = medium[1].ToString();
+			labelLevelT4.Text = medium[2].ToString();
+			labelLevelT5.Text = this.calculator.LowestTalisman.ToString();
+			labelLevelResult.Text = this.calculator.CombinedTalisman.ToString();
+		}
 		#endregion
 
 		#region Utility functions
@@ -246,23 +264,5 @@ namespace PoE_Helper {
 			return string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
 		}
 		#endregion
-
-		private void levelTalisman_SelectedIndexChanged( object sender, EventArgs e ) {
-			if (this.calculator == null) {
-				this.calculator = new TalismanCalculator(levelTalisman1.SelectedItem,
-					levelTalisman2.SelectedItem, levelTalisman3.SelectedItem,
-					levelTalisman4.SelectedItem, levelTalisman5.SelectedItem);
-			}
-			LevelComboBox lcb = sender as LevelComboBox;
-			Console.WriteLine(string.Format("{0} \t{1}", lcb.SelectedItem, lcb.Tag));
-			this.calculator.SetTalismanLevel(lcb.SelectedItem, Convert.ToInt32(lcb.Tag));
-			int[] medium = this.calculator.MediumTalismans;
-			labelLevelT1.Text = this.calculator.HighestTalisman.ToString();
-			labelLevelT2.Text = medium[0].ToString();
-			labelLevelT3.Text = medium[1].ToString();
-			labelLevelT4.Text = medium[2].ToString();
-			labelLevelT5.Text = this.calculator.LowestTalisman.ToString();
-			labelLevelResult.Text = this.calculator.CombinedTalisman.ToString();
-		}
 	}
 }
