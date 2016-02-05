@@ -84,8 +84,9 @@
 			this.btnOutput01 = new System.Windows.Forms.Button();
 			this.btnSwapCurrency = new System.Windows.Forms.Button();
 			this.tabPageTalisman = new System.Windows.Forms.TabPage();
+			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.inputUppderBound = new System.Windows.Forms.NumericUpDown();
+			this.inputUpperBound = new System.Windows.Forms.NumericUpDown();
 			this.inputLowerBound = new System.Windows.Forms.NumericUpDown();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tabPageSettings = new System.Windows.Forms.TabPage();
@@ -115,8 +116,17 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.tooltipButtons = new System.Windows.Forms.ToolTip(this.components);
 			this.saveTimer = new System.Windows.Forms.Timer(this.components);
+			this.label4 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
 			this.txtTab1Input = new PoE_Helper.DecimalTextBox();
 			this.txtTab1Output = new PoE_Helper.DecimalTextBox();
+			this.levelTalisman3 = new PoE_Helper.LevelComboBox();
+			this.levelTalisman5 = new PoE_Helper.LevelComboBox();
+			this.levelTalisman2 = new PoE_Helper.LevelComboBox();
+			this.levelTalisman4 = new PoE_Helper.LevelComboBox();
+			this.levelTalisman1 = new PoE_Helper.LevelComboBox();
 			this.currencyTextBox24 = new PoE_Helper.DecimalTextBox();
 			this.currencyTextBox23 = new PoE_Helper.DecimalTextBox();
 			this.currencyTextBox22 = new PoE_Helper.DecimalTextBox();
@@ -141,6 +151,17 @@
 			this.currencyTextBox03 = new PoE_Helper.DecimalTextBox();
 			this.currencyTextBox02 = new PoE_Helper.DecimalTextBox();
 			this.currencyTextBox01 = new PoE_Helper.DecimalTextBox();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label12 = new System.Windows.Forms.Label();
+			this.label13 = new System.Windows.Forms.Label();
+			this.label14 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label17 = new System.Windows.Forms.Label();
 			this.statusBar.SuspendLayout();
 			this.tabControlFeatures.SuspendLayout();
 			this.tabPageCurrency.SuspendLayout();
@@ -148,7 +169,7 @@
 			this.tableButtonsInput.SuspendLayout();
 			this.tableButtonsOutput.SuspendLayout();
 			this.tabPageTalisman.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.inputUppderBound)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.inputUpperBound)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.inputLowerBound)).BeginInit();
 			this.tabPageSettings.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -175,6 +196,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// statusBar
@@ -197,7 +219,7 @@
 			this.statusLabelLeft.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
 			this.statusLabelLeft.LinkColor = System.Drawing.SystemColors.ControlText;
 			this.statusLabelLeft.Name = "statusLabelLeft";
-			this.statusLabelLeft.Size = new System.Drawing.Size(469, 17);
+			this.statusLabelLeft.Size = new System.Drawing.Size(557, 17);
 			this.statusLabelLeft.Spring = true;
 			this.statusLabelLeft.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.statusLabelLeft.VisitedLinkColor = System.Drawing.SystemColors.ControlText;
@@ -1093,8 +1115,19 @@
 			// 
 			// tabPageTalisman
 			// 
+			this.tabPageTalisman.Controls.Add(this.groupBox1);
+			this.tabPageTalisman.Controls.Add(this.label7);
+			this.tabPageTalisman.Controls.Add(this.levelTalisman3);
+			this.tabPageTalisman.Controls.Add(this.label6);
+			this.tabPageTalisman.Controls.Add(this.levelTalisman5);
+			this.tabPageTalisman.Controls.Add(this.label5);
+			this.tabPageTalisman.Controls.Add(this.levelTalisman2);
+			this.tabPageTalisman.Controls.Add(this.label4);
+			this.tabPageTalisman.Controls.Add(this.levelTalisman4);
+			this.tabPageTalisman.Controls.Add(this.label3);
+			this.tabPageTalisman.Controls.Add(this.levelTalisman1);
 			this.tabPageTalisman.Controls.Add(this.label2);
-			this.tabPageTalisman.Controls.Add(this.inputUppderBound);
+			this.tabPageTalisman.Controls.Add(this.inputUpperBound);
 			this.tabPageTalisman.Controls.Add(this.inputLowerBound);
 			this.tabPageTalisman.Controls.Add(this.label1);
 			this.tabPageTalisman.Location = new System.Drawing.Point(4, 26);
@@ -1104,6 +1137,17 @@
 			this.tabPageTalisman.TabIndex = 1;
 			this.tabPageTalisman.Text = "Talisman";
 			this.tabPageTalisman.UseVisualStyleBackColor = true;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(6, 79);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(83, 21);
+			this.label3.TabIndex = 5;
+			this.label3.Text = "Talisman 1";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label2
 			// 
@@ -1115,29 +1159,31 @@
 			this.label2.TabIndex = 3;
 			this.label2.Text = "to";
 			// 
-			// inputUppderBound
+			// inputUpperBound
 			// 
-			this.inputUppderBound.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.inputUppderBound.Location = new System.Drawing.Point(150, 6);
-			this.inputUppderBound.Maximum = new decimal(new int[] {
+			this.inputUpperBound.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.inputUpperBound.Location = new System.Drawing.Point(150, 6);
+			this.inputUpperBound.Maximum = new decimal(new int[] {
             84,
             0,
             0,
             0});
-			this.inputUppderBound.Minimum = new decimal(new int[] {
+			this.inputUpperBound.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-			this.inputUppderBound.Name = "inputUppderBound";
-			this.inputUppderBound.Size = new System.Drawing.Size(50, 29);
-			this.inputUppderBound.TabIndex = 2;
-			this.inputUppderBound.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.inputUppderBound.Value = new decimal(new int[] {
+			this.inputUpperBound.Name = "inputUpperBound";
+			this.inputUpperBound.Size = new System.Drawing.Size(50, 29);
+			this.inputUpperBound.TabIndex = 99;
+			this.inputUpperBound.TabStop = false;
+			this.inputUpperBound.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.inputUpperBound.Value = new decimal(new int[] {
             80,
             0,
             0,
             0});
+			this.inputUpperBound.ValueChanged += new System.EventHandler(this.inputLevelBounds_ValueChanged);
 			// 
 			// inputLowerBound
 			// 
@@ -1155,13 +1201,15 @@
             0});
 			this.inputLowerBound.Name = "inputLowerBound";
 			this.inputLowerBound.Size = new System.Drawing.Size(50, 29);
-			this.inputLowerBound.TabIndex = 1;
+			this.inputLowerBound.TabIndex = 99;
+			this.inputLowerBound.TabStop = false;
 			this.inputLowerBound.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.inputLowerBound.Value = new decimal(new int[] {
             77,
             0,
             0,
             0});
+			this.inputLowerBound.ValueChanged += new System.EventHandler(this.inputLevelBounds_ValueChanged);
 			// 
 			// label1
 			// 
@@ -1479,6 +1527,50 @@
 			// 
 			this.saveTimer.Interval = 2000;
 			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(184, 79);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(83, 21);
+			this.label4.TabIndex = 7;
+			this.label4.Text = "Talisman 4";
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.Location = new System.Drawing.Point(6, 168);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(83, 21);
+			this.label5.TabIndex = 9;
+			this.label5.Text = "Talisman 2";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.Location = new System.Drawing.Point(184, 168);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(83, 21);
+			this.label6.TabIndex = 11;
+			this.label6.Text = "Talisman 5";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.Location = new System.Drawing.Point(6, 258);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(83, 21);
+			this.label7.TabIndex = 13;
+			this.label7.Text = "Talisman 3";
+			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// txtTab1Input
 			// 
 			this.txtTab1Input.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1510,6 +1602,81 @@
 			this.txtTab1Output.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txtTab1Output.WordWrap = false;
 			this.txtTab1Output.Click += new System.EventHandler(this.txtTab1Output_Click);
+			// 
+			// levelTalisman3
+			// 
+			this.levelTalisman3.DropDownHeight = 150;
+			this.levelTalisman3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman3.FormattingEnabled = true;
+			this.levelTalisman3.IntegralHeight = false;
+			this.levelTalisman3.Location = new System.Drawing.Point(95, 254);
+			this.levelTalisman3.MaxValue = 0;
+			this.levelTalisman3.MinValue = 0;
+			this.levelTalisman3.Name = "levelTalisman3";
+			this.levelTalisman3.SelectedItem = 0;
+			this.levelTalisman3.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman3.TabIndex = 3;
+			// 
+			// levelTalisman5
+			// 
+			this.levelTalisman5.DropDownHeight = 150;
+			this.levelTalisman5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman5.FormattingEnabled = true;
+			this.levelTalisman5.IntegralHeight = false;
+			this.levelTalisman5.Location = new System.Drawing.Point(273, 165);
+			this.levelTalisman5.MaxValue = 0;
+			this.levelTalisman5.MinValue = 0;
+			this.levelTalisman5.Name = "levelTalisman5";
+			this.levelTalisman5.SelectedItem = 0;
+			this.levelTalisman5.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman5.TabIndex = 5;
+			// 
+			// levelTalisman2
+			// 
+			this.levelTalisman2.DropDownHeight = 150;
+			this.levelTalisman2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman2.FormattingEnabled = true;
+			this.levelTalisman2.IntegralHeight = false;
+			this.levelTalisman2.Location = new System.Drawing.Point(95, 165);
+			this.levelTalisman2.MaxValue = 0;
+			this.levelTalisman2.MinValue = 0;
+			this.levelTalisman2.Name = "levelTalisman2";
+			this.levelTalisman2.SelectedItem = 0;
+			this.levelTalisman2.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman2.TabIndex = 2;
+			// 
+			// levelTalisman4
+			// 
+			this.levelTalisman4.DropDownHeight = 150;
+			this.levelTalisman4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman4.FormattingEnabled = true;
+			this.levelTalisman4.IntegralHeight = false;
+			this.levelTalisman4.Location = new System.Drawing.Point(273, 76);
+			this.levelTalisman4.MaxValue = 0;
+			this.levelTalisman4.MinValue = 0;
+			this.levelTalisman4.Name = "levelTalisman4";
+			this.levelTalisman4.SelectedItem = 0;
+			this.levelTalisman4.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman4.TabIndex = 4;
+			// 
+			// levelTalisman1
+			// 
+			this.levelTalisman1.DropDownHeight = 150;
+			this.levelTalisman1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman1.FormattingEnabled = true;
+			this.levelTalisman1.IntegralHeight = false;
+			this.levelTalisman1.Location = new System.Drawing.Point(95, 76);
+			this.levelTalisman1.MaxValue = 0;
+			this.levelTalisman1.MinValue = 0;
+			this.levelTalisman1.Name = "levelTalisman1";
+			this.levelTalisman1.SelectedItem = 0;
+			this.levelTalisman1.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman1.TabIndex = 1;
 			// 
 			// currencyTextBox24
 			// 
@@ -1824,6 +1991,151 @@
 			this.currencyTextBox01.WordWrap = false;
 			this.currencyTextBox01.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.label13);
+			this.groupBox1.Controls.Add(this.label14);
+			this.groupBox1.Controls.Add(this.label15);
+			this.groupBox1.Controls.Add(this.label16);
+			this.groupBox1.Controls.Add(this.label17);
+			this.groupBox1.Controls.Add(this.label12);
+			this.groupBox1.Controls.Add(this.label11);
+			this.groupBox1.Controls.Add(this.label10);
+			this.groupBox1.Controls.Add(this.label9);
+			this.groupBox1.Controls.Add(this.label8);
+			this.groupBox1.Location = new System.Drawing.Point(342, 67);
+			this.groupBox1.Margin = new System.Windows.Forms.Padding(10);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(214, 259);
+			this.groupBox1.TabIndex = 100;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Calculation";
+			// 
+			// label8
+			// 
+			this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.Location = new System.Drawing.Point(178, 24);
+			this.label8.Margin = new System.Windows.Forms.Padding(3);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(30, 20);
+			this.label8.TabIndex = 0;
+			this.label8.Text = "77";
+			this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label9
+			// 
+			this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(178, 50);
+			this.label9.Margin = new System.Windows.Forms.Padding(3);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(30, 20);
+			this.label9.TabIndex = 1;
+			this.label9.Text = "77";
+			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label10
+			// 
+			this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(178, 76);
+			this.label10.Margin = new System.Windows.Forms.Padding(3);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(30, 20);
+			this.label10.TabIndex = 2;
+			this.label10.Text = "77";
+			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label11
+			// 
+			this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label11.Location = new System.Drawing.Point(178, 102);
+			this.label11.Margin = new System.Windows.Forms.Padding(3);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(30, 20);
+			this.label11.TabIndex = 3;
+			this.label11.Text = "77";
+			this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label12
+			// 
+			this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label12.Location = new System.Drawing.Point(178, 128);
+			this.label12.Margin = new System.Windows.Forms.Padding(3);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(30, 20);
+			this.label12.TabIndex = 4;
+			this.label12.Text = "77";
+			this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label13
+			// 
+			this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label13.AutoSize = true;
+			this.label13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label13.Location = new System.Drawing.Point(148, 128);
+			this.label13.Margin = new System.Windows.Forms.Padding(3);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(24, 20);
+			this.label13.TabIndex = 9;
+			this.label13.Text = "3x";
+			this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label14
+			// 
+			this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label14.AutoSize = true;
+			this.label14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label14.Location = new System.Drawing.Point(148, 102);
+			this.label14.Margin = new System.Windows.Forms.Padding(3);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(24, 20);
+			this.label14.TabIndex = 8;
+			this.label14.Text = "3x";
+			this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label15
+			// 
+			this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label15.AutoSize = true;
+			this.label15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label15.Location = new System.Drawing.Point(148, 76);
+			this.label15.Margin = new System.Windows.Forms.Padding(3);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(24, 20);
+			this.label15.TabIndex = 7;
+			this.label15.Text = "3x";
+			this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label16
+			// 
+			this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label16.AutoSize = true;
+			this.label16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label16.Location = new System.Drawing.Point(148, 50);
+			this.label16.Margin = new System.Windows.Forms.Padding(3);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(24, 20);
+			this.label16.TabIndex = 6;
+			this.label16.Text = "3x";
+			this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label17
+			// 
+			this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label17.AutoSize = true;
+			this.label17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label17.Location = new System.Drawing.Point(148, 24);
+			this.label17.Margin = new System.Windows.Forms.Padding(3);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(24, 20);
+			this.label17.TabIndex = 5;
+			this.label17.Text = "3x";
+			this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -1852,7 +2164,7 @@
 			this.tableButtonsOutput.ResumeLayout(false);
 			this.tabPageTalisman.ResumeLayout(false);
 			this.tabPageTalisman.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.inputUppderBound)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.inputUpperBound)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.inputLowerBound)).EndInit();
 			this.tabPageSettings.ResumeLayout(false);
 			this.tabPageSettings.PerformLayout();
@@ -1880,6 +2192,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1997,11 +2311,32 @@
 		private System.Windows.Forms.ToolStripDropDownButton debugMenu;
 		private System.Windows.Forms.ToolStripMenuItem debugMenuEntry01;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.NumericUpDown inputUppderBound;
+		private System.Windows.Forms.NumericUpDown inputUpperBound;
 		private System.Windows.Forms.NumericUpDown inputLowerBound;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.ToolStripStatusLabel statusLabelLeft;
 		private System.Windows.Forms.Timer saveTimer;
+		private System.Windows.Forms.Label label3;
+		private LevelComboBox levelTalisman1;
+		private System.Windows.Forms.Label label7;
+		private LevelComboBox levelTalisman3;
+		private System.Windows.Forms.Label label6;
+		private LevelComboBox levelTalisman5;
+		private System.Windows.Forms.Label label5;
+		private LevelComboBox levelTalisman2;
+		private System.Windows.Forms.Label label4;
+		private LevelComboBox levelTalisman4;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.Label label17;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label8;
 	}
 }
 

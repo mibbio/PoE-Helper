@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Threading;
 using System.Windows.Forms;
 using PoE_Helper.Enum;
 
@@ -72,7 +71,7 @@ namespace PoE_Helper {
 		private void tabControlFeatures_Selecting( object sender, TabControlCancelEventArgs e ) {
 			TabPage page = ((TabControl) sender).SelectedTab;
 			if (page == tabPageTalisman) {
-				e.Cancel = true;
+				//e.Cancel = true;
 			}
 			if (page == tabPageSettings) {
 				InitializeSettingsTab();
@@ -192,6 +191,21 @@ namespace PoE_Helper {
 			if (config.State == ConfigState.Clean) { config.State = ConfigState.Tainted; }
 			ConvertCurrency(selectedCurrencyButton[ButtonType.Input], selectedCurrencyButton[ButtonType.Output]);
 			txtTab1Output.Refresh();
+		}
+		#endregion
+
+		#region 'Talisman' tab event handling
+		private void inputLevelBounds_ValueChanged( object sender, EventArgs e ) {
+			// ensure lower and upper bound don't overlap
+			if (sender == inputLowerBound) {
+				inputUpperBound.Minimum = inputLowerBound.Value + 1;
+			} else {
+				inputLowerBound.Maximum = inputUpperBound.Value - 1;
+			}
+			int count = (int) inputUpperBound.Value - (int) inputLowerBound.Value + 1;
+			foreach (LevelComboBox lcb in tabPageTalisman.Controls.OfType<LevelComboBox>()) {
+				lcb.DataSource = Enumerable.Range((int) inputLowerBound.Value, count).ToList();
+			}
 		}
 		#endregion
 
