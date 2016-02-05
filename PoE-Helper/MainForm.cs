@@ -83,15 +83,12 @@ namespace PoE_Helper {
 
 		#region Update handling
 		private void UpdateCheck_VersionCheckDone() {
-#if DEBUG
-			int newerAvail = 1;
-#else
 			int newerAvail = updater.LatestVersion.CompareTo(applicationVersion);
-#endif
 			if (newerAvail > 0) {
 				statusBar.Invoke(() => {
 					statusLabelLeft.IsLink = true;
 					statusLabelLeft.LinkColor = colorAdvice;
+					statusLabelLeft.Image = Icons.fa_info_circle_16;
 					statusLabelLeft.Text = string.Format("Version '{0}' available. Click to start download. ", updater.LatestVersion);
 				});
 				statusLabelLeft.Click += StatusLabelLeft_StartDownload;

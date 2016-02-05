@@ -13,13 +13,9 @@ namespace PoE_Helper {
 			public Uri RemoteUri { get; private set; }
 			public string LocalFile { get; private set; }
 		}
-#if !DEBUG
-		private string BaseUri = "http://mibbiodev.de/test";
-		private string Filename = "archlinux-2016.02.01-dual.iso";
-#else
+
 		private string BaseUri = "https://github.com/mibbio/PoE-Helper/releases/download/v{0}.{1}.{2}";
 		private string Filename = "PoE-Helper-x86-{0}.{1}.{2}.{3}.msi";
-#endif
 		private Uri sourceUri;
 
 		public Downloader() { }
