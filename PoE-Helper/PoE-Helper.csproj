@@ -246,9 +246,6 @@
     <None Include="Resources\24_Mirror_of_Kalandra.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\change_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5.2 %28x86 und x64%29</ProductName>
@@ -268,6 +265,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ideas.txt" />
+    <None Include="Resources\fa-download_16.png" />
+    <None Include="Resources\fa-info-circle_16.png" />
+    <None Include="Resources\fa-check-square-o_16.png" />
+    <None Include="Resources\fa-github_64.png" />
+    <None Include="Resources\fa-exchange_64.png" />
+    <None Include="Resources\fa-arrows-h_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

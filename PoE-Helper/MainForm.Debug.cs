@@ -6,7 +6,7 @@ namespace PoE_Helper {
 	public partial class MainForm : Form {
 		[Conditional("DEBUG")]
 		private void EnableDebugMenu() {
-			this.debugMenuEntry01.Click += new System.EventHandler(this.debugMenuEntry01_Click);
+			this.debugMenuEntry01.Click += new EventHandler(this.debugMenuEntry01_Click);
 			debugMenu.Visible = true;
 		}
 

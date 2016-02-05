@@ -8,9 +8,7 @@ namespace PoE_Helper {
 	class Updater {
 		private readonly string updateUrl = "http://www.mibbiodev.de/poe/version.txt";
 
-		public delegate void VersionCheckDoneEventHandler();
-
-		//private static Version _latestVersion = null;
+		public Updater() { }
 
 		public async void CheckRemoteVersion( object sender, EventArgs e ) {
 			await Task.Run(() => {
@@ -41,7 +39,8 @@ namespace PoE_Helper {
 			});
 		}
 
-		public event VersionCheckDoneEventHandler VersionCheckDone;
+		public delegate void VersionCheckDoneEventHandler();
+		public event VersionCheckDoneEventHandler VersionCheckDone = new VersionCheckDoneEventHandler(() => { });
 
 		public Version LatestVersion { get; private set; }
 

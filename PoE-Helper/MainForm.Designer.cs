@@ -26,12 +26,9 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.statusBar = new System.Windows.Forms.StatusStrip();
-			this.statusProgressbar = new System.Windows.Forms.ToolStripProgressBar();
-			this.placeholderLeft = new System.Windows.Forms.ToolStripStatusLabel();
-			this.statusNewerVersion = new System.Windows.Forms.ToolStripStatusLabel();
+			this.statusLabelLeft = new System.Windows.Forms.ToolStripStatusLabel();
 			this.debugMenu = new System.Windows.Forms.ToolStripDropDownButton();
 			this.debugMenuEntry01 = new System.Windows.Forms.ToolStripMenuItem();
-			this.placeholderRight = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tabControlFeatures = new System.Windows.Forms.TabControl();
 			this.tabPageCurrency = new System.Windows.Forms.TabPage();
 			this.tableTabPageCurrency = new System.Windows.Forms.TableLayoutPanel();
@@ -183,11 +180,8 @@
 			// statusBar
 			// 
 			this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusProgressbar,
-            this.placeholderLeft,
-            this.statusNewerVersion,
-            this.debugMenu,
-            this.placeholderRight});
+            this.statusLabelLeft,
+            this.debugMenu});
 			this.statusBar.Location = new System.Drawing.Point(10, 379);
 			this.statusBar.Name = "statusBar";
 			this.statusBar.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
@@ -196,33 +190,19 @@
 			this.statusBar.SizingGrip = false;
 			this.statusBar.TabIndex = 1;
 			// 
-			// statusProgressbar
+			// statusLabelLeft
 			// 
-			this.statusProgressbar.Name = "statusProgressbar";
-			this.statusProgressbar.Size = new System.Drawing.Size(200, 16);
-			this.statusProgressbar.Step = 1;
-			this.statusProgressbar.Value = 50;
-			this.statusProgressbar.Visible = false;
-			// 
-			// placeholderLeft
-			// 
-			this.placeholderLeft.Name = "placeholderLeft";
-			this.placeholderLeft.Size = new System.Drawing.Size(278, 17);
-			this.placeholderLeft.Spring = true;
-			// 
-			// statusNewerVersion
-			// 
-			this.statusNewerVersion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.statusNewerVersion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline);
-			this.statusNewerVersion.ForeColor = System.Drawing.Color.Red;
-			this.statusNewerVersion.IsLink = true;
-			this.statusNewerVersion.LinkColor = System.Drawing.Color.Red;
-			this.statusNewerVersion.Name = "statusNewerVersion";
-			this.statusNewerVersion.Size = new System.Drawing.Size(118, 17);
-			this.statusNewerVersion.Text = "Version x.x.x available";
-			this.statusNewerVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.statusNewerVersion.ToolTipText = "Click to get newest version.";
-			this.statusNewerVersion.Visible = false;
+			this.statusLabelLeft.ActiveLinkColor = System.Drawing.SystemColors.ControlText;
+			this.statusLabelLeft.Image = global::PoE_Helper.Icons.fa_info_circle_16;
+			this.statusLabelLeft.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.statusLabelLeft.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+			this.statusLabelLeft.LinkColor = System.Drawing.SystemColors.ControlText;
+			this.statusLabelLeft.Name = "statusLabelLeft";
+			this.statusLabelLeft.Size = new System.Drawing.Size(469, 17);
+			this.statusLabelLeft.Spring = true;
+			this.statusLabelLeft.Text = "placeholder";
+			this.statusLabelLeft.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.statusLabelLeft.VisitedLinkColor = System.Drawing.SystemColors.ControlText;
 			// 
 			// debugMenu
 			// 
@@ -242,12 +222,6 @@
 			this.debugMenuEntry01.Name = "debugMenuEntry01";
 			this.debugMenuEntry01.Size = new System.Drawing.Size(218, 22);
 			this.debugMenuEntry01.Text = "Randomize currency values";
-			// 
-			// placeholderRight
-			// 
-			this.placeholderRight.Name = "placeholderRight";
-			this.placeholderRight.Size = new System.Drawing.Size(278, 17);
-			this.placeholderRight.Spring = true;
 			// 
 			// tabControlFeatures
 			// 
@@ -1107,8 +1081,8 @@
 			// 
 			// btnSwapCurrency
 			// 
-			this.btnSwapCurrency.BackgroundImage = global::PoE_Helper.Icons.change_32px;
-			this.btnSwapCurrency.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.btnSwapCurrency.BackgroundImage = global::PoE_Helper.Icons.fa_exchange_64;
+			this.btnSwapCurrency.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnSwapCurrency.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.btnSwapCurrency.Location = new System.Drawing.Point(242, 239);
 			this.btnSwapCurrency.Margin = new System.Windows.Forms.Padding(50, 1, 50, 1);
@@ -1867,6 +1841,7 @@
 			this.Name = "MainForm";
 			this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 0);
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Path of Exile - Tools";
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.statusBar.ResumeLayout(false);
@@ -2027,10 +2002,7 @@
 		private System.Windows.Forms.NumericUpDown inputUppderBound;
 		private System.Windows.Forms.NumericUpDown inputLowerBound;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ToolStripStatusLabel statusNewerVersion;
-		private System.Windows.Forms.ToolStripProgressBar statusProgressbar;
-		private System.Windows.Forms.ToolStripStatusLabel placeholderLeft;
-		private System.Windows.Forms.ToolStripStatusLabel placeholderRight;
+		private System.Windows.Forms.ToolStripStatusLabel statusLabelLeft;
 		private System.Windows.Forms.Timer saveTimer;
 	}
 }

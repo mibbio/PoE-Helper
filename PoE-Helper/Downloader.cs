@@ -4,39 +4,44 @@ using System.Net;
 
 namespace PoE_Helper {
 	class Downloader {
-#if DEBUG
-		private readonly string BaseUri = "http://mibbiodev.de/test";
-		private readonly string Filename = "archlinux-2016.02.01-dual.iso";
-#else
-		private readonly string BaseUri = "https://github.com/mibbio/PoE-Helper/releases/download/v{0}.{1}.{2}";
-		private readonly string Filename = "PoE-Helper-x86-{0}.{1}.{2}.{3}.msi";
-#endif
-		private readonly Uri sourceUri;
+		public class DownloadEventArgs {
+			public DownloadEventArgs( Uri remote, string local ) {
+				this.RemoteUri = remote;
+				this.LocalFile = local;
+			}
 
-		public delegate void ProgressChangedHandler( DownloadProgressChangedEventArgs e );
-
-		public Downloader( Version version ) {
+			public Uri RemoteUri { get; private set; }
+			public string LocalFile { get; private set; }
+		}
 #if !DEBUG
+		private string BaseUri = "http://mibbiodev.de/test";
+		private string Filename = "archlinux-2016.02.01-dual.iso";
+#else
+		private string BaseUri = "https://github.com/mibbio/PoE-Helper/releases/download/v{0}.{1}.{2}";
+		private string Filename = "PoE-Helper-x86-{0}.{1}.{2}.{3}.msi";
+#endif
+		private Uri sourceUri;
+
+		public Downloader() { }
+
+		public bool Download( Version version ) {
 			this.BaseUri = string.Format(this.BaseUri, version.Major, version.Minor, version.Build);
 			this.Filename = string.Format(this.Filename, version.Major, version.Minor, version.Build, version.Revision);
-#endif
 			this.sourceUri = new Uri(Path.Combine(this.BaseUri, this.Filename));
-		}
+			string localFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+			localFile = Path.Combine(localFile, "PoE-Helper", this.Filename);
 
-		public bool Download() {
-			string appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-			Console.WriteLine(Path.Combine(appData, "PoE-Helper", this.Filename));
 			WebClient client = new WebClient();
-			client.DownloadFileAsync(this.sourceUri, Path.Combine(appData, "PoE-Helper", this.Filename));
-			client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(( sender, args ) => {
-				Console.WriteLine(string.Format("[{0}] \t{1}/{2}", args.ProgressPercentage, args.BytesReceived, args.TotalBytesToReceive));
-				//OnProgressChanged(args);
+			client.DownloadFileAsync(this.sourceUri, localFile);
+			client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(( sender, data ) => {
+				UpdateDownloadEvent(data.ProgressPercentage, new DownloadEventArgs(this.sourceUri, localFile));
 			});
 			return true;
 		}
 
 		#region Events
-		public event ProgressChangedHandler OnProgressChanged;
+		public delegate void UpdateDownloadHandler( int progress, DownloadEventArgs e );
+		public event UpdateDownloadHandler UpdateDownloadEvent = new UpdateDownloadHandler((p, f) => { });
 		#endregion
 	}
 }

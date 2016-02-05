@@ -1,21 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using PoE_Helper.Enum;
-using SharpConfig;
 
 namespace PoE_Helper {
 	public partial class MainForm : Form {
 		#region Variables
+		// colors
+		private readonly Color colorDefault = Color.FromKnownColor(KnownColor.ControlText);
+		private readonly Color colorAdvice = Color.OrangeRed;
+		private readonly Color colorSuccess = Color.LimeGreen;
+
 		// main
 		private readonly Properties.Internal defaultCfg = Properties.Internal.Default;
 		private readonly Dictionary<ButtonType, Button> selectedCurrencyButton;
 		private readonly Version applicationVersion;
 		private readonly Updater updater;
 		private readonly AppConfig config;
+
+		private string UpdateInstaller = string.Empty;
 
 		// talisman
 		private static readonly int MIN_LEVEL = 1;
@@ -26,6 +34,8 @@ namespace PoE_Helper {
 			InitializeComponent();
 			EnableDebugMenu();
 
+			this.updater = new Updater();
+
 			// getting assembly version number
 			applicationVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
 			this.Text = string.Format("{0} v{1}", this.Text, VersionString(applicationVersion));
@@ -34,7 +44,8 @@ namespace PoE_Helper {
 			Directory.CreateDirectory(path);
 			config = new AppConfig(Path.Combine(path, "currency.conf"));
 			InitializeCurrencyTab();
-			InitializeTalismanTab();this.debugMenuEntry01.Click += new System.EventHandler(this.debugMenuEntry01_Click);
+			InitializeTalismanTab();
+			this.debugMenuEntry01.Click += new EventHandler(this.debugMenuEntry01_Click);
 
 			saveTimer.Tick += new EventHandler(( sender, e ) => {
 				config.Save(tabPageSettings.Controls.OfType<DecimalTextBox>().ToList());
@@ -48,11 +59,8 @@ namespace PoE_Helper {
 				{ ButtonType.Output, defaultOutput },
 			};
 
-			this.updater = new Updater();
 			updater.VersionCheckDone += UpdateCheck_VersionCheckDone;
-			this.Shown += updater.CheckRemoteVersion;
-			Downloader downloader = new Downloader(new Version("1.0.1.0"));
-			//downloader.Download();
+			statusBar.HandleCreated += updater.CheckRemoteVersion;
 		}
 
 		#region General event handling
@@ -71,13 +79,68 @@ namespace PoE_Helper {
 				if (!saveTimer.Enabled) { saveTimer.Start(); }
 			} else { saveTimer.Stop(); }
 		}
+		#endregion
 
+		#region Update handling
 		private void UpdateCheck_VersionCheckDone() {
+#if DEBUG
+			int newerAvail = 1;
+#else
 			int newerAvail = updater.LatestVersion.CompareTo(applicationVersion);
+#endif
 			if (newerAvail > 0) {
-				// TODO start download process
-				statusNewerVersion.Visible = true;
-				statusNewerVersion.Text = string.Format("[Click to get version {0}]", updater.LatestVersion);
+				statusBar.Invoke(() => {
+					statusLabelLeft.IsLink = true;
+					statusLabelLeft.LinkColor = colorAdvice;
+					statusLabelLeft.Text = string.Format("Version '{0}' available. Click to start download. ", updater.LatestVersion);
+				});
+				statusLabelLeft.Click += StatusLabelLeft_StartDownload;
+			}
+		}
+
+		private void Downloader_ProgressChangedEvent( int progress, Downloader.DownloadEventArgs e ) {
+			string text = string.Format("Download {0}{1}",
+				(progress < 100) ? progress.ToString() : "complete. Click to start Update.",
+				(progress < 100) ? "%" : ""
+			);
+			statusBar.Invoke(() => {
+				statusLabelLeft.Text = text;
+				statusLabelLeft.LinkColor = colorDefault;
+				statusLabelLeft.Image = Icons.fa_download_16;
+			});
+			if (progress == 100) {
+				UpdateInstaller = e.LocalFile;
+				statusBar.Invoke(() => {
+					statusLabelLeft.IsLink = true;
+					statusLabelLeft.LinkColor = colorSuccess;
+					statusLabelLeft.Image = Icons.fa_check_square_o_16;
+				});
+				statusLabelLeft.Click -= StatusLabelLeft_StartDownload;
+				statusLabelLeft.Click += StatusLabelLeft_ExecuteUpdate;
+			}
+		}
+
+		private void StatusLabelLeft_StartDownload( object sender, EventArgs e ) {
+			statusBar.Invoke(() => {
+				statusLabelLeft.IsLink = false;
+			});
+			Downloader downloader = new Downloader();
+			downloader.UpdateDownloadEvent += Downloader_ProgressChangedEvent;
+			downloader.Download(new Version("1.0.1.0"));
+		}
+
+		private void StatusLabelLeft_ExecuteUpdate( object sender, EventArgs e ) {
+			this.FormClosed += MainForm_FormClosed;
+			if (!this.IsDisposed && this.InvokeRequired) {
+				this.Invoke(() => this.Close());
+			} else {
+				this.Close();
+			}
+		}
+
+		private void MainForm_FormClosed( object sender, FormClosedEventArgs e ) {
+			if (!string.IsNullOrEmpty(UpdateInstaller)) {
+				Process.Start(UpdateInstaller);
 			}
 		}
 		#endregion
