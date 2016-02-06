@@ -260,7 +260,6 @@
 			this.tabControlFeatures.Name = "tabControlFeatures";
 			this.tabControlFeatures.SelectedIndex = 0;
 			this.tabControlFeatures.Size = new System.Drawing.Size(574, 369);
-			this.tabControlFeatures.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
 			this.tabControlFeatures.TabIndex = 2;
 			this.tooltipButtons.SetToolTip(this.tabControlFeatures, "coming soon");
 			this.tabControlFeatures.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlFeatures_Selecting);
@@ -1695,9 +1694,11 @@
 			this.tabPageSettings.Controls.Add(this.pictureBox1);
 			this.tabPageSettings.Location = new System.Drawing.Point(4, 26);
 			this.tabPageSettings.Name = "tabPageSettings";
+			this.tabPageSettings.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPageSettings.Size = new System.Drawing.Size(566, 339);
 			this.tabPageSettings.TabIndex = 2;
 			this.tabPageSettings.Text = "Settings";
+			this.tabPageSettings.UseVisualStyleBackColor = true;
 			// 
 			// currencyTextBox24
 			// 
