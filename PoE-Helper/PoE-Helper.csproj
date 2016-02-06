@@ -92,6 +92,7 @@
     <Compile Include="ControlExtensions.cs" />
     <Compile Include="Downloader.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="FixedToolStripRenderer.cs" />
     <Compile Include="Icons.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -266,10 +267,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ideas.txt" />
+    <None Include="Resources\fa-check-square-o_16.png" />
     <None Include="Resources\fa-download_16.png" />
     <None Include="Resources\fa-info-circle_16.png" />
-    <None Include="Resources\fa-check-square-o_16.png" />
-    <None Include="Resources\fa-github_64.png" />
     <None Include="Resources\fa-exchange_64.png" />
     <None Include="Resources\fa-arrows-h_64.png" />
   </ItemGroup>

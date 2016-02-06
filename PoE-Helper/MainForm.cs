@@ -34,6 +34,9 @@ namespace PoE_Helper {
 			InitializeComponent();
 			EnableDebugMenu();
 
+			this.toolStripTop.Renderer = new FixedToolStripRenderer();
+			this.toolStripComboLeague.SelectedIndex = 2;
+
 			this.updater = new Updater();
 
 			// getting assembly version number

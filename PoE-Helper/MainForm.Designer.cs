@@ -29,6 +29,10 @@
 			this.statusLabelLeft = new System.Windows.Forms.ToolStripStatusLabel();
 			this.debugMenu = new System.Windows.Forms.ToolStripDropDownButton();
 			this.debugMenuEntry01 = new System.Windows.Forms.ToolStripMenuItem();
+			this.tooltipButtons = new System.Windows.Forms.ToolTip(this.components);
+			this.btnSwapCurrency = new System.Windows.Forms.Button();
+			this.saveTimer = new System.Windows.Forms.Timer(this.components);
+			this.toolStripContainerMain = new System.Windows.Forms.ToolStripContainer();
 			this.tabControlFeatures = new System.Windows.Forms.TabControl();
 			this.tabPageCurrency = new System.Windows.Forms.TabPage();
 			this.tableTabPageCurrency = new System.Windows.Forms.TableLayoutPanel();
@@ -82,7 +86,6 @@
 			this.btnOutput13 = new System.Windows.Forms.Button();
 			this.btnOutput07 = new System.Windows.Forms.Button();
 			this.btnOutput01 = new System.Windows.Forms.Button();
-			this.btnSwapCurrency = new System.Windows.Forms.Button();
 			this.txtTab1Input = new PoE_Helper.DecimalTextBox();
 			this.txtTab1Output = new PoE_Helper.DecimalTextBox();
 			this.tabPageTalisman = new System.Windows.Forms.TabPage();
@@ -105,19 +108,19 @@
 			this.labelLevelT2 = new System.Windows.Forms.Label();
 			this.labelLevelT1 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
-			this.levelTalisman3 = new PoE_Helper.LevelComboBox();
 			this.label6 = new System.Windows.Forms.Label();
-			this.levelTalisman5 = new PoE_Helper.LevelComboBox();
 			this.label5 = new System.Windows.Forms.Label();
-			this.levelTalisman2 = new PoE_Helper.LevelComboBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.levelTalisman4 = new PoE_Helper.LevelComboBox();
 			this.label3 = new System.Windows.Forms.Label();
-			this.levelTalisman1 = new PoE_Helper.LevelComboBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.inputUpperBound = new System.Windows.Forms.NumericUpDown();
 			this.inputLowerBound = new System.Windows.Forms.NumericUpDown();
 			this.label1 = new System.Windows.Forms.Label();
+			this.levelTalisman3 = new PoE_Helper.LevelComboBox();
+			this.levelTalisman5 = new PoE_Helper.LevelComboBox();
+			this.levelTalisman2 = new PoE_Helper.LevelComboBox();
+			this.levelTalisman4 = new PoE_Helper.LevelComboBox();
+			this.levelTalisman1 = new PoE_Helper.LevelComboBox();
 			this.tabPageSettings = new System.Windows.Forms.TabPage();
 			this.currencyTextBox24 = new PoE_Helper.DecimalTextBox();
 			this.currencyTextBox23 = new PoE_Helper.DecimalTextBox();
@@ -167,9 +170,14 @@
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.tooltipButtons = new System.Windows.Forms.ToolTip(this.components);
-			this.saveTimer = new System.Windows.Forms.Timer(this.components);
+			this.toolStripTop = new System.Windows.Forms.ToolStrip();
+			this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+			this.toolStripComboLeague = new System.Windows.Forms.ToolStripComboBox();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.statusBar.SuspendLayout();
+			this.toolStripContainerMain.ContentPanel.SuspendLayout();
+			this.toolStripContainerMain.TopToolStripPanel.SuspendLayout();
+			this.toolStripContainerMain.SuspendLayout();
 			this.tabControlFeatures.SuspendLayout();
 			this.tabPageCurrency.SuspendLayout();
 			this.tableTabPageCurrency.SuspendLayout();
@@ -204,6 +212,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.toolStripTop.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// statusBar
@@ -211,11 +220,11 @@
 			this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabelLeft,
             this.debugMenu});
-			this.statusBar.Location = new System.Drawing.Point(10, 379);
+			this.statusBar.Location = new System.Drawing.Point(0, 399);
 			this.statusBar.Name = "statusBar";
 			this.statusBar.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
 			this.statusBar.ShowItemToolTips = true;
-			this.statusBar.Size = new System.Drawing.Size(574, 22);
+			this.statusBar.Size = new System.Drawing.Size(594, 22);
 			this.statusBar.SizingGrip = false;
 			this.statusBar.TabIndex = 1;
 			// 
@@ -226,7 +235,7 @@
 			this.statusLabelLeft.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
 			this.statusLabelLeft.LinkColor = System.Drawing.SystemColors.ControlText;
 			this.statusLabelLeft.Name = "statusLabelLeft";
-			this.statusLabelLeft.Size = new System.Drawing.Size(557, 17);
+			this.statusLabelLeft.Size = new System.Drawing.Size(577, 17);
 			this.statusLabelLeft.Spring = true;
 			this.statusLabelLeft.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.statusLabelLeft.VisitedLinkColor = System.Drawing.SystemColors.ControlText;
@@ -250,19 +259,64 @@
 			this.debugMenuEntry01.Size = new System.Drawing.Size(218, 22);
 			this.debugMenuEntry01.Text = "Randomize currency values";
 			// 
+			// tooltipButtons
+			// 
+			this.tooltipButtons.UseAnimation = false;
+			this.tooltipButtons.UseFading = false;
+			// 
+			// btnSwapCurrency
+			// 
+			this.btnSwapCurrency.BackgroundImage = global::PoE_Helper.Icons.fa_exchange_64;
+			this.btnSwapCurrency.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnSwapCurrency.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.btnSwapCurrency.Location = new System.Drawing.Point(242, 244);
+			this.btnSwapCurrency.Margin = new System.Windows.Forms.Padding(50, 1, 50, 1);
+			this.btnSwapCurrency.Name = "btnSwapCurrency";
+			this.btnSwapCurrency.Size = new System.Drawing.Size(94, 46);
+			this.btnSwapCurrency.TabIndex = 4;
+			this.tooltipButtons.SetToolTip(this.btnSwapCurrency, "Swap source and target currency");
+			this.btnSwapCurrency.UseVisualStyleBackColor = true;
+			// 
+			// saveTimer
+			// 
+			this.saveTimer.Interval = 2000;
+			// 
+			// toolStripContainerMain
+			// 
+			this.toolStripContainerMain.BottomToolStripPanelVisible = false;
+			// 
+			// toolStripContainerMain.ContentPanel
+			// 
+			this.toolStripContainerMain.ContentPanel.BackColor = System.Drawing.Color.Transparent;
+			this.toolStripContainerMain.ContentPanel.Controls.Add(this.tabControlFeatures);
+			this.toolStripContainerMain.ContentPanel.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+			this.toolStripContainerMain.ContentPanel.Size = new System.Drawing.Size(594, 374);
+			this.toolStripContainerMain.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.toolStripContainerMain.LeftToolStripPanelVisible = false;
+			this.toolStripContainerMain.Location = new System.Drawing.Point(0, 0);
+			this.toolStripContainerMain.Name = "toolStripContainerMain";
+			this.toolStripContainerMain.RightToolStripPanelVisible = false;
+			this.toolStripContainerMain.Size = new System.Drawing.Size(594, 399);
+			this.toolStripContainerMain.TabIndex = 2;
+			this.toolStripContainerMain.Text = "toolStripContainer1";
+			// 
+			// toolStripContainerMain.TopToolStripPanel
+			// 
+			this.toolStripContainerMain.TopToolStripPanel.BackColor = System.Drawing.Color.Transparent;
+			this.toolStripContainerMain.TopToolStripPanel.Controls.Add(this.toolStripTop);
+			this.toolStripContainerMain.TopToolStripPanel.Padding = new System.Windows.Forms.Padding(2);
+			// 
 			// tabControlFeatures
 			// 
 			this.tabControlFeatures.Controls.Add(this.tabPageCurrency);
 			this.tabControlFeatures.Controls.Add(this.tabPageTalisman);
 			this.tabControlFeatures.Controls.Add(this.tabPageSettings);
 			this.tabControlFeatures.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tabControlFeatures.Location = new System.Drawing.Point(10, 10);
+			this.tabControlFeatures.Location = new System.Drawing.Point(2, 0);
 			this.tabControlFeatures.Name = "tabControlFeatures";
 			this.tabControlFeatures.SelectedIndex = 0;
-			this.tabControlFeatures.Size = new System.Drawing.Size(574, 369);
-			this.tabControlFeatures.TabIndex = 2;
-			this.tooltipButtons.SetToolTip(this.tabControlFeatures, "coming soon");
-			this.tabControlFeatures.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlFeatures_Selecting);
+			this.tabControlFeatures.Size = new System.Drawing.Size(592, 374);
+			this.tabControlFeatures.TabIndex = 3;
 			// 
 			// tabPageCurrency
 			// 
@@ -270,7 +324,7 @@
 			this.tabPageCurrency.Location = new System.Drawing.Point(4, 26);
 			this.tabPageCurrency.Name = "tabPageCurrency";
 			this.tabPageCurrency.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageCurrency.Size = new System.Drawing.Size(566, 339);
+			this.tabPageCurrency.Size = new System.Drawing.Size(584, 344);
 			this.tabPageCurrency.TabIndex = 0;
 			this.tabPageCurrency.Text = "Currency";
 			this.tabPageCurrency.UseVisualStyleBackColor = true;
@@ -292,7 +346,7 @@
 			this.tableTabPageCurrency.RowCount = 2;
 			this.tableTabPageCurrency.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableTabPageCurrency.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableTabPageCurrency.Size = new System.Drawing.Size(560, 333);
+			this.tableTabPageCurrency.Size = new System.Drawing.Size(578, 338);
 			this.tableTabPageCurrency.TabIndex = 0;
 			// 
 			// tableButtonsInput
@@ -337,7 +391,7 @@
 			this.tableButtonsInput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
 			this.tableButtonsInput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
 			this.tableButtonsInput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-			this.tableButtonsInput.Size = new System.Drawing.Size(192, 286);
+			this.tableButtonsInput.Size = new System.Drawing.Size(192, 288);
 			this.tableButtonsInput.TabIndex = 0;
 			// 
 			// btnInput09
@@ -353,7 +407,6 @@
 			this.btnInput09.TabStop = false;
 			this.btnInput09.Tag = "input";
 			this.btnInput09.UseVisualStyleBackColor = true;
-			this.btnInput09.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput24
 			// 
@@ -368,7 +421,6 @@
 			this.btnInput24.TabStop = false;
 			this.btnInput24.Tag = "input";
 			this.btnInput24.UseVisualStyleBackColor = true;
-			this.btnInput24.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput18
 			// 
@@ -383,7 +435,6 @@
 			this.btnInput18.TabStop = false;
 			this.btnInput18.Tag = "input";
 			this.btnInput18.UseVisualStyleBackColor = true;
-			this.btnInput18.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput12
 			// 
@@ -398,7 +449,6 @@
 			this.btnInput12.TabStop = false;
 			this.btnInput12.Tag = "input";
 			this.btnInput12.UseVisualStyleBackColor = true;
-			this.btnInput12.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput06
 			// 
@@ -413,7 +463,6 @@
 			this.btnInput06.TabStop = false;
 			this.btnInput06.Tag = "input";
 			this.btnInput06.UseVisualStyleBackColor = true;
-			this.btnInput06.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput23
 			// 
@@ -428,7 +477,6 @@
 			this.btnInput23.TabStop = false;
 			this.btnInput23.Tag = "input";
 			this.btnInput23.UseVisualStyleBackColor = true;
-			this.btnInput23.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput17
 			// 
@@ -443,7 +491,6 @@
 			this.btnInput17.TabStop = false;
 			this.btnInput17.Tag = "input";
 			this.btnInput17.UseVisualStyleBackColor = true;
-			this.btnInput17.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput11
 			// 
@@ -458,7 +505,6 @@
 			this.btnInput11.TabStop = false;
 			this.btnInput11.Tag = "input";
 			this.btnInput11.UseVisualStyleBackColor = true;
-			this.btnInput11.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput05
 			// 
@@ -473,7 +519,6 @@
 			this.btnInput05.TabStop = false;
 			this.btnInput05.Tag = "input";
 			this.btnInput05.UseVisualStyleBackColor = true;
-			this.btnInput05.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput22
 			// 
@@ -488,7 +533,6 @@
 			this.btnInput22.TabStop = false;
 			this.btnInput22.Tag = "input";
 			this.btnInput22.UseVisualStyleBackColor = true;
-			this.btnInput22.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput16
 			// 
@@ -503,7 +547,6 @@
 			this.btnInput16.TabStop = false;
 			this.btnInput16.Tag = "input";
 			this.btnInput16.UseVisualStyleBackColor = true;
-			this.btnInput16.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput10
 			// 
@@ -518,7 +561,6 @@
 			this.btnInput10.TabStop = false;
 			this.btnInput10.Tag = "input";
 			this.btnInput10.UseVisualStyleBackColor = true;
-			this.btnInput10.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput04
 			// 
@@ -533,7 +575,6 @@
 			this.btnInput04.TabStop = false;
 			this.btnInput04.Tag = "input";
 			this.btnInput04.UseVisualStyleBackColor = true;
-			this.btnInput04.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput21
 			// 
@@ -548,7 +589,6 @@
 			this.btnInput21.TabStop = false;
 			this.btnInput21.Tag = "input";
 			this.btnInput21.UseVisualStyleBackColor = true;
-			this.btnInput21.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput15
 			// 
@@ -563,7 +603,6 @@
 			this.btnInput15.TabStop = false;
 			this.btnInput15.Tag = "input";
 			this.btnInput15.UseVisualStyleBackColor = true;
-			this.btnInput15.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput03
 			// 
@@ -578,7 +617,6 @@
 			this.btnInput03.TabStop = false;
 			this.btnInput03.Tag = "input";
 			this.btnInput03.UseVisualStyleBackColor = true;
-			this.btnInput03.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput20
 			// 
@@ -593,7 +631,6 @@
 			this.btnInput20.TabStop = false;
 			this.btnInput20.Tag = "input";
 			this.btnInput20.UseVisualStyleBackColor = true;
-			this.btnInput20.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput14
 			// 
@@ -608,7 +645,6 @@
 			this.btnInput14.TabStop = false;
 			this.btnInput14.Tag = "input";
 			this.btnInput14.UseVisualStyleBackColor = true;
-			this.btnInput14.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput08
 			// 
@@ -623,7 +659,6 @@
 			this.btnInput08.TabStop = false;
 			this.btnInput08.Tag = "input";
 			this.btnInput08.UseVisualStyleBackColor = true;
-			this.btnInput08.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput02
 			// 
@@ -638,7 +673,6 @@
 			this.btnInput02.TabStop = false;
 			this.btnInput02.Tag = "input";
 			this.btnInput02.UseVisualStyleBackColor = true;
-			this.btnInput02.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput19
 			// 
@@ -653,7 +687,6 @@
 			this.btnInput19.TabStop = false;
 			this.btnInput19.Tag = "input";
 			this.btnInput19.UseVisualStyleBackColor = true;
-			this.btnInput19.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput13
 			// 
@@ -668,7 +701,6 @@
 			this.btnInput13.TabStop = false;
 			this.btnInput13.Tag = "input";
 			this.btnInput13.UseVisualStyleBackColor = true;
-			this.btnInput13.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput07
 			// 
@@ -683,7 +715,6 @@
 			this.btnInput07.TabStop = false;
 			this.btnInput07.Tag = "input";
 			this.btnInput07.UseVisualStyleBackColor = true;
-			this.btnInput07.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput01
 			// 
@@ -698,7 +729,6 @@
 			this.btnInput01.TabStop = false;
 			this.btnInput01.Tag = "input";
 			this.btnInput01.UseVisualStyleBackColor = true;
-			this.btnInput01.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// tableButtonsOutput
 			// 
@@ -732,7 +762,7 @@
 			this.tableButtonsOutput.Controls.Add(this.btnOutput13, 2, 0);
 			this.tableButtonsOutput.Controls.Add(this.btnOutput07, 1, 0);
 			this.tableButtonsOutput.Controls.Add(this.btnOutput01, 0, 0);
-			this.tableButtonsOutput.Location = new System.Drawing.Point(368, 0);
+			this.tableButtonsOutput.Location = new System.Drawing.Point(386, 0);
 			this.tableButtonsOutput.Margin = new System.Windows.Forms.Padding(0);
 			this.tableButtonsOutput.Name = "tableButtonsOutput";
 			this.tableButtonsOutput.RowCount = 6;
@@ -742,7 +772,7 @@
 			this.tableButtonsOutput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
 			this.tableButtonsOutput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
 			this.tableButtonsOutput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-			this.tableButtonsOutput.Size = new System.Drawing.Size(192, 286);
+			this.tableButtonsOutput.Size = new System.Drawing.Size(192, 288);
 			this.tableButtonsOutput.TabIndex = 1;
 			// 
 			// btnOutput24
@@ -758,7 +788,6 @@
 			this.btnOutput24.TabStop = false;
 			this.btnOutput24.Tag = "output";
 			this.btnOutput24.UseVisualStyleBackColor = true;
-			this.btnOutput24.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput18
 			// 
@@ -773,7 +802,6 @@
 			this.btnOutput18.TabStop = false;
 			this.btnOutput18.Tag = "output";
 			this.btnOutput18.UseVisualStyleBackColor = true;
-			this.btnOutput18.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput12
 			// 
@@ -788,7 +816,6 @@
 			this.btnOutput12.TabStop = false;
 			this.btnOutput12.Tag = "output";
 			this.btnOutput12.UseVisualStyleBackColor = true;
-			this.btnOutput12.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput06
 			// 
@@ -803,7 +830,6 @@
 			this.btnOutput06.TabStop = false;
 			this.btnOutput06.Tag = "output";
 			this.btnOutput06.UseVisualStyleBackColor = true;
-			this.btnOutput06.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput23
 			// 
@@ -818,7 +844,6 @@
 			this.btnOutput23.TabStop = false;
 			this.btnOutput23.Tag = "output";
 			this.btnOutput23.UseVisualStyleBackColor = true;
-			this.btnOutput23.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput17
 			// 
@@ -833,7 +858,6 @@
 			this.btnOutput17.TabStop = false;
 			this.btnOutput17.Tag = "output";
 			this.btnOutput17.UseVisualStyleBackColor = true;
-			this.btnOutput17.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput11
 			// 
@@ -848,7 +872,6 @@
 			this.btnOutput11.TabStop = false;
 			this.btnOutput11.Tag = "output";
 			this.btnOutput11.UseVisualStyleBackColor = true;
-			this.btnOutput11.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput05
 			// 
@@ -863,7 +886,6 @@
 			this.btnOutput05.TabStop = false;
 			this.btnOutput05.Tag = "output";
 			this.btnOutput05.UseVisualStyleBackColor = true;
-			this.btnOutput05.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput22
 			// 
@@ -878,7 +900,6 @@
 			this.btnOutput22.TabStop = false;
 			this.btnOutput22.Tag = "output";
 			this.btnOutput22.UseVisualStyleBackColor = true;
-			this.btnOutput22.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput16
 			// 
@@ -893,7 +914,6 @@
 			this.btnOutput16.TabStop = false;
 			this.btnOutput16.Tag = "output";
 			this.btnOutput16.UseVisualStyleBackColor = true;
-			this.btnOutput16.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput10
 			// 
@@ -908,7 +928,6 @@
 			this.btnOutput10.TabStop = false;
 			this.btnOutput10.Tag = "output";
 			this.btnOutput10.UseVisualStyleBackColor = true;
-			this.btnOutput10.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput04
 			// 
@@ -923,7 +942,6 @@
 			this.btnOutput04.TabStop = false;
 			this.btnOutput04.Tag = "output";
 			this.btnOutput04.UseVisualStyleBackColor = true;
-			this.btnOutput04.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput21
 			// 
@@ -938,7 +956,6 @@
 			this.btnOutput21.TabStop = false;
 			this.btnOutput21.Tag = "output";
 			this.btnOutput21.UseVisualStyleBackColor = true;
-			this.btnOutput21.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput15
 			// 
@@ -953,7 +970,6 @@
 			this.btnOutput15.TabStop = false;
 			this.btnOutput15.Tag = "output";
 			this.btnOutput15.UseVisualStyleBackColor = true;
-			this.btnOutput15.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput09
 			// 
@@ -968,7 +984,6 @@
 			this.btnOutput09.TabStop = false;
 			this.btnOutput09.Tag = "output";
 			this.btnOutput09.UseVisualStyleBackColor = true;
-			this.btnOutput09.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput03
 			// 
@@ -983,7 +998,6 @@
 			this.btnOutput03.TabStop = false;
 			this.btnOutput03.Tag = "output";
 			this.btnOutput03.UseVisualStyleBackColor = true;
-			this.btnOutput03.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput20
 			// 
@@ -998,7 +1012,6 @@
 			this.btnOutput20.TabStop = false;
 			this.btnOutput20.Tag = "output";
 			this.btnOutput20.UseVisualStyleBackColor = true;
-			this.btnOutput20.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput14
 			// 
@@ -1013,7 +1026,6 @@
 			this.btnOutput14.TabStop = false;
 			this.btnOutput14.Tag = "output";
 			this.btnOutput14.UseVisualStyleBackColor = true;
-			this.btnOutput14.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput08
 			// 
@@ -1028,7 +1040,6 @@
 			this.btnOutput08.TabStop = false;
 			this.btnOutput08.Tag = "output";
 			this.btnOutput08.UseVisualStyleBackColor = true;
-			this.btnOutput08.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput02
 			// 
@@ -1043,7 +1054,6 @@
 			this.btnOutput02.TabStop = false;
 			this.btnOutput02.Tag = "output";
 			this.btnOutput02.UseVisualStyleBackColor = true;
-			this.btnOutput02.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput19
 			// 
@@ -1058,7 +1068,6 @@
 			this.btnOutput19.TabStop = false;
 			this.btnOutput19.Tag = "output";
 			this.btnOutput19.UseVisualStyleBackColor = true;
-			this.btnOutput19.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput13
 			// 
@@ -1073,7 +1082,6 @@
 			this.btnOutput13.TabStop = false;
 			this.btnOutput13.Tag = "output";
 			this.btnOutput13.UseVisualStyleBackColor = true;
-			this.btnOutput13.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput07
 			// 
@@ -1088,7 +1096,6 @@
 			this.btnOutput07.TabStop = false;
 			this.btnOutput07.Tag = "output";
 			this.btnOutput07.UseVisualStyleBackColor = true;
-			this.btnOutput07.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput01
 			// 
@@ -1103,27 +1110,12 @@
 			this.btnOutput01.TabStop = false;
 			this.btnOutput01.Tag = "output";
 			this.btnOutput01.UseVisualStyleBackColor = true;
-			this.btnOutput01.Click += new System.EventHandler(this.buttonCurrency_Click);
-			// 
-			// btnSwapCurrency
-			// 
-			this.btnSwapCurrency.BackgroundImage = global::PoE_Helper.Icons.fa_exchange_64;
-			this.btnSwapCurrency.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnSwapCurrency.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.btnSwapCurrency.Location = new System.Drawing.Point(242, 239);
-			this.btnSwapCurrency.Margin = new System.Windows.Forms.Padding(50, 1, 50, 1);
-			this.btnSwapCurrency.Name = "btnSwapCurrency";
-			this.btnSwapCurrency.Size = new System.Drawing.Size(76, 46);
-			this.btnSwapCurrency.TabIndex = 4;
-			this.tooltipButtons.SetToolTip(this.btnSwapCurrency, "Swap source and target currency");
-			this.btnSwapCurrency.UseVisualStyleBackColor = true;
-			this.btnSwapCurrency.Click += new System.EventHandler(this.btnSwapCurrency_Click);
 			// 
 			// txtTab1Input
 			// 
 			this.txtTab1Input.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.txtTab1Input.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTab1Input.Location = new System.Drawing.Point(2, 288);
+			this.txtTab1Input.Location = new System.Drawing.Point(2, 293);
 			this.txtTab1Input.Margin = new System.Windows.Forms.Padding(2);
 			this.txtTab1Input.MaxLength = 10;
 			this.txtTab1Input.Name = "txtTab1Input";
@@ -1132,13 +1124,12 @@
 			this.txtTab1Input.Text = "0,00";
 			this.txtTab1Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txtTab1Input.WordWrap = false;
-			this.txtTab1Input.TextChanged += new System.EventHandler(this.txtTab1Input_TextChanged);
 			// 
 			// txtTab1Output
 			// 
 			this.txtTab1Output.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.txtTab1Output.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTab1Output.Location = new System.Drawing.Point(370, 288);
+			this.txtTab1Output.Location = new System.Drawing.Point(388, 293);
 			this.txtTab1Output.Margin = new System.Windows.Forms.Padding(2);
 			this.txtTab1Output.MaxLength = 10;
 			this.txtTab1Output.Name = "txtTab1Output";
@@ -1149,29 +1140,28 @@
 			this.txtTab1Output.Text = "0,00";
 			this.txtTab1Output.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txtTab1Output.WordWrap = false;
-			this.txtTab1Output.Click += new System.EventHandler(this.txtTab1Output_Click);
 			// 
 			// tabPageTalisman
 			// 
 			this.tabPageTalisman.Controls.Add(this.groupBox1);
 			this.tabPageTalisman.Controls.Add(this.label7);
-			this.tabPageTalisman.Controls.Add(this.levelTalisman3);
 			this.tabPageTalisman.Controls.Add(this.label6);
-			this.tabPageTalisman.Controls.Add(this.levelTalisman5);
 			this.tabPageTalisman.Controls.Add(this.label5);
-			this.tabPageTalisman.Controls.Add(this.levelTalisman2);
 			this.tabPageTalisman.Controls.Add(this.label4);
-			this.tabPageTalisman.Controls.Add(this.levelTalisman4);
 			this.tabPageTalisman.Controls.Add(this.label3);
-			this.tabPageTalisman.Controls.Add(this.levelTalisman1);
 			this.tabPageTalisman.Controls.Add(this.label2);
 			this.tabPageTalisman.Controls.Add(this.inputUpperBound);
 			this.tabPageTalisman.Controls.Add(this.inputLowerBound);
 			this.tabPageTalisman.Controls.Add(this.label1);
-			this.tabPageTalisman.Location = new System.Drawing.Point(4, 26);
+			this.tabPageTalisman.Controls.Add(this.levelTalisman3);
+			this.tabPageTalisman.Controls.Add(this.levelTalisman5);
+			this.tabPageTalisman.Controls.Add(this.levelTalisman2);
+			this.tabPageTalisman.Controls.Add(this.levelTalisman4);
+			this.tabPageTalisman.Controls.Add(this.levelTalisman1);
+			this.tabPageTalisman.Location = new System.Drawing.Point(4, 22);
 			this.tabPageTalisman.Name = "tabPageTalisman";
 			this.tabPageTalisman.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageTalisman.Size = new System.Drawing.Size(566, 339);
+			this.tabPageTalisman.Size = new System.Drawing.Size(584, 348);
 			this.tabPageTalisman.TabIndex = 1;
 			this.tabPageTalisman.Text = "Talisman";
 			this.tabPageTalisman.UseVisualStyleBackColor = true;
@@ -1440,23 +1430,6 @@
 			this.label7.Text = "Talisman 3";
 			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// levelTalisman3
-			// 
-			this.levelTalisman3.DropDownHeight = 150;
-			this.levelTalisman3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.levelTalisman3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.levelTalisman3.FormattingEnabled = true;
-			this.levelTalisman3.IntegralHeight = false;
-			this.levelTalisman3.Location = new System.Drawing.Point(95, 254);
-			this.levelTalisman3.MaxValue = 0;
-			this.levelTalisman3.MinValue = 0;
-			this.levelTalisman3.Name = "levelTalisman3";
-			this.levelTalisman3.SelectedItem = 0;
-			this.levelTalisman3.Size = new System.Drawing.Size(50, 29);
-			this.levelTalisman3.TabIndex = 3;
-			this.levelTalisman3.Tag = "3";
-			this.levelTalisman3.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
-			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
@@ -1467,23 +1440,6 @@
 			this.label6.TabIndex = 11;
 			this.label6.Text = "Talisman 5";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// levelTalisman5
-			// 
-			this.levelTalisman5.DropDownHeight = 150;
-			this.levelTalisman5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.levelTalisman5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.levelTalisman5.FormattingEnabled = true;
-			this.levelTalisman5.IntegralHeight = false;
-			this.levelTalisman5.Location = new System.Drawing.Point(273, 165);
-			this.levelTalisman5.MaxValue = 0;
-			this.levelTalisman5.MinValue = 0;
-			this.levelTalisman5.Name = "levelTalisman5";
-			this.levelTalisman5.SelectedItem = 0;
-			this.levelTalisman5.Size = new System.Drawing.Size(50, 29);
-			this.levelTalisman5.TabIndex = 5;
-			this.levelTalisman5.Tag = "5";
-			this.levelTalisman5.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
 			// 
 			// label5
 			// 
@@ -1496,23 +1452,6 @@
 			this.label5.Text = "Talisman 2";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// levelTalisman2
-			// 
-			this.levelTalisman2.DropDownHeight = 150;
-			this.levelTalisman2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.levelTalisman2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.levelTalisman2.FormattingEnabled = true;
-			this.levelTalisman2.IntegralHeight = false;
-			this.levelTalisman2.Location = new System.Drawing.Point(95, 165);
-			this.levelTalisman2.MaxValue = 0;
-			this.levelTalisman2.MinValue = 0;
-			this.levelTalisman2.Name = "levelTalisman2";
-			this.levelTalisman2.SelectedItem = 0;
-			this.levelTalisman2.Size = new System.Drawing.Size(50, 29);
-			this.levelTalisman2.TabIndex = 2;
-			this.levelTalisman2.Tag = "2";
-			this.levelTalisman2.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
-			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -1524,23 +1463,6 @@
 			this.label4.Text = "Talisman 4";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// levelTalisman4
-			// 
-			this.levelTalisman4.DropDownHeight = 150;
-			this.levelTalisman4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.levelTalisman4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.levelTalisman4.FormattingEnabled = true;
-			this.levelTalisman4.IntegralHeight = false;
-			this.levelTalisman4.Location = new System.Drawing.Point(273, 76);
-			this.levelTalisman4.MaxValue = 0;
-			this.levelTalisman4.MinValue = 0;
-			this.levelTalisman4.Name = "levelTalisman4";
-			this.levelTalisman4.SelectedItem = 0;
-			this.levelTalisman4.Size = new System.Drawing.Size(50, 29);
-			this.levelTalisman4.TabIndex = 4;
-			this.levelTalisman4.Tag = "4";
-			this.levelTalisman4.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
-			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
@@ -1551,23 +1473,6 @@
 			this.label3.TabIndex = 5;
 			this.label3.Text = "Talisman 1";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// levelTalisman1
-			// 
-			this.levelTalisman1.DropDownHeight = 150;
-			this.levelTalisman1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.levelTalisman1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.levelTalisman1.FormattingEnabled = true;
-			this.levelTalisman1.IntegralHeight = false;
-			this.levelTalisman1.Location = new System.Drawing.Point(95, 76);
-			this.levelTalisman1.MaxValue = 0;
-			this.levelTalisman1.MinValue = 0;
-			this.levelTalisman1.Name = "levelTalisman1";
-			this.levelTalisman1.SelectedItem = 0;
-			this.levelTalisman1.Size = new System.Drawing.Size(50, 29);
-			this.levelTalisman1.TabIndex = 1;
-			this.levelTalisman1.Tag = "1";
-			this.levelTalisman1.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
 			// 
 			// label2
 			// 
@@ -1641,6 +1546,91 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Range";
 			// 
+			// levelTalisman3
+			// 
+			this.levelTalisman3.DropDownHeight = 150;
+			this.levelTalisman3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman3.FormattingEnabled = true;
+			this.levelTalisman3.IntegralHeight = false;
+			this.levelTalisman3.Location = new System.Drawing.Point(95, 254);
+			this.levelTalisman3.MaxValue = 0;
+			this.levelTalisman3.MinValue = 0;
+			this.levelTalisman3.Name = "levelTalisman3";
+			this.levelTalisman3.SelectedItem = 0;
+			this.levelTalisman3.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman3.TabIndex = 3;
+			this.levelTalisman3.Tag = "3";
+			this.levelTalisman3.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
+			// 
+			// levelTalisman5
+			// 
+			this.levelTalisman5.DropDownHeight = 150;
+			this.levelTalisman5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman5.FormattingEnabled = true;
+			this.levelTalisman5.IntegralHeight = false;
+			this.levelTalisman5.Location = new System.Drawing.Point(273, 165);
+			this.levelTalisman5.MaxValue = 0;
+			this.levelTalisman5.MinValue = 0;
+			this.levelTalisman5.Name = "levelTalisman5";
+			this.levelTalisman5.SelectedItem = 0;
+			this.levelTalisman5.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman5.TabIndex = 5;
+			this.levelTalisman5.Tag = "5";
+			this.levelTalisman5.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
+			// 
+			// levelTalisman2
+			// 
+			this.levelTalisman2.DropDownHeight = 150;
+			this.levelTalisman2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman2.FormattingEnabled = true;
+			this.levelTalisman2.IntegralHeight = false;
+			this.levelTalisman2.Location = new System.Drawing.Point(95, 165);
+			this.levelTalisman2.MaxValue = 0;
+			this.levelTalisman2.MinValue = 0;
+			this.levelTalisman2.Name = "levelTalisman2";
+			this.levelTalisman2.SelectedItem = 0;
+			this.levelTalisman2.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman2.TabIndex = 2;
+			this.levelTalisman2.Tag = "2";
+			this.levelTalisman2.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
+			// 
+			// levelTalisman4
+			// 
+			this.levelTalisman4.DropDownHeight = 150;
+			this.levelTalisman4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman4.FormattingEnabled = true;
+			this.levelTalisman4.IntegralHeight = false;
+			this.levelTalisman4.Location = new System.Drawing.Point(273, 76);
+			this.levelTalisman4.MaxValue = 0;
+			this.levelTalisman4.MinValue = 0;
+			this.levelTalisman4.Name = "levelTalisman4";
+			this.levelTalisman4.SelectedItem = 0;
+			this.levelTalisman4.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman4.TabIndex = 4;
+			this.levelTalisman4.Tag = "4";
+			this.levelTalisman4.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
+			// 
+			// levelTalisman1
+			// 
+			this.levelTalisman1.DropDownHeight = 150;
+			this.levelTalisman1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.levelTalisman1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.levelTalisman1.FormattingEnabled = true;
+			this.levelTalisman1.IntegralHeight = false;
+			this.levelTalisman1.Location = new System.Drawing.Point(95, 76);
+			this.levelTalisman1.MaxValue = 0;
+			this.levelTalisman1.MinValue = 0;
+			this.levelTalisman1.Name = "levelTalisman1";
+			this.levelTalisman1.SelectedItem = 0;
+			this.levelTalisman1.Size = new System.Drawing.Size(50, 29);
+			this.levelTalisman1.TabIndex = 1;
+			this.levelTalisman1.Tag = "1";
+			this.levelTalisman1.SelectedIndexChanged += new System.EventHandler(this.levelTalisman_SelectedIndexChanged);
+			// 
 			// tabPageSettings
 			// 
 			this.tabPageSettings.BackColor = System.Drawing.Color.Transparent;
@@ -1692,10 +1682,10 @@
 			this.tabPageSettings.Controls.Add(this.pictureBox3);
 			this.tabPageSettings.Controls.Add(this.pictureBox2);
 			this.tabPageSettings.Controls.Add(this.pictureBox1);
-			this.tabPageSettings.Location = new System.Drawing.Point(4, 26);
+			this.tabPageSettings.Location = new System.Drawing.Point(4, 22);
 			this.tabPageSettings.Name = "tabPageSettings";
 			this.tabPageSettings.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageSettings.Size = new System.Drawing.Size(566, 339);
+			this.tabPageSettings.Size = new System.Drawing.Size(584, 348);
 			this.tabPageSettings.TabIndex = 2;
 			this.tabPageSettings.Text = "Settings";
 			this.tabPageSettings.UseVisualStyleBackColor = true;
@@ -1711,7 +1701,6 @@
 			this.currencyTextBox24.Text = "0,00";
 			this.currencyTextBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox24.WordWrap = false;
-			this.currencyTextBox24.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox23
 			// 
@@ -1724,7 +1713,6 @@
 			this.currencyTextBox23.Text = "0,00";
 			this.currencyTextBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox23.WordWrap = false;
-			this.currencyTextBox23.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox22
 			// 
@@ -1737,7 +1725,6 @@
 			this.currencyTextBox22.Text = "0,00";
 			this.currencyTextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox22.WordWrap = false;
-			this.currencyTextBox22.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox21
 			// 
@@ -1750,7 +1737,6 @@
 			this.currencyTextBox21.Text = "0,00";
 			this.currencyTextBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox21.WordWrap = false;
-			this.currencyTextBox21.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox20
 			// 
@@ -1763,7 +1749,6 @@
 			this.currencyTextBox20.Text = "0,00";
 			this.currencyTextBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox20.WordWrap = false;
-			this.currencyTextBox20.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox19
 			// 
@@ -1776,7 +1761,6 @@
 			this.currencyTextBox19.Text = "0,00";
 			this.currencyTextBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox19.WordWrap = false;
-			this.currencyTextBox19.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox18
 			// 
@@ -1790,7 +1774,6 @@
 			this.currencyTextBox18.Text = "0,00";
 			this.currencyTextBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox18.WordWrap = false;
-			this.currencyTextBox18.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox17
 			// 
@@ -1803,7 +1786,6 @@
 			this.currencyTextBox17.Text = "0,00";
 			this.currencyTextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox17.WordWrap = false;
-			this.currencyTextBox17.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox16
 			// 
@@ -1816,7 +1798,6 @@
 			this.currencyTextBox16.Text = "0,00";
 			this.currencyTextBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox16.WordWrap = false;
-			this.currencyTextBox16.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox15
 			// 
@@ -1829,7 +1810,6 @@
 			this.currencyTextBox15.Text = "0,00";
 			this.currencyTextBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox15.WordWrap = false;
-			this.currencyTextBox15.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox14
 			// 
@@ -1842,7 +1822,6 @@
 			this.currencyTextBox14.Text = "0,00";
 			this.currencyTextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox14.WordWrap = false;
-			this.currencyTextBox14.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox13
 			// 
@@ -1855,7 +1834,6 @@
 			this.currencyTextBox13.Text = "0,00";
 			this.currencyTextBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox13.WordWrap = false;
-			this.currencyTextBox13.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox12
 			// 
@@ -1868,7 +1846,6 @@
 			this.currencyTextBox12.Text = "0,00";
 			this.currencyTextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox12.WordWrap = false;
-			this.currencyTextBox12.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox11
 			// 
@@ -1881,7 +1858,6 @@
 			this.currencyTextBox11.Text = "0,00";
 			this.currencyTextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox11.WordWrap = false;
-			this.currencyTextBox11.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox10
 			// 
@@ -1894,7 +1870,6 @@
 			this.currencyTextBox10.Text = "0,00";
 			this.currencyTextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox10.WordWrap = false;
-			this.currencyTextBox10.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox09
 			// 
@@ -1907,7 +1882,6 @@
 			this.currencyTextBox09.Text = "0,00";
 			this.currencyTextBox09.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox09.WordWrap = false;
-			this.currencyTextBox09.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox08
 			// 
@@ -1920,7 +1894,6 @@
 			this.currencyTextBox08.Text = "0,00";
 			this.currencyTextBox08.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox08.WordWrap = false;
-			this.currencyTextBox08.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox07
 			// 
@@ -1933,7 +1906,6 @@
 			this.currencyTextBox07.Text = "0,00";
 			this.currencyTextBox07.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox07.WordWrap = false;
-			this.currencyTextBox07.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox06
 			// 
@@ -1946,7 +1918,6 @@
 			this.currencyTextBox06.Text = "0,00";
 			this.currencyTextBox06.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox06.WordWrap = false;
-			this.currencyTextBox06.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox05
 			// 
@@ -1959,7 +1930,6 @@
 			this.currencyTextBox05.Text = "0,00";
 			this.currencyTextBox05.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox05.WordWrap = false;
-			this.currencyTextBox05.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox04
 			// 
@@ -1972,7 +1942,6 @@
 			this.currencyTextBox04.Text = "0,00";
 			this.currencyTextBox04.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox04.WordWrap = false;
-			this.currencyTextBox04.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox03
 			// 
@@ -1985,7 +1954,6 @@
 			this.currencyTextBox03.Text = "0,00";
 			this.currencyTextBox03.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox03.WordWrap = false;
-			this.currencyTextBox03.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox02
 			// 
@@ -1998,7 +1966,6 @@
 			this.currencyTextBox02.Text = "0,00";
 			this.currencyTextBox02.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox02.WordWrap = false;
-			this.currencyTextBox02.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox01
 			// 
@@ -2011,7 +1978,6 @@
 			this.currencyTextBox01.Text = "0,00";
 			this.currencyTextBox01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox01.WordWrap = false;
-			this.currencyTextBox01.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// pictureBox17
 			// 
@@ -2253,21 +2219,55 @@
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			// 
-			// tooltipButtons
+			// toolStripTop
 			// 
-			this.tooltipButtons.UseAnimation = false;
-			this.tooltipButtons.UseFading = false;
+			this.toolStripTop.CanOverflow = false;
+			this.toolStripTop.Dock = System.Windows.Forms.DockStyle.None;
+			this.toolStripTop.GripMargin = new System.Windows.Forms.Padding(0);
+			this.toolStripTop.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+			this.toolStripTop.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripComboLeague,
+            this.toolStripSeparator1});
+			this.toolStripTop.Location = new System.Drawing.Point(0, 0);
+			this.toolStripTop.Name = "toolStripTop";
+			this.toolStripTop.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+			this.toolStripTop.Size = new System.Drawing.Size(594, 25);
+			this.toolStripTop.Stretch = true;
+			this.toolStripTop.TabIndex = 0;
 			// 
-			// saveTimer
+			// toolStripLabel1
 			// 
-			this.saveTimer.Interval = 2000;
+			this.toolStripLabel1.Name = "toolStripLabel1";
+			this.toolStripLabel1.Size = new System.Drawing.Size(45, 22);
+			this.toolStripLabel1.Text = "League";
+			// 
+			// toolStripComboLeague
+			// 
+			this.toolStripComboLeague.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.toolStripComboLeague.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.toolStripComboLeague.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.toolStripComboLeague.Enabled = false;
+			this.toolStripComboLeague.Items.AddRange(new object[] {
+            "Standard",
+            "Standard (HC)",
+            "Talisman",
+            "Talisman (HC)"});
+			this.toolStripComboLeague.MaxDropDownItems = 4;
+			this.toolStripComboLeague.Name = "toolStripComboLeague";
+			this.toolStripComboLeague.Size = new System.Drawing.Size(100, 25);
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(594, 401);
-			this.Controls.Add(this.tabControlFeatures);
+			this.ClientSize = new System.Drawing.Size(594, 421);
+			this.Controls.Add(this.toolStripContainerMain);
 			this.Controls.Add(this.statusBar);
 			this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -2275,13 +2275,17 @@
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
-			this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 0);
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Path of Exile - Tools";
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.statusBar.ResumeLayout(false);
 			this.statusBar.PerformLayout();
+			this.toolStripContainerMain.ContentPanel.ResumeLayout(false);
+			this.toolStripContainerMain.TopToolStripPanel.ResumeLayout(false);
+			this.toolStripContainerMain.TopToolStripPanel.PerformLayout();
+			this.toolStripContainerMain.ResumeLayout(false);
+			this.toolStripContainerMain.PerformLayout();
 			this.tabControlFeatures.ResumeLayout(false);
 			this.tabPageCurrency.ResumeLayout(false);
 			this.tableTabPageCurrency.ResumeLayout(false);
@@ -2320,6 +2324,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.toolStripTop.ResumeLayout(false);
+			this.toolStripTop.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -2327,13 +2333,17 @@
 
 		#endregion
 		private System.Windows.Forms.StatusStrip statusBar;
+		private System.Windows.Forms.ToolTip tooltipButtons;
+		private System.Windows.Forms.ToolStripDropDownButton debugMenu;
+		private System.Windows.Forms.ToolStripMenuItem debugMenuEntry01;
+		private System.Windows.Forms.ToolStripStatusLabel statusLabelLeft;
+		private System.Windows.Forms.Timer saveTimer;
+		private System.Windows.Forms.ToolStripContainer toolStripContainerMain;
 		private System.Windows.Forms.TabControl tabControlFeatures;
 		private System.Windows.Forms.TabPage tabPageCurrency;
-		private System.Windows.Forms.TabPage tabPageTalisman;
-		private System.Windows.Forms.TabPage tabPageSettings;
 		private System.Windows.Forms.TableLayoutPanel tableTabPageCurrency;
 		private System.Windows.Forms.TableLayoutPanel tableButtonsInput;
-		private System.Windows.Forms.Button btnInput01;
+		private System.Windows.Forms.Button btnInput09;
 		private System.Windows.Forms.Button btnInput24;
 		private System.Windows.Forms.Button btnInput18;
 		private System.Windows.Forms.Button btnInput12;
@@ -2348,7 +2358,6 @@
 		private System.Windows.Forms.Button btnInput04;
 		private System.Windows.Forms.Button btnInput21;
 		private System.Windows.Forms.Button btnInput15;
-		private System.Windows.Forms.Button btnInput09;
 		private System.Windows.Forms.Button btnInput03;
 		private System.Windows.Forms.Button btnInput20;
 		private System.Windows.Forms.Button btnInput14;
@@ -2357,6 +2366,7 @@
 		private System.Windows.Forms.Button btnInput19;
 		private System.Windows.Forms.Button btnInput13;
 		private System.Windows.Forms.Button btnInput07;
+		private System.Windows.Forms.Button btnInput01;
 		private System.Windows.Forms.TableLayoutPanel tableButtonsOutput;
 		private System.Windows.Forms.Button btnOutput24;
 		private System.Windows.Forms.Button btnOutput18;
@@ -2383,34 +2393,42 @@
 		private System.Windows.Forms.Button btnOutput07;
 		private System.Windows.Forms.Button btnOutput01;
 		private System.Windows.Forms.Button btnSwapCurrency;
-		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.PictureBox pictureBox17;
-		private System.Windows.Forms.PictureBox pictureBox18;
-		private System.Windows.Forms.PictureBox pictureBox19;
-		private System.Windows.Forms.PictureBox pictureBox20;
-		private System.Windows.Forms.PictureBox pictureBox21;
-		private System.Windows.Forms.PictureBox pictureBox22;
-		private System.Windows.Forms.PictureBox pictureBox23;
-		private System.Windows.Forms.PictureBox pictureBox24;
-		private System.Windows.Forms.PictureBox pictureBox9;
-		private System.Windows.Forms.PictureBox pictureBox10;
-		private System.Windows.Forms.PictureBox pictureBox11;
-		private System.Windows.Forms.PictureBox pictureBox12;
-		private System.Windows.Forms.PictureBox pictureBox13;
-		private System.Windows.Forms.PictureBox pictureBox14;
-		private System.Windows.Forms.PictureBox pictureBox15;
-		private System.Windows.Forms.PictureBox pictureBox16;
-		private System.Windows.Forms.PictureBox pictureBox5;
-		private System.Windows.Forms.PictureBox pictureBox6;
-		private System.Windows.Forms.PictureBox pictureBox7;
-		private System.Windows.Forms.PictureBox pictureBox8;
-		private System.Windows.Forms.PictureBox pictureBox4;
-		private System.Windows.Forms.PictureBox pictureBox3;
-		private System.Windows.Forms.PictureBox pictureBox2;
-		private System.Windows.Forms.ToolTip tooltipButtons;
 		private DecimalTextBox txtTab1Input;
 		private DecimalTextBox txtTab1Output;
-		private DecimalTextBox currencyTextBox01;
+		private System.Windows.Forms.TabPage tabPageTalisman;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.Label labelLevelResult;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label labelT5;
+		private System.Windows.Forms.Label labelT4;
+		private System.Windows.Forms.Label labelT3;
+		private System.Windows.Forms.Label labelT2;
+		private System.Windows.Forms.Label labelT1;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.Label label17;
+		private System.Windows.Forms.Label labelLevelT5;
+		private System.Windows.Forms.Label labelLevelT4;
+		private System.Windows.Forms.Label labelLevelT3;
+		private System.Windows.Forms.Label labelLevelT2;
+		private System.Windows.Forms.Label labelLevelT1;
+		private System.Windows.Forms.Label label7;
+		private LevelComboBox levelTalisman3;
+		private System.Windows.Forms.Label label6;
+		private LevelComboBox levelTalisman5;
+		private System.Windows.Forms.Label label5;
+		private LevelComboBox levelTalisman2;
+		private System.Windows.Forms.Label label4;
+		private LevelComboBox levelTalisman4;
+		private System.Windows.Forms.Label label3;
+		private LevelComboBox levelTalisman1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.NumericUpDown inputUpperBound;
+		private System.Windows.Forms.NumericUpDown inputLowerBound;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.TabPage tabPageSettings;
 		private DecimalTextBox currencyTextBox24;
 		private DecimalTextBox currencyTextBox23;
 		private DecimalTextBox currencyTextBox22;
@@ -2434,42 +2452,35 @@
 		private DecimalTextBox currencyTextBox04;
 		private DecimalTextBox currencyTextBox03;
 		private DecimalTextBox currencyTextBox02;
-		private System.Windows.Forms.ToolStripDropDownButton debugMenu;
-		private System.Windows.Forms.ToolStripMenuItem debugMenuEntry01;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.NumericUpDown inputUpperBound;
-		private System.Windows.Forms.NumericUpDown inputLowerBound;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ToolStripStatusLabel statusLabelLeft;
-		private System.Windows.Forms.Timer saveTimer;
-		private System.Windows.Forms.Label label3;
-		private LevelComboBox levelTalisman1;
-		private System.Windows.Forms.Label label7;
-		private LevelComboBox levelTalisman3;
-		private System.Windows.Forms.Label label6;
-		private LevelComboBox levelTalisman5;
-		private System.Windows.Forms.Label label5;
-		private LevelComboBox levelTalisman2;
-		private System.Windows.Forms.Label label4;
-		private LevelComboBox levelTalisman4;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Label label13;
-		private System.Windows.Forms.Label label14;
-		private System.Windows.Forms.Label label15;
-		private System.Windows.Forms.Label label16;
-		private System.Windows.Forms.Label label17;
-		private System.Windows.Forms.Label labelLevelT5;
-		private System.Windows.Forms.Label labelLevelT4;
-		private System.Windows.Forms.Label labelLevelT3;
-		private System.Windows.Forms.Label labelLevelT2;
-		private System.Windows.Forms.Label labelLevelT1;
-		private System.Windows.Forms.Label labelLevelResult;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.Label labelT5;
-		private System.Windows.Forms.Label labelT4;
-		private System.Windows.Forms.Label labelT3;
-		private System.Windows.Forms.Label labelT2;
-		private System.Windows.Forms.Label labelT1;
+		private DecimalTextBox currencyTextBox01;
+		private System.Windows.Forms.PictureBox pictureBox17;
+		private System.Windows.Forms.PictureBox pictureBox18;
+		private System.Windows.Forms.PictureBox pictureBox19;
+		private System.Windows.Forms.PictureBox pictureBox20;
+		private System.Windows.Forms.PictureBox pictureBox21;
+		private System.Windows.Forms.PictureBox pictureBox22;
+		private System.Windows.Forms.PictureBox pictureBox23;
+		private System.Windows.Forms.PictureBox pictureBox24;
+		private System.Windows.Forms.PictureBox pictureBox9;
+		private System.Windows.Forms.PictureBox pictureBox10;
+		private System.Windows.Forms.PictureBox pictureBox11;
+		private System.Windows.Forms.PictureBox pictureBox12;
+		private System.Windows.Forms.PictureBox pictureBox13;
+		private System.Windows.Forms.PictureBox pictureBox14;
+		private System.Windows.Forms.PictureBox pictureBox15;
+		private System.Windows.Forms.PictureBox pictureBox16;
+		private System.Windows.Forms.PictureBox pictureBox5;
+		private System.Windows.Forms.PictureBox pictureBox6;
+		private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.PictureBox pictureBox8;
+		private System.Windows.Forms.PictureBox pictureBox4;
+		private System.Windows.Forms.PictureBox pictureBox3;
+		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.ToolStrip toolStripTop;
+		private System.Windows.Forms.ToolStripComboBox toolStripComboLeague;
+		private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 	}
 }
 
