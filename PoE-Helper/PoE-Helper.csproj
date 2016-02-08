@@ -267,6 +267,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ideas.txt" />
+    <None Include="Resources\fa-check_16.png" />
+    <None Include="Resources\fa-close_16.png" />
     <None Include="Resources\fa-check-square-o_16.png" />
     <None Include="Resources\fa-download_16.png" />
     <None Include="Resources\fa-info-circle_16.png" />

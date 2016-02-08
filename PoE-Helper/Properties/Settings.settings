@@ -20,5 +20,8 @@
     <Setting Name="TagElementCurrency" Type="System.String" Scope="Application">
       <Value Profile="(Default)">currency</Value>
     </Setting>
+    <Setting Name="lastModified" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">02/08/2016 14:16:00</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

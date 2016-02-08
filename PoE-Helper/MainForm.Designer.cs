@@ -174,6 +174,9 @@
 			this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
 			this.toolStripComboLeague = new System.Windows.Forms.ToolStripComboBox();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripExternSwitch = new System.Windows.Forms.ToolStripButton();
+			this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+			this.remoteDataTimer = new System.Windows.Forms.Timer(this.components);
 			this.statusBar.SuspendLayout();
 			this.toolStripContainerMain.ContentPanel.SuspendLayout();
 			this.toolStripContainerMain.TopToolStripPanel.SuspendLayout();
@@ -276,6 +279,7 @@
 			this.btnSwapCurrency.TabIndex = 4;
 			this.tooltipButtons.SetToolTip(this.btnSwapCurrency, "Swap source and target currency");
 			this.btnSwapCurrency.UseVisualStyleBackColor = true;
+			this.btnSwapCurrency.Click += new System.EventHandler(this.btnSwapCurrency_Click);
 			// 
 			// saveTimer
 			// 
@@ -317,6 +321,7 @@
 			this.tabControlFeatures.SelectedIndex = 0;
 			this.tabControlFeatures.Size = new System.Drawing.Size(592, 374);
 			this.tabControlFeatures.TabIndex = 3;
+			this.tabControlFeatures.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlFeatures_Selecting);
 			// 
 			// tabPageCurrency
 			// 
@@ -407,6 +412,7 @@
 			this.btnInput09.TabStop = false;
 			this.btnInput09.Tag = "input";
 			this.btnInput09.UseVisualStyleBackColor = true;
+			this.btnInput09.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput24
 			// 
@@ -421,6 +427,7 @@
 			this.btnInput24.TabStop = false;
 			this.btnInput24.Tag = "input";
 			this.btnInput24.UseVisualStyleBackColor = true;
+			this.btnInput24.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput18
 			// 
@@ -435,6 +442,7 @@
 			this.btnInput18.TabStop = false;
 			this.btnInput18.Tag = "input";
 			this.btnInput18.UseVisualStyleBackColor = true;
+			this.btnInput18.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput12
 			// 
@@ -449,6 +457,7 @@
 			this.btnInput12.TabStop = false;
 			this.btnInput12.Tag = "input";
 			this.btnInput12.UseVisualStyleBackColor = true;
+			this.btnInput12.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput06
 			// 
@@ -463,6 +472,7 @@
 			this.btnInput06.TabStop = false;
 			this.btnInput06.Tag = "input";
 			this.btnInput06.UseVisualStyleBackColor = true;
+			this.btnInput06.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput23
 			// 
@@ -477,6 +487,7 @@
 			this.btnInput23.TabStop = false;
 			this.btnInput23.Tag = "input";
 			this.btnInput23.UseVisualStyleBackColor = true;
+			this.btnInput23.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput17
 			// 
@@ -491,6 +502,7 @@
 			this.btnInput17.TabStop = false;
 			this.btnInput17.Tag = "input";
 			this.btnInput17.UseVisualStyleBackColor = true;
+			this.btnInput17.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput11
 			// 
@@ -505,6 +517,7 @@
 			this.btnInput11.TabStop = false;
 			this.btnInput11.Tag = "input";
 			this.btnInput11.UseVisualStyleBackColor = true;
+			this.btnInput11.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput05
 			// 
@@ -519,6 +532,7 @@
 			this.btnInput05.TabStop = false;
 			this.btnInput05.Tag = "input";
 			this.btnInput05.UseVisualStyleBackColor = true;
+			this.btnInput05.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput22
 			// 
@@ -533,6 +547,7 @@
 			this.btnInput22.TabStop = false;
 			this.btnInput22.Tag = "input";
 			this.btnInput22.UseVisualStyleBackColor = true;
+			this.btnInput22.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput16
 			// 
@@ -547,6 +562,7 @@
 			this.btnInput16.TabStop = false;
 			this.btnInput16.Tag = "input";
 			this.btnInput16.UseVisualStyleBackColor = true;
+			this.btnInput16.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput10
 			// 
@@ -561,6 +577,7 @@
 			this.btnInput10.TabStop = false;
 			this.btnInput10.Tag = "input";
 			this.btnInput10.UseVisualStyleBackColor = true;
+			this.btnInput10.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput04
 			// 
@@ -575,6 +592,7 @@
 			this.btnInput04.TabStop = false;
 			this.btnInput04.Tag = "input";
 			this.btnInput04.UseVisualStyleBackColor = true;
+			this.btnInput04.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput21
 			// 
@@ -589,6 +607,7 @@
 			this.btnInput21.TabStop = false;
 			this.btnInput21.Tag = "input";
 			this.btnInput21.UseVisualStyleBackColor = true;
+			this.btnInput21.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput15
 			// 
@@ -603,6 +622,7 @@
 			this.btnInput15.TabStop = false;
 			this.btnInput15.Tag = "input";
 			this.btnInput15.UseVisualStyleBackColor = true;
+			this.btnInput15.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput03
 			// 
@@ -617,6 +637,7 @@
 			this.btnInput03.TabStop = false;
 			this.btnInput03.Tag = "input";
 			this.btnInput03.UseVisualStyleBackColor = true;
+			this.btnInput03.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput20
 			// 
@@ -631,6 +652,7 @@
 			this.btnInput20.TabStop = false;
 			this.btnInput20.Tag = "input";
 			this.btnInput20.UseVisualStyleBackColor = true;
+			this.btnInput20.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput14
 			// 
@@ -645,6 +667,7 @@
 			this.btnInput14.TabStop = false;
 			this.btnInput14.Tag = "input";
 			this.btnInput14.UseVisualStyleBackColor = true;
+			this.btnInput14.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput08
 			// 
@@ -659,6 +682,7 @@
 			this.btnInput08.TabStop = false;
 			this.btnInput08.Tag = "input";
 			this.btnInput08.UseVisualStyleBackColor = true;
+			this.btnInput08.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput02
 			// 
@@ -673,6 +697,7 @@
 			this.btnInput02.TabStop = false;
 			this.btnInput02.Tag = "input";
 			this.btnInput02.UseVisualStyleBackColor = true;
+			this.btnInput02.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput19
 			// 
@@ -687,6 +712,7 @@
 			this.btnInput19.TabStop = false;
 			this.btnInput19.Tag = "input";
 			this.btnInput19.UseVisualStyleBackColor = true;
+			this.btnInput19.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput13
 			// 
@@ -701,6 +727,7 @@
 			this.btnInput13.TabStop = false;
 			this.btnInput13.Tag = "input";
 			this.btnInput13.UseVisualStyleBackColor = true;
+			this.btnInput13.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput07
 			// 
@@ -715,6 +742,7 @@
 			this.btnInput07.TabStop = false;
 			this.btnInput07.Tag = "input";
 			this.btnInput07.UseVisualStyleBackColor = true;
+			this.btnInput07.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnInput01
 			// 
@@ -729,6 +757,7 @@
 			this.btnInput01.TabStop = false;
 			this.btnInput01.Tag = "input";
 			this.btnInput01.UseVisualStyleBackColor = true;
+			this.btnInput01.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// tableButtonsOutput
 			// 
@@ -788,6 +817,7 @@
 			this.btnOutput24.TabStop = false;
 			this.btnOutput24.Tag = "output";
 			this.btnOutput24.UseVisualStyleBackColor = true;
+			this.btnOutput24.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput18
 			// 
@@ -802,6 +832,7 @@
 			this.btnOutput18.TabStop = false;
 			this.btnOutput18.Tag = "output";
 			this.btnOutput18.UseVisualStyleBackColor = true;
+			this.btnOutput18.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput12
 			// 
@@ -816,6 +847,7 @@
 			this.btnOutput12.TabStop = false;
 			this.btnOutput12.Tag = "output";
 			this.btnOutput12.UseVisualStyleBackColor = true;
+			this.btnOutput12.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput06
 			// 
@@ -830,6 +862,7 @@
 			this.btnOutput06.TabStop = false;
 			this.btnOutput06.Tag = "output";
 			this.btnOutput06.UseVisualStyleBackColor = true;
+			this.btnOutput06.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput23
 			// 
@@ -844,6 +877,7 @@
 			this.btnOutput23.TabStop = false;
 			this.btnOutput23.Tag = "output";
 			this.btnOutput23.UseVisualStyleBackColor = true;
+			this.btnOutput23.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput17
 			// 
@@ -858,6 +892,7 @@
 			this.btnOutput17.TabStop = false;
 			this.btnOutput17.Tag = "output";
 			this.btnOutput17.UseVisualStyleBackColor = true;
+			this.btnOutput17.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput11
 			// 
@@ -872,6 +907,7 @@
 			this.btnOutput11.TabStop = false;
 			this.btnOutput11.Tag = "output";
 			this.btnOutput11.UseVisualStyleBackColor = true;
+			this.btnOutput11.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput05
 			// 
@@ -886,6 +922,7 @@
 			this.btnOutput05.TabStop = false;
 			this.btnOutput05.Tag = "output";
 			this.btnOutput05.UseVisualStyleBackColor = true;
+			this.btnOutput05.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput22
 			// 
@@ -900,6 +937,7 @@
 			this.btnOutput22.TabStop = false;
 			this.btnOutput22.Tag = "output";
 			this.btnOutput22.UseVisualStyleBackColor = true;
+			this.btnOutput22.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput16
 			// 
@@ -914,6 +952,7 @@
 			this.btnOutput16.TabStop = false;
 			this.btnOutput16.Tag = "output";
 			this.btnOutput16.UseVisualStyleBackColor = true;
+			this.btnOutput16.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput10
 			// 
@@ -928,6 +967,7 @@
 			this.btnOutput10.TabStop = false;
 			this.btnOutput10.Tag = "output";
 			this.btnOutput10.UseVisualStyleBackColor = true;
+			this.btnOutput10.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput04
 			// 
@@ -942,6 +982,7 @@
 			this.btnOutput04.TabStop = false;
 			this.btnOutput04.Tag = "output";
 			this.btnOutput04.UseVisualStyleBackColor = true;
+			this.btnOutput04.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput21
 			// 
@@ -956,6 +997,7 @@
 			this.btnOutput21.TabStop = false;
 			this.btnOutput21.Tag = "output";
 			this.btnOutput21.UseVisualStyleBackColor = true;
+			this.btnOutput21.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput15
 			// 
@@ -970,6 +1012,7 @@
 			this.btnOutput15.TabStop = false;
 			this.btnOutput15.Tag = "output";
 			this.btnOutput15.UseVisualStyleBackColor = true;
+			this.btnOutput15.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput09
 			// 
@@ -984,6 +1027,7 @@
 			this.btnOutput09.TabStop = false;
 			this.btnOutput09.Tag = "output";
 			this.btnOutput09.UseVisualStyleBackColor = true;
+			this.btnOutput09.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput03
 			// 
@@ -998,6 +1042,7 @@
 			this.btnOutput03.TabStop = false;
 			this.btnOutput03.Tag = "output";
 			this.btnOutput03.UseVisualStyleBackColor = true;
+			this.btnOutput03.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput20
 			// 
@@ -1012,6 +1057,7 @@
 			this.btnOutput20.TabStop = false;
 			this.btnOutput20.Tag = "output";
 			this.btnOutput20.UseVisualStyleBackColor = true;
+			this.btnOutput20.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput14
 			// 
@@ -1026,6 +1072,7 @@
 			this.btnOutput14.TabStop = false;
 			this.btnOutput14.Tag = "output";
 			this.btnOutput14.UseVisualStyleBackColor = true;
+			this.btnOutput14.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput08
 			// 
@@ -1040,6 +1087,7 @@
 			this.btnOutput08.TabStop = false;
 			this.btnOutput08.Tag = "output";
 			this.btnOutput08.UseVisualStyleBackColor = true;
+			this.btnOutput08.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput02
 			// 
@@ -1054,6 +1102,7 @@
 			this.btnOutput02.TabStop = false;
 			this.btnOutput02.Tag = "output";
 			this.btnOutput02.UseVisualStyleBackColor = true;
+			this.btnOutput02.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput19
 			// 
@@ -1068,6 +1117,7 @@
 			this.btnOutput19.TabStop = false;
 			this.btnOutput19.Tag = "output";
 			this.btnOutput19.UseVisualStyleBackColor = true;
+			this.btnOutput19.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput13
 			// 
@@ -1082,6 +1132,7 @@
 			this.btnOutput13.TabStop = false;
 			this.btnOutput13.Tag = "output";
 			this.btnOutput13.UseVisualStyleBackColor = true;
+			this.btnOutput13.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput07
 			// 
@@ -1096,6 +1147,7 @@
 			this.btnOutput07.TabStop = false;
 			this.btnOutput07.Tag = "output";
 			this.btnOutput07.UseVisualStyleBackColor = true;
+			this.btnOutput07.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// btnOutput01
 			// 
@@ -1110,6 +1162,7 @@
 			this.btnOutput01.TabStop = false;
 			this.btnOutput01.Tag = "output";
 			this.btnOutput01.UseVisualStyleBackColor = true;
+			this.btnOutput01.Click += new System.EventHandler(this.buttonCurrency_Click);
 			// 
 			// txtTab1Input
 			// 
@@ -1124,6 +1177,7 @@
 			this.txtTab1Input.Text = "0,00";
 			this.txtTab1Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txtTab1Input.WordWrap = false;
+			this.txtTab1Input.TextChanged += new System.EventHandler(this.txtTab1Input_TextChanged);
 			// 
 			// txtTab1Output
 			// 
@@ -1140,6 +1194,7 @@
 			this.txtTab1Output.Text = "0,00";
 			this.txtTab1Output.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txtTab1Output.WordWrap = false;
+			this.txtTab1Output.Click += new System.EventHandler(this.txtTab1Output_Click);
 			// 
 			// tabPageTalisman
 			// 
@@ -1701,6 +1756,7 @@
 			this.currencyTextBox24.Text = "0,00";
 			this.currencyTextBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox24.WordWrap = false;
+			this.currencyTextBox24.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox23
 			// 
@@ -1713,6 +1769,7 @@
 			this.currencyTextBox23.Text = "0,00";
 			this.currencyTextBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox23.WordWrap = false;
+			this.currencyTextBox23.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox22
 			// 
@@ -1725,6 +1782,7 @@
 			this.currencyTextBox22.Text = "0,00";
 			this.currencyTextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox22.WordWrap = false;
+			this.currencyTextBox22.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox21
 			// 
@@ -1737,6 +1795,7 @@
 			this.currencyTextBox21.Text = "0,00";
 			this.currencyTextBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox21.WordWrap = false;
+			this.currencyTextBox21.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox20
 			// 
@@ -1749,6 +1808,7 @@
 			this.currencyTextBox20.Text = "0,00";
 			this.currencyTextBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox20.WordWrap = false;
+			this.currencyTextBox20.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox19
 			// 
@@ -1761,6 +1821,7 @@
 			this.currencyTextBox19.Text = "0,00";
 			this.currencyTextBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox19.WordWrap = false;
+			this.currencyTextBox19.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox18
 			// 
@@ -1774,6 +1835,7 @@
 			this.currencyTextBox18.Text = "0,00";
 			this.currencyTextBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox18.WordWrap = false;
+			this.currencyTextBox18.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox17
 			// 
@@ -1786,6 +1848,7 @@
 			this.currencyTextBox17.Text = "0,00";
 			this.currencyTextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox17.WordWrap = false;
+			this.currencyTextBox17.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox16
 			// 
@@ -1798,6 +1861,7 @@
 			this.currencyTextBox16.Text = "0,00";
 			this.currencyTextBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox16.WordWrap = false;
+			this.currencyTextBox16.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox15
 			// 
@@ -1810,6 +1874,7 @@
 			this.currencyTextBox15.Text = "0,00";
 			this.currencyTextBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox15.WordWrap = false;
+			this.currencyTextBox15.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox14
 			// 
@@ -1822,6 +1887,7 @@
 			this.currencyTextBox14.Text = "0,00";
 			this.currencyTextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox14.WordWrap = false;
+			this.currencyTextBox14.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox13
 			// 
@@ -1834,6 +1900,7 @@
 			this.currencyTextBox13.Text = "0,00";
 			this.currencyTextBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox13.WordWrap = false;
+			this.currencyTextBox13.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox12
 			// 
@@ -1846,6 +1913,7 @@
 			this.currencyTextBox12.Text = "0,00";
 			this.currencyTextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox12.WordWrap = false;
+			this.currencyTextBox12.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox11
 			// 
@@ -1858,6 +1926,7 @@
 			this.currencyTextBox11.Text = "0,00";
 			this.currencyTextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox11.WordWrap = false;
+			this.currencyTextBox11.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox10
 			// 
@@ -1870,6 +1939,7 @@
 			this.currencyTextBox10.Text = "0,00";
 			this.currencyTextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox10.WordWrap = false;
+			this.currencyTextBox10.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox09
 			// 
@@ -1882,6 +1952,7 @@
 			this.currencyTextBox09.Text = "0,00";
 			this.currencyTextBox09.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox09.WordWrap = false;
+			this.currencyTextBox09.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox08
 			// 
@@ -1894,6 +1965,7 @@
 			this.currencyTextBox08.Text = "0,00";
 			this.currencyTextBox08.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox08.WordWrap = false;
+			this.currencyTextBox08.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox07
 			// 
@@ -1906,6 +1978,7 @@
 			this.currencyTextBox07.Text = "0,00";
 			this.currencyTextBox07.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox07.WordWrap = false;
+			this.currencyTextBox07.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox06
 			// 
@@ -1918,6 +1991,7 @@
 			this.currencyTextBox06.Text = "0,00";
 			this.currencyTextBox06.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox06.WordWrap = false;
+			this.currencyTextBox06.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox05
 			// 
@@ -1930,6 +2004,7 @@
 			this.currencyTextBox05.Text = "0,00";
 			this.currencyTextBox05.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox05.WordWrap = false;
+			this.currencyTextBox05.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox04
 			// 
@@ -1942,6 +2017,7 @@
 			this.currencyTextBox04.Text = "0,00";
 			this.currencyTextBox04.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox04.WordWrap = false;
+			this.currencyTextBox04.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox03
 			// 
@@ -1954,6 +2030,7 @@
 			this.currencyTextBox03.Text = "0,00";
 			this.currencyTextBox03.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox03.WordWrap = false;
+			this.currencyTextBox03.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox02
 			// 
@@ -1966,6 +2043,7 @@
 			this.currencyTextBox02.Text = "0,00";
 			this.currencyTextBox02.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox02.WordWrap = false;
+			this.currencyTextBox02.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// currencyTextBox01
 			// 
@@ -1978,6 +2056,7 @@
 			this.currencyTextBox01.Text = "0,00";
 			this.currencyTextBox01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.currencyTextBox01.WordWrap = false;
+			this.currencyTextBox01.Validated += new System.EventHandler(this.currencyTextBox_Validated);
 			// 
 			// pictureBox17
 			// 
@@ -2228,7 +2307,9 @@
 			this.toolStripTop.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripComboLeague,
-            this.toolStripSeparator1});
+            this.toolStripSeparator1,
+            this.toolStripExternSwitch,
+            this.toolStripLabel2});
 			this.toolStripTop.Location = new System.Drawing.Point(0, 0);
 			this.toolStripTop.Name = "toolStripTop";
 			this.toolStripTop.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -2261,6 +2342,30 @@
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+			// 
+			// toolStripExternSwitch
+			// 
+			this.toolStripExternSwitch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+			this.toolStripExternSwitch.AutoToolTip = false;
+			this.toolStripExternSwitch.CheckOnClick = true;
+			this.toolStripExternSwitch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripExternSwitch.Image = global::PoE_Helper.Icons.fa_close_16;
+			this.toolStripExternSwitch.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripExternSwitch.Name = "toolStripExternSwitch";
+			this.toolStripExternSwitch.Size = new System.Drawing.Size(23, 22);
+			this.toolStripExternSwitch.Text = "toolStripButton1";
+			this.toolStripExternSwitch.Click += new System.EventHandler(this.toolStripExternSwitch_Click);
+			// 
+			// toolStripLabel2
+			// 
+			this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+			this.toolStripLabel2.Name = "toolStripLabel2";
+			this.toolStripLabel2.Size = new System.Drawing.Size(136, 22);
+			this.toolStripLabel2.Text = "Get currency data online";
+			// 
+			// remoteDataTimer
+			// 
+			this.remoteDataTimer.Interval = 60000;
 			// 
 			// MainForm
 			// 
@@ -2481,6 +2586,9 @@
 		private System.Windows.Forms.ToolStripComboBox toolStripComboLeague;
 		private System.Windows.Forms.ToolStripLabel toolStripLabel1;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripButton toolStripExternSwitch;
+		private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+		private System.Windows.Forms.Timer remoteDataTimer;
 	}
 }
 

@@ -76,5 +76,17 @@ namespace PoE_Helper.Properties {
                 return ((string)(this["TagElementCurrency"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("02/08/2016 14:16:00")]
+        public global::System.DateTime lastModified {
+            get {
+                return ((global::System.DateTime)(this["lastModified"]));
+            }
+            set {
+                this["lastModified"] = value;
+            }
+        }
     }
 }

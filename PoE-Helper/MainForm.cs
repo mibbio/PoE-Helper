@@ -64,6 +64,8 @@ namespace PoE_Helper {
 
 			updater.VersionCheckDone += UpdateCheck_VersionCheckDone;
 			statusBar.HandleCreated += updater.CheckRemoteVersion;
+			remoteDataTimer.Tick += new EventHandler(config.LoadExternData);
+			config.ExternDataLoaded += new AppConfig.ExternDataLoadedEventHandler(Config_ExternDataLoaded);
 		}
 
 		#region General event handling
@@ -74,13 +76,31 @@ namespace PoE_Helper {
 
 		private void tabControlFeatures_Selecting( object sender, TabControlCancelEventArgs e ) {
 			TabPage page = ((TabControl) sender).SelectedTab;
-			if (page == tabPageTalisman) {
-				//e.Cancel = true;
-			}
 			if (page == tabPageSettings) {
 				InitializeSettingsTab();
 				if (!saveTimer.Enabled) { saveTimer.Start(); }
 			} else { saveTimer.Stop(); }
+		}
+
+		private void toolStripExternSwitch_Click( object sender, EventArgs e ) {
+			if (sender is ToolStripButton) {
+				ToolStripButton btn = (ToolStripButton) sender;
+				if (btn.CheckState == CheckState.Checked) {
+					btn.Image = Icons.fa_check_16;
+					remoteDataTimer.Start();
+					Console.WriteLine("1- Timer [{0}] at {1}", remoteDataTimer.Enabled, DateTime.Now);
+				} else {
+					btn.Image = Icons.fa_close_16;
+					remoteDataTimer.Stop();
+					Console.WriteLine("2 - Timer [{0}] at {1}", remoteDataTimer.Enabled, DateTime.Now);
+				}
+			}
+		}
+
+		private void Config_ExternDataLoaded() {
+			Console.WriteLine("Update Settings");
+			remoteDataTimer.Interval = 900000;
+			InitializeSettingsTab();
 		}
 		#endregion
 
@@ -219,7 +239,6 @@ namespace PoE_Helper {
 					levelTalisman4.SelectedItem, levelTalisman5.SelectedItem);
 			}
 			LevelComboBox lcb = sender as LevelComboBox;
-			Console.WriteLine(string.Format("{0} \t{1}", lcb.SelectedItem, lcb.Tag));
 			this.calculator.SetTalismanLevel(lcb.SelectedItem, Convert.ToInt32(lcb.Tag));
 			int[] medium = this.calculator.MediumTalismans;
 			labelLevelT1.Text = this.calculator.HighestTalisman.ToString();
@@ -267,5 +286,7 @@ namespace PoE_Helper {
 			return string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
 		}
 		#endregion
+
+		
 	}
 }

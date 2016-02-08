@@ -40,22 +40,20 @@ namespace PoE_Helper {
 
 		public void InitializeSettingsTab() {
 			ThreadPool.QueueUserWorkItem(new WaitCallback(state => {
-				lock (tabPageSettings) {
-					foreach (DecimalTextBox dtb in tabPageSettings.Controls.OfType<DecimalTextBox>()) {
-						while (!dtb.IsHandleCreated) { Thread.Sleep(100); }
-						int index = -1;
-						int.TryParse(dtb.Name.Substring(dtb.Name.Length - 2), out index);
-						if (index >= 0) {
-							try {
-								dtb.Invoke(new Action(() => {
-									dtb.Value = dtb.Value = config.GetCurrency(index - 1).Value;
-									dtb.Tag = index - 1;
-									dtb.Refresh();
-								}));
-							}
-							catch (ArgumentOutOfRangeException) { }
+				foreach (DecimalTextBox dtb in tabPageSettings.Controls.OfType<DecimalTextBox>()) {
+					while (!dtb.IsHandleCreated) { Thread.Sleep(100); }
+					int index = -1;
+					int.TryParse(dtb.Name.Substring(dtb.Name.Length - 2), out index);
+					if (index >= 0) {
+						try {
+							dtb.Invoke(new Action(() => {
+								dtb.Value = dtb.Value = config.GetCurrency(index - 1).Value;
+								dtb.Tag = index - 1;
+								dtb.Refresh();
+							}));
 						}
-					} 
+						catch (ArgumentOutOfRangeException) { }
+					}
 				}
 			}));
 		}

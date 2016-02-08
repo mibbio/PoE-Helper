@@ -73,9 +73,29 @@ namespace PoE_Helper {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fa_check_16 {
+            get {
+                object obj = ResourceManager.GetObject("fa_check_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fa_check_square_o_16 {
             get {
                 object obj = ResourceManager.GetObject("fa_check_square_o_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fa_close_16 {
+            get {
+                object obj = ResourceManager.GetObject("fa_close_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

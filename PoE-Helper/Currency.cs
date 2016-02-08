@@ -25,7 +25,7 @@ namespace PoE_Helper {
 
 		public string Label {
 			get {
-				return @_regexNum.Replace(_label, "").Replace("__", "\'").Replace('_', ' ');
+				return @_regexNum.Replace(this.Name, "").Replace("__", "\'").Replace('_', ' ');
 			}
 			private set { _label = value; }
 		}
