@@ -88,5 +88,101 @@ namespace PoE_Helper.Properties {
                 this["lastModified"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool requestOnline {
+            get {
+                return ((bool)(this["requestOnline"]));
+            }
+            set {
+                this["requestOnline"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int lowerBound {
+            get {
+                return ((int)(this["lowerBound"]));
+            }
+            set {
+                this["lowerBound"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int upperBound {
+            get {
+                return ((int)(this["upperBound"]));
+            }
+            set {
+                this["upperBound"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int talis1 {
+            get {
+                return ((int)(this["talis1"]));
+            }
+            set {
+                this["talis1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int talis2 {
+            get {
+                return ((int)(this["talis2"]));
+            }
+            set {
+                this["talis2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int talis3 {
+            get {
+                return ((int)(this["talis3"]));
+            }
+            set {
+                this["talis3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int talis4 {
+            get {
+                return ((int)(this["talis4"]));
+            }
+            set {
+                this["talis4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int talis5 {
+            get {
+                return ((int)(this["talis5"]));
+            }
+            set {
+                this["talis5"] = value;
+            }
+        }
     }
 }

@@ -96,13 +96,11 @@ namespace PoE_Helper {
 
 		public void LoadExternData( object sender, EventArgs e ) {
 			ThreadPool.QueueUserWorkItem(new WaitCallback(state => {
-				Console.WriteLine("Starting request");
 				HttpWebRequest http = (HttpWebRequest) WebRequest.Create("http://www.mibbiodev.de/poe/currency.txt");
 				http.UserAgent = "PoE Trade Parser";
 
 				try {
 					using (WebResponse response = http.GetResponse()) {
-						Console.WriteLine(string.Format("Last Modified: {1} [newer: {0}]", ((HttpWebResponse) response).LastModified > Properties.Settings.Default.lastModified, ((HttpWebResponse) response).LastModified));
 						if (((HttpWebResponse) response).StatusCode == HttpStatusCode.OK
 						&& ((HttpWebResponse) response).LastModified > Properties.Settings.Default.lastModified) {
 							this.State = ConfigState.Loading;
@@ -126,7 +124,6 @@ namespace PoE_Helper {
 						Console.WriteLine("Protocol Status: {0}", ((HttpWebResponse) ex.Response).StatusCode);
 					}
 				}
-				Console.WriteLine("Finishing request");
 			}));
 		}
 

@@ -23,6 +23,7 @@ namespace PoE_Helper {
 		private readonly AppConfig config;
 
 		private string UpdateInstaller = string.Empty;
+		private bool initialized = false;
 
 		// talisman
 		private static readonly int MIN_LEVEL = 1;
@@ -66,6 +67,12 @@ namespace PoE_Helper {
 			statusBar.HandleCreated += updater.CheckRemoteVersion;
 			remoteDataTimer.Tick += new EventHandler(config.LoadExternData);
 			config.ExternDataLoaded += new AppConfig.ExternDataLoadedEventHandler(Config_ExternDataLoaded);
+
+			// set saved ui states
+			if (Properties.Settings.Default.requestOnline) {
+				toolStripExternSwitch.PerformClick();
+			}
+			this.initialized = true;
 		}
 
 		#region General event handling
@@ -86,19 +93,20 @@ namespace PoE_Helper {
 			if (sender is ToolStripButton) {
 				ToolStripButton btn = (ToolStripButton) sender;
 				if (btn.CheckState == CheckState.Checked) {
+					Properties.Settings.Default.requestOnline = true;
+					Properties.Settings.Default.Save();
 					btn.Image = Icons.fa_check_16;
 					remoteDataTimer.Start();
-					Console.WriteLine("1- Timer [{0}] at {1}", remoteDataTimer.Enabled, DateTime.Now);
 				} else {
+					Properties.Settings.Default.requestOnline = false;
+					Properties.Settings.Default.Save();
 					btn.Image = Icons.fa_close_16;
 					remoteDataTimer.Stop();
-					Console.WriteLine("2 - Timer [{0}] at {1}", remoteDataTimer.Enabled, DateTime.Now);
 				}
 			}
 		}
 
 		private void Config_ExternDataLoaded() {
-			Console.WriteLine("Update Settings");
 			remoteDataTimer.Interval = 900000;
 			InitializeSettingsTab();
 		}
@@ -230,6 +238,9 @@ namespace PoE_Helper {
 			foreach (LevelComboBox lcb in tabPageTalisman.Controls.OfType<LevelComboBox>()) {
 				lcb.DataSource = Enumerable.Range((int) inputLowerBound.Value, count).ToList();
 			}
+			Properties.Settings.Default.lowerBound = Convert.ToInt32(inputLowerBound.Value);
+			Properties.Settings.Default.upperBound = Convert.ToInt32(inputUpperBound.Value);
+			Properties.Settings.Default.Save();
 		}
 
 		private void levelTalisman_SelectedIndexChanged( object sender, EventArgs e ) {
@@ -247,6 +258,15 @@ namespace PoE_Helper {
 			labelLevelT4.Text = medium[2].ToString();
 			labelLevelT5.Text = this.calculator.LowestTalisman.ToString();
 			labelLevelResult.Text = this.calculator.CombinedTalisman.ToString();
+
+			if (this.initialized) {
+				Properties.Settings.Default.talis1 = levelTalisman1.SelectedIndex;
+				Properties.Settings.Default.talis2 = levelTalisman2.SelectedIndex;
+				Properties.Settings.Default.talis3 = levelTalisman3.SelectedIndex;
+				Properties.Settings.Default.talis4 = levelTalisman4.SelectedIndex;
+				Properties.Settings.Default.talis5 = levelTalisman5.SelectedIndex;
+				Properties.Settings.Default.Save();
+			}
 		}
 		#endregion
 
@@ -287,6 +307,6 @@ namespace PoE_Helper {
 		}
 		#endregion
 
-		
+
 	}
 }
