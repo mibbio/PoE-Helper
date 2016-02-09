@@ -388,7 +388,7 @@ namespace PoE_Helper {
 			if (c1 != null && c2 != null) {
 				decimal result = new decimal(0.0);
 				try {
-					result = c1.Value / c2.Value * txtTab1Input.Value;
+					result = c2.Value / c1.Value * txtTab1Input.Value;
 				}
 				catch (DivideByZeroException) { }
 				txtTab1Output.Value = result;
