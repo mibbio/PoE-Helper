@@ -269,7 +269,7 @@
 			// 
 			// btnSwapCurrency
 			// 
-			this.btnSwapCurrency.BackgroundImage = global::PoE_Helper.Icons.fa_exchange_64;
+			this.btnSwapCurrency.BackgroundImage = global::PoE_Helper.IconsGeneral.fa_exchange_64;
 			this.btnSwapCurrency.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnSwapCurrency.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.btnSwapCurrency.Location = new System.Drawing.Point(242, 244);
@@ -401,7 +401,7 @@
 			// 
 			// btnInput09
 			// 
-			this.btnInput09.BackgroundImage = global::PoE_Helper.CurrencyIcons._09_Orb_of_Alchemy;
+			this.btnInput09.BackgroundImage = global::PoE_Helper.IconsCurrency._09_Orb_of_Alchemy;
 			this.btnInput09.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput09.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput09.Location = new System.Drawing.Point(49, 97);
@@ -416,7 +416,7 @@
 			// 
 			// btnInput24
 			// 
-			this.btnInput24.BackgroundImage = global::PoE_Helper.CurrencyIcons._24_Mirror_of_Kalandra;
+			this.btnInput24.BackgroundImage = global::PoE_Helper.IconsCurrency._24_Mirror_of_Kalandra;
 			this.btnInput24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput24.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput24.Location = new System.Drawing.Point(145, 241);
@@ -431,7 +431,7 @@
 			// 
 			// btnInput18
 			// 
-			this.btnInput18.BackgroundImage = global::PoE_Helper.CurrencyIcons._18_Chaos_Orb;
+			this.btnInput18.BackgroundImage = global::PoE_Helper.IconsCurrency._18_Chaos_Orb;
 			this.btnInput18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput18.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput18.Location = new System.Drawing.Point(97, 241);
@@ -446,7 +446,7 @@
 			// 
 			// btnInput12
 			// 
-			this.btnInput12.BackgroundImage = global::PoE_Helper.CurrencyIcons._12_Orb_of_Fusing;
+			this.btnInput12.BackgroundImage = global::PoE_Helper.IconsCurrency._12_Orb_of_Fusing;
 			this.btnInput12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput12.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput12.Location = new System.Drawing.Point(49, 241);
@@ -461,7 +461,7 @@
 			// 
 			// btnInput06
 			// 
-			this.btnInput06.BackgroundImage = global::PoE_Helper.CurrencyIcons._06_Orb_of_Chance;
+			this.btnInput06.BackgroundImage = global::PoE_Helper.IconsCurrency._06_Orb_of_Chance;
 			this.btnInput06.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput06.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput06.Location = new System.Drawing.Point(1, 241);
@@ -476,7 +476,7 @@
 			// 
 			// btnInput23
 			// 
-			this.btnInput23.BackgroundImage = global::PoE_Helper.CurrencyIcons._23_Eternal_Orb;
+			this.btnInput23.BackgroundImage = global::PoE_Helper.IconsCurrency._23_Eternal_Orb;
 			this.btnInput23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput23.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput23.Location = new System.Drawing.Point(145, 193);
@@ -491,7 +491,7 @@
 			// 
 			// btnInput17
 			// 
-			this.btnInput17.BackgroundImage = global::PoE_Helper.CurrencyIcons._17_Gemcutter__s_Prism;
+			this.btnInput17.BackgroundImage = global::PoE_Helper.IconsCurrency._17_Gemcutter__s_Prism;
 			this.btnInput17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput17.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput17.Location = new System.Drawing.Point(97, 193);
@@ -506,7 +506,7 @@
 			// 
 			// btnInput11
 			// 
-			this.btnInput11.BackgroundImage = global::PoE_Helper.CurrencyIcons._11_Jeweller__s_Orb;
+			this.btnInput11.BackgroundImage = global::PoE_Helper.IconsCurrency._11_Jeweller__s_Orb;
 			this.btnInput11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput11.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput11.Location = new System.Drawing.Point(49, 193);
@@ -521,7 +521,7 @@
 			// 
 			// btnInput05
 			// 
-			this.btnInput05.BackgroundImage = global::PoE_Helper.CurrencyIcons._05_Orb_of_Augmentation;
+			this.btnInput05.BackgroundImage = global::PoE_Helper.IconsCurrency._05_Orb_of_Augmentation;
 			this.btnInput05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput05.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput05.Location = new System.Drawing.Point(1, 193);
@@ -536,7 +536,7 @@
 			// 
 			// btnInput22
 			// 
-			this.btnInput22.BackgroundImage = global::PoE_Helper.CurrencyIcons._22_Exalted_Orb;
+			this.btnInput22.BackgroundImage = global::PoE_Helper.IconsCurrency._22_Exalted_Orb;
 			this.btnInput22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput22.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput22.Location = new System.Drawing.Point(145, 145);
@@ -551,7 +551,7 @@
 			// 
 			// btnInput16
 			// 
-			this.btnInput16.BackgroundImage = global::PoE_Helper.CurrencyIcons._16_Cartographer__s_Chisel;
+			this.btnInput16.BackgroundImage = global::PoE_Helper.IconsCurrency._16_Cartographer__s_Chisel;
 			this.btnInput16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput16.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput16.Location = new System.Drawing.Point(97, 145);
@@ -566,7 +566,7 @@
 			// 
 			// btnInput10
 			// 
-			this.btnInput10.BackgroundImage = global::PoE_Helper.CurrencyIcons._10_Chromatic_Orb;
+			this.btnInput10.BackgroundImage = global::PoE_Helper.IconsCurrency._10_Chromatic_Orb;
 			this.btnInput10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput10.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput10.Location = new System.Drawing.Point(49, 145);
@@ -581,7 +581,7 @@
 			// 
 			// btnInput04
 			// 
-			this.btnInput04.BackgroundImage = global::PoE_Helper.CurrencyIcons._04_Orb_of_Transmutation;
+			this.btnInput04.BackgroundImage = global::PoE_Helper.IconsCurrency._04_Orb_of_Transmutation;
 			this.btnInput04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput04.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput04.Location = new System.Drawing.Point(1, 145);
@@ -596,7 +596,7 @@
 			// 
 			// btnInput21
 			// 
-			this.btnInput21.BackgroundImage = global::PoE_Helper.CurrencyIcons._21_Divine_Orb;
+			this.btnInput21.BackgroundImage = global::PoE_Helper.IconsCurrency._21_Divine_Orb;
 			this.btnInput21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput21.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput21.Location = new System.Drawing.Point(145, 97);
@@ -611,7 +611,7 @@
 			// 
 			// btnInput15
 			// 
-			this.btnInput15.BackgroundImage = global::PoE_Helper.CurrencyIcons._15_Orb_of_Regret;
+			this.btnInput15.BackgroundImage = global::PoE_Helper.IconsCurrency._15_Orb_of_Regret;
 			this.btnInput15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput15.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput15.Location = new System.Drawing.Point(97, 97);
@@ -626,7 +626,7 @@
 			// 
 			// btnInput03
 			// 
-			this.btnInput03.BackgroundImage = global::PoE_Helper.CurrencyIcons._03_Orb_of_Alteration;
+			this.btnInput03.BackgroundImage = global::PoE_Helper.IconsCurrency._03_Orb_of_Alteration;
 			this.btnInput03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput03.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput03.Location = new System.Drawing.Point(1, 97);
@@ -641,7 +641,7 @@
 			// 
 			// btnInput20
 			// 
-			this.btnInput20.BackgroundImage = global::PoE_Helper.CurrencyIcons._20_Blessed_Orb;
+			this.btnInput20.BackgroundImage = global::PoE_Helper.IconsCurrency._20_Blessed_Orb;
 			this.btnInput20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput20.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput20.Location = new System.Drawing.Point(145, 49);
@@ -656,7 +656,7 @@
 			// 
 			// btnInput14
 			// 
-			this.btnInput14.BackgroundImage = global::PoE_Helper.CurrencyIcons._14_Orb_of_Scouring;
+			this.btnInput14.BackgroundImage = global::PoE_Helper.IconsCurrency._14_Orb_of_Scouring;
 			this.btnInput14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput14.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput14.Location = new System.Drawing.Point(97, 49);
@@ -671,7 +671,7 @@
 			// 
 			// btnInput08
 			// 
-			this.btnInput08.BackgroundImage = global::PoE_Helper.CurrencyIcons._08_Blacksmith__s_Whetstone;
+			this.btnInput08.BackgroundImage = global::PoE_Helper.IconsCurrency._08_Blacksmith__s_Whetstone;
 			this.btnInput08.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput08.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput08.Location = new System.Drawing.Point(49, 49);
@@ -686,7 +686,7 @@
 			// 
 			// btnInput02
 			// 
-			this.btnInput02.BackgroundImage = global::PoE_Helper.CurrencyIcons._02_Scroll_of_Wisdom;
+			this.btnInput02.BackgroundImage = global::PoE_Helper.IconsCurrency._02_Scroll_of_Wisdom;
 			this.btnInput02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput02.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput02.Location = new System.Drawing.Point(1, 49);
@@ -701,7 +701,7 @@
 			// 
 			// btnInput19
 			// 
-			this.btnInput19.BackgroundImage = global::PoE_Helper.CurrencyIcons._19_Regal_Orb;
+			this.btnInput19.BackgroundImage = global::PoE_Helper.IconsCurrency._19_Regal_Orb;
 			this.btnInput19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput19.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput19.Location = new System.Drawing.Point(145, 1);
@@ -716,7 +716,7 @@
 			// 
 			// btnInput13
 			// 
-			this.btnInput13.BackgroundImage = global::PoE_Helper.CurrencyIcons._13_Glassblower__s_Bauble;
+			this.btnInput13.BackgroundImage = global::PoE_Helper.IconsCurrency._13_Glassblower__s_Bauble;
 			this.btnInput13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput13.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput13.Location = new System.Drawing.Point(97, 1);
@@ -731,7 +731,7 @@
 			// 
 			// btnInput07
 			// 
-			this.btnInput07.BackgroundImage = global::PoE_Helper.CurrencyIcons._07_Armourer__s_Scrap;
+			this.btnInput07.BackgroundImage = global::PoE_Helper.IconsCurrency._07_Armourer__s_Scrap;
 			this.btnInput07.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput07.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput07.Location = new System.Drawing.Point(49, 1);
@@ -746,7 +746,7 @@
 			// 
 			// btnInput01
 			// 
-			this.btnInput01.BackgroundImage = global::PoE_Helper.CurrencyIcons._01_Portal_Scroll;
+			this.btnInput01.BackgroundImage = global::PoE_Helper.IconsCurrency._01_Portal_Scroll;
 			this.btnInput01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnInput01.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnInput01.Location = new System.Drawing.Point(1, 1);
@@ -806,7 +806,7 @@
 			// 
 			// btnOutput24
 			// 
-			this.btnOutput24.BackgroundImage = global::PoE_Helper.CurrencyIcons._24_Mirror_of_Kalandra;
+			this.btnOutput24.BackgroundImage = global::PoE_Helper.IconsCurrency._24_Mirror_of_Kalandra;
 			this.btnOutput24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput24.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput24.Location = new System.Drawing.Point(145, 241);
@@ -821,7 +821,7 @@
 			// 
 			// btnOutput18
 			// 
-			this.btnOutput18.BackgroundImage = global::PoE_Helper.CurrencyIcons._18_Chaos_Orb;
+			this.btnOutput18.BackgroundImage = global::PoE_Helper.IconsCurrency._18_Chaos_Orb;
 			this.btnOutput18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput18.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput18.Location = new System.Drawing.Point(97, 241);
@@ -836,7 +836,7 @@
 			// 
 			// btnOutput12
 			// 
-			this.btnOutput12.BackgroundImage = global::PoE_Helper.CurrencyIcons._12_Orb_of_Fusing;
+			this.btnOutput12.BackgroundImage = global::PoE_Helper.IconsCurrency._12_Orb_of_Fusing;
 			this.btnOutput12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput12.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput12.Location = new System.Drawing.Point(49, 241);
@@ -851,7 +851,7 @@
 			// 
 			// btnOutput06
 			// 
-			this.btnOutput06.BackgroundImage = global::PoE_Helper.CurrencyIcons._06_Orb_of_Chance;
+			this.btnOutput06.BackgroundImage = global::PoE_Helper.IconsCurrency._06_Orb_of_Chance;
 			this.btnOutput06.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput06.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput06.Location = new System.Drawing.Point(1, 241);
@@ -866,7 +866,7 @@
 			// 
 			// btnOutput23
 			// 
-			this.btnOutput23.BackgroundImage = global::PoE_Helper.CurrencyIcons._23_Eternal_Orb;
+			this.btnOutput23.BackgroundImage = global::PoE_Helper.IconsCurrency._23_Eternal_Orb;
 			this.btnOutput23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput23.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput23.Location = new System.Drawing.Point(145, 193);
@@ -881,7 +881,7 @@
 			// 
 			// btnOutput17
 			// 
-			this.btnOutput17.BackgroundImage = global::PoE_Helper.CurrencyIcons._17_Gemcutter__s_Prism;
+			this.btnOutput17.BackgroundImage = global::PoE_Helper.IconsCurrency._17_Gemcutter__s_Prism;
 			this.btnOutput17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput17.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput17.Location = new System.Drawing.Point(97, 193);
@@ -896,7 +896,7 @@
 			// 
 			// btnOutput11
 			// 
-			this.btnOutput11.BackgroundImage = global::PoE_Helper.CurrencyIcons._11_Jeweller__s_Orb;
+			this.btnOutput11.BackgroundImage = global::PoE_Helper.IconsCurrency._11_Jeweller__s_Orb;
 			this.btnOutput11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput11.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput11.Location = new System.Drawing.Point(49, 193);
@@ -911,7 +911,7 @@
 			// 
 			// btnOutput05
 			// 
-			this.btnOutput05.BackgroundImage = global::PoE_Helper.CurrencyIcons._05_Orb_of_Augmentation;
+			this.btnOutput05.BackgroundImage = global::PoE_Helper.IconsCurrency._05_Orb_of_Augmentation;
 			this.btnOutput05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput05.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput05.Location = new System.Drawing.Point(1, 193);
@@ -926,7 +926,7 @@
 			// 
 			// btnOutput22
 			// 
-			this.btnOutput22.BackgroundImage = global::PoE_Helper.CurrencyIcons._22_Exalted_Orb;
+			this.btnOutput22.BackgroundImage = global::PoE_Helper.IconsCurrency._22_Exalted_Orb;
 			this.btnOutput22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput22.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput22.Location = new System.Drawing.Point(145, 145);
@@ -941,7 +941,7 @@
 			// 
 			// btnOutput16
 			// 
-			this.btnOutput16.BackgroundImage = global::PoE_Helper.CurrencyIcons._16_Cartographer__s_Chisel;
+			this.btnOutput16.BackgroundImage = global::PoE_Helper.IconsCurrency._16_Cartographer__s_Chisel;
 			this.btnOutput16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput16.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput16.Location = new System.Drawing.Point(97, 145);
@@ -956,7 +956,7 @@
 			// 
 			// btnOutput10
 			// 
-			this.btnOutput10.BackgroundImage = global::PoE_Helper.CurrencyIcons._10_Chromatic_Orb;
+			this.btnOutput10.BackgroundImage = global::PoE_Helper.IconsCurrency._10_Chromatic_Orb;
 			this.btnOutput10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput10.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput10.Location = new System.Drawing.Point(49, 145);
@@ -971,7 +971,7 @@
 			// 
 			// btnOutput04
 			// 
-			this.btnOutput04.BackgroundImage = global::PoE_Helper.CurrencyIcons._04_Orb_of_Transmutation;
+			this.btnOutput04.BackgroundImage = global::PoE_Helper.IconsCurrency._04_Orb_of_Transmutation;
 			this.btnOutput04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput04.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput04.Location = new System.Drawing.Point(1, 145);
@@ -986,7 +986,7 @@
 			// 
 			// btnOutput21
 			// 
-			this.btnOutput21.BackgroundImage = global::PoE_Helper.CurrencyIcons._21_Divine_Orb;
+			this.btnOutput21.BackgroundImage = global::PoE_Helper.IconsCurrency._21_Divine_Orb;
 			this.btnOutput21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput21.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput21.Location = new System.Drawing.Point(145, 97);
@@ -1001,7 +1001,7 @@
 			// 
 			// btnOutput15
 			// 
-			this.btnOutput15.BackgroundImage = global::PoE_Helper.CurrencyIcons._15_Orb_of_Regret;
+			this.btnOutput15.BackgroundImage = global::PoE_Helper.IconsCurrency._15_Orb_of_Regret;
 			this.btnOutput15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput15.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput15.Location = new System.Drawing.Point(97, 97);
@@ -1016,7 +1016,7 @@
 			// 
 			// btnOutput09
 			// 
-			this.btnOutput09.BackgroundImage = global::PoE_Helper.CurrencyIcons._09_Orb_of_Alchemy;
+			this.btnOutput09.BackgroundImage = global::PoE_Helper.IconsCurrency._09_Orb_of_Alchemy;
 			this.btnOutput09.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput09.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput09.Location = new System.Drawing.Point(49, 97);
@@ -1031,7 +1031,7 @@
 			// 
 			// btnOutput03
 			// 
-			this.btnOutput03.BackgroundImage = global::PoE_Helper.CurrencyIcons._03_Orb_of_Alteration;
+			this.btnOutput03.BackgroundImage = global::PoE_Helper.IconsCurrency._03_Orb_of_Alteration;
 			this.btnOutput03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput03.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput03.Location = new System.Drawing.Point(1, 97);
@@ -1046,7 +1046,7 @@
 			// 
 			// btnOutput20
 			// 
-			this.btnOutput20.BackgroundImage = global::PoE_Helper.CurrencyIcons._20_Blessed_Orb;
+			this.btnOutput20.BackgroundImage = global::PoE_Helper.IconsCurrency._20_Blessed_Orb;
 			this.btnOutput20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput20.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput20.Location = new System.Drawing.Point(145, 49);
@@ -1061,7 +1061,7 @@
 			// 
 			// btnOutput14
 			// 
-			this.btnOutput14.BackgroundImage = global::PoE_Helper.CurrencyIcons._14_Orb_of_Scouring;
+			this.btnOutput14.BackgroundImage = global::PoE_Helper.IconsCurrency._14_Orb_of_Scouring;
 			this.btnOutput14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput14.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput14.Location = new System.Drawing.Point(97, 49);
@@ -1076,7 +1076,7 @@
 			// 
 			// btnOutput08
 			// 
-			this.btnOutput08.BackgroundImage = global::PoE_Helper.CurrencyIcons._08_Blacksmith__s_Whetstone;
+			this.btnOutput08.BackgroundImage = global::PoE_Helper.IconsCurrency._08_Blacksmith__s_Whetstone;
 			this.btnOutput08.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput08.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput08.Location = new System.Drawing.Point(49, 49);
@@ -1091,7 +1091,7 @@
 			// 
 			// btnOutput02
 			// 
-			this.btnOutput02.BackgroundImage = global::PoE_Helper.CurrencyIcons._02_Scroll_of_Wisdom;
+			this.btnOutput02.BackgroundImage = global::PoE_Helper.IconsCurrency._02_Scroll_of_Wisdom;
 			this.btnOutput02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput02.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput02.Location = new System.Drawing.Point(1, 49);
@@ -1106,7 +1106,7 @@
 			// 
 			// btnOutput19
 			// 
-			this.btnOutput19.BackgroundImage = global::PoE_Helper.CurrencyIcons._19_Regal_Orb;
+			this.btnOutput19.BackgroundImage = global::PoE_Helper.IconsCurrency._19_Regal_Orb;
 			this.btnOutput19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput19.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput19.Location = new System.Drawing.Point(145, 1);
@@ -1121,7 +1121,7 @@
 			// 
 			// btnOutput13
 			// 
-			this.btnOutput13.BackgroundImage = global::PoE_Helper.CurrencyIcons._13_Glassblower__s_Bauble;
+			this.btnOutput13.BackgroundImage = global::PoE_Helper.IconsCurrency._13_Glassblower__s_Bauble;
 			this.btnOutput13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput13.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput13.Location = new System.Drawing.Point(97, 1);
@@ -1136,7 +1136,7 @@
 			// 
 			// btnOutput07
 			// 
-			this.btnOutput07.BackgroundImage = global::PoE_Helper.CurrencyIcons._07_Armourer__s_Scrap;
+			this.btnOutput07.BackgroundImage = global::PoE_Helper.IconsCurrency._07_Armourer__s_Scrap;
 			this.btnOutput07.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput07.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput07.Location = new System.Drawing.Point(49, 1);
@@ -1151,7 +1151,7 @@
 			// 
 			// btnOutput01
 			// 
-			this.btnOutput01.BackgroundImage = global::PoE_Helper.CurrencyIcons._01_Portal_Scroll;
+			this.btnOutput01.BackgroundImage = global::PoE_Helper.IconsCurrency._01_Portal_Scroll;
 			this.btnOutput01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnOutput01.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnOutput01.Location = new System.Drawing.Point(1, 1);
@@ -1213,10 +1213,10 @@
 			this.tabPageTalisman.Controls.Add(this.levelTalisman2);
 			this.tabPageTalisman.Controls.Add(this.levelTalisman4);
 			this.tabPageTalisman.Controls.Add(this.levelTalisman1);
-			this.tabPageTalisman.Location = new System.Drawing.Point(4, 22);
+			this.tabPageTalisman.Location = new System.Drawing.Point(4, 26);
 			this.tabPageTalisman.Name = "tabPageTalisman";
 			this.tabPageTalisman.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageTalisman.Size = new System.Drawing.Size(584, 348);
+			this.tabPageTalisman.Size = new System.Drawing.Size(584, 344);
 			this.tabPageTalisman.TabIndex = 1;
 			this.tabPageTalisman.Text = "Talisman";
 			this.tabPageTalisman.UseVisualStyleBackColor = true;
@@ -2060,7 +2060,7 @@
 			// 
 			// pictureBox17
 			// 
-			this.pictureBox17.BackgroundImage = global::PoE_Helper.CurrencyIcons._16_Cartographer__s_Chisel;
+			this.pictureBox17.BackgroundImage = global::PoE_Helper.IconsCurrency._16_Cartographer__s_Chisel;
 			this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox17.Location = new System.Drawing.Point(213, 297);
 			this.pictureBox17.Name = "pictureBox17";
@@ -2070,7 +2070,7 @@
 			// 
 			// pictureBox18
 			// 
-			this.pictureBox18.BackgroundImage = global::PoE_Helper.CurrencyIcons._15_Orb_of_Regret;
+			this.pictureBox18.BackgroundImage = global::PoE_Helper.IconsCurrency._15_Orb_of_Regret;
 			this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox18.Location = new System.Drawing.Point(213, 255);
 			this.pictureBox18.Name = "pictureBox18";
@@ -2080,7 +2080,7 @@
 			// 
 			// pictureBox19
 			// 
-			this.pictureBox19.BackgroundImage = global::PoE_Helper.CurrencyIcons._14_Orb_of_Scouring;
+			this.pictureBox19.BackgroundImage = global::PoE_Helper.IconsCurrency._14_Orb_of_Scouring;
 			this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox19.Location = new System.Drawing.Point(213, 213);
 			this.pictureBox19.Name = "pictureBox19";
@@ -2090,7 +2090,7 @@
 			// 
 			// pictureBox20
 			// 
-			this.pictureBox20.BackgroundImage = global::PoE_Helper.CurrencyIcons._13_Glassblower__s_Bauble;
+			this.pictureBox20.BackgroundImage = global::PoE_Helper.IconsCurrency._13_Glassblower__s_Bauble;
 			this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox20.Location = new System.Drawing.Point(213, 171);
 			this.pictureBox20.Name = "pictureBox20";
@@ -2100,7 +2100,7 @@
 			// 
 			// pictureBox21
 			// 
-			this.pictureBox21.BackgroundImage = global::PoE_Helper.CurrencyIcons._12_Orb_of_Fusing;
+			this.pictureBox21.BackgroundImage = global::PoE_Helper.IconsCurrency._12_Orb_of_Fusing;
 			this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox21.Location = new System.Drawing.Point(213, 129);
 			this.pictureBox21.Name = "pictureBox21";
@@ -2110,7 +2110,7 @@
 			// 
 			// pictureBox22
 			// 
-			this.pictureBox22.BackgroundImage = global::PoE_Helper.CurrencyIcons._11_Jeweller__s_Orb;
+			this.pictureBox22.BackgroundImage = global::PoE_Helper.IconsCurrency._11_Jeweller__s_Orb;
 			this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox22.Location = new System.Drawing.Point(213, 87);
 			this.pictureBox22.Name = "pictureBox22";
@@ -2120,7 +2120,7 @@
 			// 
 			// pictureBox23
 			// 
-			this.pictureBox23.BackgroundImage = global::PoE_Helper.CurrencyIcons._10_Chromatic_Orb;
+			this.pictureBox23.BackgroundImage = global::PoE_Helper.IconsCurrency._10_Chromatic_Orb;
 			this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox23.Location = new System.Drawing.Point(213, 45);
 			this.pictureBox23.Name = "pictureBox23";
@@ -2130,7 +2130,7 @@
 			// 
 			// pictureBox24
 			// 
-			this.pictureBox24.BackgroundImage = global::PoE_Helper.CurrencyIcons._09_Orb_of_Alchemy;
+			this.pictureBox24.BackgroundImage = global::PoE_Helper.IconsCurrency._09_Orb_of_Alchemy;
 			this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox24.Location = new System.Drawing.Point(213, 3);
 			this.pictureBox24.Name = "pictureBox24";
@@ -2140,7 +2140,7 @@
 			// 
 			// pictureBox9
 			// 
-			this.pictureBox9.BackgroundImage = global::PoE_Helper.CurrencyIcons._24_Mirror_of_Kalandra;
+			this.pictureBox9.BackgroundImage = global::PoE_Helper.IconsCurrency._24_Mirror_of_Kalandra;
 			this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox9.Location = new System.Drawing.Point(421, 297);
 			this.pictureBox9.Name = "pictureBox9";
@@ -2150,7 +2150,7 @@
 			// 
 			// pictureBox10
 			// 
-			this.pictureBox10.BackgroundImage = global::PoE_Helper.CurrencyIcons._23_Eternal_Orb;
+			this.pictureBox10.BackgroundImage = global::PoE_Helper.IconsCurrency._23_Eternal_Orb;
 			this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox10.Location = new System.Drawing.Point(421, 255);
 			this.pictureBox10.Name = "pictureBox10";
@@ -2160,7 +2160,7 @@
 			// 
 			// pictureBox11
 			// 
-			this.pictureBox11.BackgroundImage = global::PoE_Helper.CurrencyIcons._22_Exalted_Orb;
+			this.pictureBox11.BackgroundImage = global::PoE_Helper.IconsCurrency._22_Exalted_Orb;
 			this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox11.Location = new System.Drawing.Point(421, 213);
 			this.pictureBox11.Name = "pictureBox11";
@@ -2170,7 +2170,7 @@
 			// 
 			// pictureBox12
 			// 
-			this.pictureBox12.BackgroundImage = global::PoE_Helper.CurrencyIcons._21_Divine_Orb;
+			this.pictureBox12.BackgroundImage = global::PoE_Helper.IconsCurrency._21_Divine_Orb;
 			this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox12.Location = new System.Drawing.Point(421, 171);
 			this.pictureBox12.Name = "pictureBox12";
@@ -2180,7 +2180,7 @@
 			// 
 			// pictureBox13
 			// 
-			this.pictureBox13.BackgroundImage = global::PoE_Helper.CurrencyIcons._20_Blessed_Orb;
+			this.pictureBox13.BackgroundImage = global::PoE_Helper.IconsCurrency._20_Blessed_Orb;
 			this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox13.Location = new System.Drawing.Point(421, 129);
 			this.pictureBox13.Name = "pictureBox13";
@@ -2190,7 +2190,7 @@
 			// 
 			// pictureBox14
 			// 
-			this.pictureBox14.BackgroundImage = global::PoE_Helper.CurrencyIcons._19_Regal_Orb;
+			this.pictureBox14.BackgroundImage = global::PoE_Helper.IconsCurrency._19_Regal_Orb;
 			this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox14.Location = new System.Drawing.Point(421, 87);
 			this.pictureBox14.Name = "pictureBox14";
@@ -2200,7 +2200,7 @@
 			// 
 			// pictureBox15
 			// 
-			this.pictureBox15.BackgroundImage = global::PoE_Helper.CurrencyIcons._18_Chaos_Orb;
+			this.pictureBox15.BackgroundImage = global::PoE_Helper.IconsCurrency._18_Chaos_Orb;
 			this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox15.Location = new System.Drawing.Point(421, 45);
 			this.pictureBox15.Name = "pictureBox15";
@@ -2210,7 +2210,7 @@
 			// 
 			// pictureBox16
 			// 
-			this.pictureBox16.BackgroundImage = global::PoE_Helper.CurrencyIcons._17_Gemcutter__s_Prism;
+			this.pictureBox16.BackgroundImage = global::PoE_Helper.IconsCurrency._17_Gemcutter__s_Prism;
 			this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox16.Location = new System.Drawing.Point(421, 3);
 			this.pictureBox16.Name = "pictureBox16";
@@ -2220,7 +2220,7 @@
 			// 
 			// pictureBox5
 			// 
-			this.pictureBox5.BackgroundImage = global::PoE_Helper.CurrencyIcons._08_Blacksmith__s_Whetstone;
+			this.pictureBox5.BackgroundImage = global::PoE_Helper.IconsCurrency._08_Blacksmith__s_Whetstone;
 			this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox5.Location = new System.Drawing.Point(3, 297);
 			this.pictureBox5.Name = "pictureBox5";
@@ -2230,7 +2230,7 @@
 			// 
 			// pictureBox6
 			// 
-			this.pictureBox6.BackgroundImage = global::PoE_Helper.CurrencyIcons._07_Armourer__s_Scrap;
+			this.pictureBox6.BackgroundImage = global::PoE_Helper.IconsCurrency._07_Armourer__s_Scrap;
 			this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox6.Location = new System.Drawing.Point(3, 255);
 			this.pictureBox6.Name = "pictureBox6";
@@ -2240,7 +2240,7 @@
 			// 
 			// pictureBox7
 			// 
-			this.pictureBox7.BackgroundImage = global::PoE_Helper.CurrencyIcons._06_Orb_of_Chance;
+			this.pictureBox7.BackgroundImage = global::PoE_Helper.IconsCurrency._06_Orb_of_Chance;
 			this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox7.Location = new System.Drawing.Point(3, 213);
 			this.pictureBox7.Name = "pictureBox7";
@@ -2250,7 +2250,7 @@
 			// 
 			// pictureBox8
 			// 
-			this.pictureBox8.BackgroundImage = global::PoE_Helper.CurrencyIcons._05_Orb_of_Augmentation;
+			this.pictureBox8.BackgroundImage = global::PoE_Helper.IconsCurrency._05_Orb_of_Augmentation;
 			this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox8.Location = new System.Drawing.Point(3, 171);
 			this.pictureBox8.Name = "pictureBox8";
@@ -2260,7 +2260,7 @@
 			// 
 			// pictureBox4
 			// 
-			this.pictureBox4.BackgroundImage = global::PoE_Helper.CurrencyIcons._04_Orb_of_Transmutation;
+			this.pictureBox4.BackgroundImage = global::PoE_Helper.IconsCurrency._04_Orb_of_Transmutation;
 			this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox4.Location = new System.Drawing.Point(3, 129);
 			this.pictureBox4.Name = "pictureBox4";
@@ -2270,7 +2270,7 @@
 			// 
 			// pictureBox3
 			// 
-			this.pictureBox3.BackgroundImage = global::PoE_Helper.CurrencyIcons._03_Orb_of_Alteration;
+			this.pictureBox3.BackgroundImage = global::PoE_Helper.IconsCurrency._03_Orb_of_Alteration;
 			this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox3.Location = new System.Drawing.Point(3, 87);
 			this.pictureBox3.Name = "pictureBox3";
@@ -2280,7 +2280,7 @@
 			// 
 			// pictureBox2
 			// 
-			this.pictureBox2.BackgroundImage = global::PoE_Helper.CurrencyIcons._02_Scroll_of_Wisdom;
+			this.pictureBox2.BackgroundImage = global::PoE_Helper.IconsCurrency._02_Scroll_of_Wisdom;
 			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox2.Location = new System.Drawing.Point(3, 45);
 			this.pictureBox2.Name = "pictureBox2";
@@ -2290,7 +2290,7 @@
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.BackgroundImage = global::PoE_Helper.CurrencyIcons._01_Portal_Scroll;
+			this.pictureBox1.BackgroundImage = global::PoE_Helper.IconsCurrency._01_Portal_Scroll;
 			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox1.Location = new System.Drawing.Point(3, 3);
 			this.pictureBox1.Name = "pictureBox1";
@@ -2349,7 +2349,7 @@
 			this.toolStripExternSwitch.AutoToolTip = false;
 			this.toolStripExternSwitch.CheckOnClick = true;
 			this.toolStripExternSwitch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripExternSwitch.Image = global::PoE_Helper.Icons.fa_close_16;
+			this.toolStripExternSwitch.Image = global::PoE_Helper.IconsGeneral.fa_close_16;
 			this.toolStripExternSwitch.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripExternSwitch.Name = "toolStripExternSwitch";
 			this.toolStripExternSwitch.Size = new System.Drawing.Size(23, 22);

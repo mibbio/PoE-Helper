@@ -67,7 +67,7 @@ namespace PoE_Helper {
 		}
 
 		public void InitializeCurrency() {
-			ResourceSet iconResourceSet = CurrencyIcons.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+			ResourceSet iconResourceSet = IconsCurrency.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
 			var iconItems = iconResourceSet.GetEnumerator();
 			while (iconItems.MoveNext()) {
 				if (!iconItems.Key.ToString().Contains("Chaos")) {

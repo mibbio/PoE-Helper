@@ -90,23 +90,23 @@
   <ItemGroup>
     <Compile Include="AppConfig.cs" />
     <Compile Include="Controls\ControlExtensions.cs" />
-    <Compile Include="Downloader.cs" />
-    <Compile Include="Controls\FixedToolStripRenderer.cs" />
-    <Compile Include="Icons.Designer.cs">
+    <Compile Include="IconsCurrency.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Icons.resx</DependentUpon>
+      <DependentUpon>IconsCurrency.resx</DependentUpon>
     </Compile>
+    <Compile Include="Downloader.cs" />
+    <Compile Include="Controls\FixedToolStripRenderer.cs" />
     <Compile Include="Controls\LevelComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TagData.cs" />
-    <Compile Include="Currency.cs" />
-    <Compile Include="CurrencyIcons.Designer.cs">
+    <Compile Include="IconsGeneral.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CurrencyIcons.resx</DependentUpon>
+      <DependentUpon>IconsGeneral.resx</DependentUpon>
     </Compile>
+    <Compile Include="TagData.cs" />
+    <Compile Include="Currency.cs" />
     <Compile Include="Controls\DecimalTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -118,21 +118,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Internal.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Internal.settings</DependentUpon>
-    </Compile>
     <Compile Include="TalismanCalculator.cs" />
     <Compile Include="Updater.cs" />
-    <EmbeddedResource Include="CurrencyIcons.resx">
+    <EmbeddedResource Include="IconsCurrency.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CurrencyIcons.Designer.cs</LastGenOutput>
+      <LastGenOutput>IconsCurrency.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Icons.resx">
+    <EmbeddedResource Include="IconsGeneral.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>IconsGeneral.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -157,10 +152,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Properties\Internal.settings">
-      <Generator>PublicSettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Internal.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -16,7 +16,7 @@ namespace PoE_Helper {
 		private readonly Color colorSuccess = Color.LimeGreen;
 
 		// main
-		private readonly Properties.Internal defaultCfg = Properties.Internal.Default;
+		private readonly Properties.Settings defaultCfg = Properties.Settings.Default;
 		private readonly Dictionary<ButtonType, Button> selectedCurrencyButton;
 		private readonly Version applicationVersion;
 		private readonly Updater updater;
@@ -165,7 +165,7 @@ namespace PoE_Helper {
 				statusBar.Invoke(() => {
 					statusLabelLeft.IsLink = true;
 					statusLabelLeft.LinkColor = colorAdvice;
-					statusLabelLeft.Image = Icons.fa_info_circle_16;
+					statusLabelLeft.Image = IconsGeneral.fa_info_circle_16;
 					statusLabelLeft.Text = string.Format("Version '{0}' available. Click to start download. ", updater.LatestVersion);
 				});
 				statusLabelLeft.Click += StatusLabelLeft_StartDownload;
@@ -180,14 +180,14 @@ namespace PoE_Helper {
 			statusBar.Invoke(() => {
 				statusLabelLeft.Text = text;
 				statusLabelLeft.LinkColor = colorDefault;
-				statusLabelLeft.Image = Icons.fa_download_16;
+				statusLabelLeft.Image = IconsGeneral.fa_download_16;
 			});
 			if (progress == 100) {
 				UpdateInstaller = e.LocalFile;
 				statusBar.Invoke(() => {
 					statusLabelLeft.IsLink = true;
 					statusLabelLeft.LinkColor = colorSuccess;
-					statusLabelLeft.Image = Icons.fa_check_square_o_16;
+					statusLabelLeft.Image = IconsGeneral.fa_check_square_o_16;
 				});
 				statusLabelLeft.Click -= StatusLabelLeft_StartDownload;
 				statusLabelLeft.Click += StatusLabelLeft_ExecuteUpdate;
@@ -239,12 +239,12 @@ namespace PoE_Helper {
 				if (btn.CheckState == CheckState.Checked) {
 					Properties.Settings.Default.requestOnline = true;
 					Properties.Settings.Default.Save();
-					btn.Image = Icons.fa_check_16;
+					btn.Image = IconsGeneral.fa_check_16;
 					remoteDataTimer.Start();
 				} else {
 					Properties.Settings.Default.requestOnline = false;
 					Properties.Settings.Default.Save();
-					btn.Image = Icons.fa_close_16;
+					btn.Image = IconsGeneral.fa_close_16;
 					remoteDataTimer.Stop();
 				}
 			}
