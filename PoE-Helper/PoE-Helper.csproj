@@ -89,25 +89,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfig.cs" />
-    <Compile Include="ControlExtensions.cs" />
+    <Compile Include="Controls\ControlExtensions.cs" />
     <Compile Include="Downloader.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="FixedToolStripRenderer.cs" />
+    <Compile Include="Controls\FixedToolStripRenderer.cs" />
     <Compile Include="Icons.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Icons.resx</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.Currency.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Debug.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Talisman.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LevelComboBox.cs">
+    <Compile Include="Controls\LevelComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="TagData.cs" />
@@ -117,7 +107,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CurrencyIcons.resx</DependentUpon>
     </Compile>
-    <Compile Include="DecimalTextBox.cs">
+    <Compile Include="Controls\DecimalTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="MainForm.cs">

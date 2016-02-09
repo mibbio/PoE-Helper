@@ -4,8 +4,8 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
-using PoE_Helper.Enum;
 
 namespace PoE_Helper {
 	public partial class MainForm : Form {
@@ -75,41 +75,87 @@ namespace PoE_Helper {
 			this.initialized = true;
 		}
 
-		#region General event handling
-		private void MainForm_Load( object sender, EventArgs e ) {
-			selectedCurrencyButton[ButtonType.Input]?.PerformClick();
-			selectedCurrencyButton[ButtonType.Output]?.PerformClick();
-		}
-
-		private void tabControlFeatures_Selecting( object sender, TabControlCancelEventArgs e ) {
-			TabPage page = ((TabControl) sender).SelectedTab;
-			if (page == tabPageSettings) {
-				InitializeSettingsTab();
-				if (!saveTimer.Enabled) { saveTimer.Start(); }
-			} else { saveTimer.Stop(); }
-		}
-
-		private void toolStripExternSwitch_Click( object sender, EventArgs e ) {
-			if (sender is ToolStripButton) {
-				ToolStripButton btn = (ToolStripButton) sender;
-				if (btn.CheckState == CheckState.Checked) {
-					Properties.Settings.Default.requestOnline = true;
-					Properties.Settings.Default.Save();
-					btn.Image = Icons.fa_check_16;
-					remoteDataTimer.Start();
-				} else {
-					Properties.Settings.Default.requestOnline = false;
-					Properties.Settings.Default.Save();
-					btn.Image = Icons.fa_close_16;
-					remoteDataTimer.Stop();
+		#region init methods
+		private void InitializeCurrencyTab() {
+			foreach (Control item in tableButtonsInput.Controls) {
+				if (!(item is Button)) { continue; }
+				int index = 0;
+				try {
+					if (int.TryParse(item.Name.Substring(item.Name.Length - 2), out index)) {
+						tooltipButtons.SetToolTip(item, config.GetCurrency(index - 1).Label);
+					}
+					item.Tag = new TagData() {
+						ButtonType = ButtonType.Input,
+						Currency = index >= 0 ? config.GetCurrency(index - 1) : null
+					};
 				}
+				catch (IndexOutOfRangeException) { continue; }
+
+			}
+			foreach (Control item in tableButtonsOutput.Controls) {
+				if (!(item is Button)) { continue; }
+				int index = 0;
+				try {
+					if (int.TryParse(item.Name.Substring(item.Name.Length - 2), out index)) {
+						tooltipButtons.SetToolTip(item, config.GetCurrency(index - 1).Label);
+					}
+					item.Tag = new TagData() {
+						ButtonType = ButtonType.Output,
+						Currency = index >= 0 ? config.GetCurrency(index - 1) : null
+					};
+				}
+				catch (IndexOutOfRangeException) { continue; }
 			}
 		}
 
-		private void Config_ExternDataLoaded() {
-			remoteDataTimer.Interval = 900000;
-			InitializeSettingsTab();
+		public void InitializeSettingsTab() {
+			ThreadPool.QueueUserWorkItem(new WaitCallback(state => {
+				foreach (DecimalTextBox dtb in tabPageSettings.Controls.OfType<DecimalTextBox>()) {
+					while (!dtb.IsHandleCreated) { Thread.Sleep(100); }
+					int index = -1;
+					int.TryParse(dtb.Name.Substring(dtb.Name.Length - 2), out index);
+					if (index >= 0) {
+						try {
+							dtb.Invoke(new Action(() => {
+								dtb.Value = dtb.Value = config.GetCurrency(index - 1).Value;
+								dtb.Tag = index - 1;
+								dtb.Refresh();
+							}));
+						}
+						catch (ArgumentOutOfRangeException) { }
+					}
+				}
+			}));
 		}
+
+		private void InitializeTalismanTab() {
+			int lower = Properties.Settings.Default.lowerBound;
+			int upper = Properties.Settings.Default.upperBound;
+
+			inputLowerBound.Minimum = MIN_LEVEL;
+			inputLowerBound.Maximum = MAX_LEVEL - 1;
+			inputLowerBound.Value = (lower < MIN_LEVEL || lower > MAX_LEVEL) ? MIN_LEVEL : lower;
+			inputUpperBound.Minimum = MIN_LEVEL + 1;
+			inputUpperBound.Maximum = MAX_LEVEL;
+			inputUpperBound.Value = (upper < inputLowerBound.Value || upper > MAX_LEVEL) ? MAX_LEVEL : upper;
+			int count = (int) inputUpperBound.Value - (int) inputLowerBound.Value + 1;
+			foreach (LevelComboBox lcb in tabPageTalisman.Controls.OfType<LevelComboBox>()) {
+				lcb.DataSource = Enumerable.Range((int) inputLowerBound.Value, count).ToList();
+			}
+
+			levelTalisman1.SelectedIndex = Properties.Settings.Default.talis1;
+			levelTalisman2.SelectedIndex = Properties.Settings.Default.talis2;
+			levelTalisman3.SelectedIndex = Properties.Settings.Default.talis3;
+			levelTalisman4.SelectedIndex = Properties.Settings.Default.talis4;
+			levelTalisman5.SelectedIndex = Properties.Settings.Default.talis5;
+		}
+
+		[Conditional("DEBUG")]
+		private void EnableDebugMenu() {
+			this.debugMenuEntry01.Click += new EventHandler(this.debugMenuEntry01_Click);
+			debugMenu.Visible = true;
+		}
+
 		#endregion
 
 		#region Update handling
@@ -170,6 +216,52 @@ namespace PoE_Helper {
 			if (!string.IsNullOrEmpty(UpdateInstaller)) {
 				Process.Start(UpdateInstaller);
 			}
+		}
+		#endregion
+
+		#region General event handling
+		private void MainForm_Load( object sender, EventArgs e ) {
+			selectedCurrencyButton[ButtonType.Input]?.PerformClick();
+			selectedCurrencyButton[ButtonType.Output]?.PerformClick();
+		}
+
+		private void tabControlFeatures_Selecting( object sender, TabControlCancelEventArgs e ) {
+			TabPage page = ((TabControl) sender).SelectedTab;
+			if (page == tabPageSettings) {
+				InitializeSettingsTab();
+				if (!saveTimer.Enabled) { saveTimer.Start(); }
+			} else { saveTimer.Stop(); }
+		}
+
+		private void toolStripExternSwitch_Click( object sender, EventArgs e ) {
+			if (sender is ToolStripButton) {
+				ToolStripButton btn = (ToolStripButton) sender;
+				if (btn.CheckState == CheckState.Checked) {
+					Properties.Settings.Default.requestOnline = true;
+					Properties.Settings.Default.Save();
+					btn.Image = Icons.fa_check_16;
+					remoteDataTimer.Start();
+				} else {
+					Properties.Settings.Default.requestOnline = false;
+					Properties.Settings.Default.Save();
+					btn.Image = Icons.fa_close_16;
+					remoteDataTimer.Stop();
+				}
+			}
+		}
+
+		private void debugMenuEntry01_Click( object sender, EventArgs e ) {
+#if DEBUG
+			if (tabControlFeatures.SelectedTab == tabPageSettings) {
+				config.RandomizeCurrency();
+				InitializeSettingsTab();
+			}
+#endif
+		}
+
+		private void Config_ExternDataLoaded() {
+			remoteDataTimer.Interval = 900000;
+			InitializeSettingsTab();
 		}
 		#endregion
 
@@ -306,7 +398,5 @@ namespace PoE_Helper {
 			return string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
 		}
 		#endregion
-
-
 	}
 }

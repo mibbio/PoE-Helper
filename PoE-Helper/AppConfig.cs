@@ -8,10 +8,11 @@ using System.Net;
 using System.Resources;
 using System.Text;
 using System.Threading;
-using PoE_Helper.Enum;
 using SharpConfig;
 
 namespace PoE_Helper {
+	public enum ConfigState { Clean, Tainted, Loading, Saving }
+
 	public class AppConfig {
 		private const string SECTION_CURRENCY = "Currency";
 

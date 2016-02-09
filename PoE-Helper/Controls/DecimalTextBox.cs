@@ -1,12 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Globalization;
 using System.Windows.Forms;
 
 namespace PoE_Helper {
 	[Localizable(true)]
-	public partial class DecimalTextBox : TextBox {
+	public class DecimalTextBox : TextBox {
 		private static readonly NumberFormatInfo DecimalFormat = CultureInfo.CurrentUICulture.NumberFormat;
 		private static readonly string DecimalSeperator = DecimalFormat.CurrencyDecimalSeparator;
 		private static readonly int DecimalDigits = DecimalFormat.CurrencyDecimalDigits;
