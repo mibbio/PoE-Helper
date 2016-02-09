@@ -16,13 +16,13 @@ namespace PoE_Helper {
 		private readonly Color colorSuccess = Color.LimeGreen;
 
 		// main
-		private readonly Properties.Settings defaultCfg = Properties.Settings.Default;
+		private readonly Properties.Settings settings = Properties.Settings.Default;
 		private readonly Dictionary<ButtonType, Button> selectedCurrencyButton;
 		private readonly Version applicationVersion;
 		private readonly Updater updater;
 		private readonly AppConfig config;
 
-		private string UpdateInstaller = string.Empty;
+		private string InstallerFileName = string.Empty;
 		private bool initialized = false;
 
 		// talisman
@@ -33,7 +33,6 @@ namespace PoE_Helper {
 
 		public MainForm() {
 			InitializeComponent();
-			EnableDebugMenu();
 
 			this.toolStripTop.Renderer = new FixedToolStripRenderer();
 			this.toolStripComboLeague.SelectedIndex = 2;
@@ -41,19 +40,16 @@ namespace PoE_Helper {
 			this.updater = new Updater();
 
 			// getting assembly version number
-			applicationVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+			this.applicationVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
 			this.Text = string.Format("{0} v{1}", this.Text, VersionString(applicationVersion));
 
 			string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PoE-Helper");
 			Directory.CreateDirectory(path);
 			config = new AppConfig(Path.Combine(path, "currency.conf"));
+
+			EnableDebugMenu();
 			InitializeCurrencyTab();
 			InitializeTalismanTab();
-			this.debugMenuEntry01.Click += new EventHandler(this.debugMenuEntry01_Click);
-
-			saveTimer.Tick += new EventHandler(( sender, e ) => {
-				config.Save(tabPageSettings.Controls.OfType<DecimalTextBox>().ToList());
-			});
 
 			// preselect Buttons
 			Button defaultInput = tableButtonsInput.Controls.OfType<Button>().First();
@@ -63,10 +59,15 @@ namespace PoE_Helper {
 				{ ButtonType.Output, defaultOutput },
 			};
 
-			updater.VersionCheckDone += UpdateCheck_VersionCheckDone;
-			statusBar.HandleCreated += updater.CheckRemoteVersion;
-			remoteDataTimer.Tick += new EventHandler(config.LoadExternData);
-			config.ExternDataLoaded += new AppConfig.ExternDataLoadedEventHandler(Config_ExternDataLoaded);
+			// assigning event handler
+			this.debugMenuEntry01.Click += new EventHandler(this.debugMenuEntry01_Click);
+			this.updater.VersionCheckDone += new Updater.VersionCheckDoneEventHandler(UpdateCheck_VersionCheckDone);
+			this.statusBar.HandleCreated += new EventHandler(updater.CheckRemoteVersion);
+			this.remoteDataTimer.Tick += new EventHandler(config.LoadExternData);
+			this.config.ExternDataLoaded += new AppConfig.ExternDataLoadedEventHandler(Config_ExternDataLoaded);
+			this.saveTimer.Tick += new EventHandler(( sender, e ) => {
+				config.Save(tabPageSettings.Controls.OfType<DecimalTextBox>().ToList());
+			});
 
 			// set saved ui states
 			if (Properties.Settings.Default.requestOnline) {
@@ -183,7 +184,7 @@ namespace PoE_Helper {
 				statusLabelLeft.Image = IconsGeneral.fa_download_16;
 			});
 			if (progress == 100) {
-				UpdateInstaller = e.LocalFile;
+				InstallerFileName = e.LocalFile;
 				statusBar.Invoke(() => {
 					statusLabelLeft.IsLink = true;
 					statusLabelLeft.LinkColor = colorSuccess;
@@ -213,8 +214,8 @@ namespace PoE_Helper {
 		}
 
 		private void MainForm_FormClosed( object sender, FormClosedEventArgs e ) {
-			if (!string.IsNullOrEmpty(UpdateInstaller)) {
-				Process.Start(UpdateInstaller);
+			if (!string.IsNullOrEmpty(InstallerFileName)) {
+				Process.Start(InstallerFileName);
 			}
 		}
 		#endregion
@@ -280,10 +281,10 @@ namespace PoE_Helper {
 
 			var tagData = (TagData) btn.Tag;
 			if (selectedCurrencyButton[tagData.ButtonType] != null) {
-				selectedCurrencyButton[tagData.ButtonType].BackColor = defaultCfg.ColorUnselected;
+				selectedCurrencyButton[tagData.ButtonType].BackColor = settings.ColorUnselected;
 			}
 			selectedCurrencyButton[tagData.ButtonType] = btn;
-			selectedCurrencyButton[tagData.ButtonType].BackColor = defaultCfg.ColorSelected;
+			selectedCurrencyButton[tagData.ButtonType].BackColor = settings.ColorSelected;
 			if (selectedCurrencyButton[ButtonType.Input] != null && selectedCurrencyButton[ButtonType.Output] != null) {
 				ConvertCurrency(selectedCurrencyButton[ButtonType.Input], selectedCurrencyButton[ButtonType.Output]);
 			}

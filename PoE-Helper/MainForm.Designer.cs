@@ -1737,12 +1737,12 @@
 			this.tabPageSettings.Controls.Add(this.pictureBox3);
 			this.tabPageSettings.Controls.Add(this.pictureBox2);
 			this.tabPageSettings.Controls.Add(this.pictureBox1);
-			this.tabPageSettings.Location = new System.Drawing.Point(4, 22);
+			this.tabPageSettings.Location = new System.Drawing.Point(4, 26);
 			this.tabPageSettings.Name = "tabPageSettings";
 			this.tabPageSettings.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageSettings.Size = new System.Drawing.Size(584, 348);
+			this.tabPageSettings.Size = new System.Drawing.Size(584, 344);
 			this.tabPageSettings.TabIndex = 2;
-			this.tabPageSettings.Text = "Settings";
+			this.tabPageSettings.Text = "Values";
 			this.tabPageSettings.UseVisualStyleBackColor = true;
 			// 
 			// currencyTextBox24
