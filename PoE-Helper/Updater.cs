@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PoE_Helper {
 	class Updater {
-		private readonly string updateUrl = "http://www.mibbiodev.de/poe/version.txt";
+		private readonly string updateUrl = "http://poe.mibbiodev.de/data/version.txt";
 
 		public Updater() { }
 

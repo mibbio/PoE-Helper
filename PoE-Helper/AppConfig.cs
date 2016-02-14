@@ -97,7 +97,7 @@ namespace PoE_Helper {
 
 		public void LoadExternData( object sender, EventArgs e ) {
 			ThreadPool.QueueUserWorkItem(new WaitCallback(state => {
-				HttpWebRequest http = (HttpWebRequest) WebRequest.Create("http://www.mibbiodev.de/poe/currency.txt");
+				HttpWebRequest http = (HttpWebRequest) WebRequest.Create("http://poe.mibbiodev.de/data/currency.txt");
 				http.UserAgent = "PoE Trade Parser";
 
 				try {
